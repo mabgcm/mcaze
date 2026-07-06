@@ -14,7 +14,7 @@ export const metadata = createMetadata({
 export default function FaqPage() {
   return (
     <>
-      <Hero eyebrow="FAQ" title="Clear answers before the first site visit." copy="Renovation decisions are easier when the basics are explained plainly. These answers cover the questions homeowners ask most often." image="/placeholders/renovation-9.svg" />
+      <Hero eyebrow="FAQ" title="Clear answers before the first site visit." copy="Renovation decisions are easier when the basics are explained plainly. These answers cover the questions homeowners ask most often." image="/images/site/faq-consultation.webp" />
       <Section>
         <Container>
           <FaqList items={faqs} withSchema />

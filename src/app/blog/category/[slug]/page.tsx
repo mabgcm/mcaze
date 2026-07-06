@@ -32,7 +32,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
   return (
     <>
-      <Hero eyebrow="Blog Category" title={category.title} copy={category.description} image="/placeholders/renovation-7.svg" />
+      <Hero eyebrow="Blog Category" title={category.title} copy={category.description} image="/images/site/blog-renovation.webp" />
       <Section>
         <Container>
           <SectionHeader title={`Articles in ${category.title}`} />

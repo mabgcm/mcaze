@@ -18,7 +18,7 @@ export default function BlogPage() {
         eyebrow="Blog"
         title="Renovation insights, ready for future articles."
         copy="The blog system is structured for planning guides, material notes, maintenance advice, categories, authors, related posts, and article schema."
-        image="/placeholders/renovation-6.svg"
+        image="/images/site/blog-renovation.webp"
       />
       <Section>
         <Container>

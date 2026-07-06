@@ -32,7 +32,7 @@ export default async function AuthorPage({ params }: AuthorPageProps) {
 
   return (
     <>
-      <Hero eyebrow="Author" title={author.name} copy={author.bio} image="/placeholders/renovation-8.svg" />
+      <Hero eyebrow="Author" title={author.name} copy={author.bio} image="/images/site/about-consultation.webp" />
       <Section>
         <Container>
           <SectionHeader title={`Articles by ${author.name}`} />

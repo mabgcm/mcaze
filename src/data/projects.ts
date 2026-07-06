@@ -10,8 +10,8 @@ export const projects: Project[] = [
       "A brighter main floor with improved circulation, updated kitchen finishes, new flooring, and coordinated painting.",
     scope: ["Kitchen refresh", "Flooring replacement", "Interior painting", "Lighting coordination"],
     year: "2026",
-    image: "/placeholders/project-1.svg",
-    gallery: ["/placeholders/project-1.svg", "/placeholders/project-2.svg", "/placeholders/project-3.svg"],
+    image: "/images/site/portfolio-main-floor.webp",
+    gallery: ["/images/site/portfolio-main-floor.webp", "/images/site/kitchen-renovation.webp", "/images/site/flooring.webp"],
   },
   {
     slug: "richmond-hill-basement-suite",
@@ -22,8 +22,8 @@ export const projects: Project[] = [
       "A lower level planned for family use with drywall, flooring, lighting, storage, and a clean neutral finish.",
     scope: ["Framing coordination", "Drywall", "Flooring", "Painting"],
     year: "2026",
-    image: "/placeholders/project-2.svg",
-    gallery: ["/placeholders/project-2.svg", "/placeholders/project-3.svg", "/placeholders/project-4.svg"],
+    image: "/images/site/portfolio-basement.webp",
+    gallery: ["/images/site/portfolio-basement.webp", "/images/site/drywall.webp", "/images/site/painting.webp"],
   },
   {
     slug: "markham-bathroom-update",
@@ -34,8 +34,8 @@ export const projects: Project[] = [
       "A compact bathroom renovation with improved storage, durable surfaces, updated fixtures, and a calm material palette.",
     scope: ["Demolition", "Waterproofing coordination", "Tile", "Fixture installation"],
     year: "2026",
-    image: "/placeholders/project-3.svg",
-    gallery: ["/placeholders/project-3.svg", "/placeholders/project-4.svg", "/placeholders/project-1.svg"],
+    image: "/images/site/portfolio-bathroom.webp",
+    gallery: ["/images/site/portfolio-bathroom.webp", "/images/site/bathroom-renovation.webp", "/images/site/portfolio-before-after.webp"],
   },
 ];
 

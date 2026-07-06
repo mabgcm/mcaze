@@ -18,7 +18,7 @@ export default function AboutPage() {
         eyebrow="About McAze"
         title="Renovation work led by practical planning and pride in the finish."
         copy="McAze was built for homeowners who want a renovation partner that communicates clearly, protects the home, and takes the details seriously."
-        image="/placeholders/renovation-2.svg"
+        image="/images/site/about-consultation.webp"
         primaryCta={{ label: "Start a Project", href: "/contact" }}
       />
       <Section>

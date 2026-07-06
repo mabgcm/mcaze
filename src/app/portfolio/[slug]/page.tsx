@@ -70,7 +70,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </Section>
       <Section className="bg-[#faf7f1]">
         <Container>
-          <SectionHeader eyebrow="Gallery" title="Project gallery placeholder" />
+          <SectionHeader eyebrow="Gallery" title="Project gallery" />
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {project.gallery.map((image) => (
               <div key={image} className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#eee9e1] bg-white shadow-sm">
@@ -82,12 +82,15 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </Section>
       <Section>
         <Container>
-          <SectionHeader eyebrow="Before / After" title="A dedicated comparison section for future project photography." copy="Add before and after images here once project photography is available. The layout is ready for side-by-side visual comparisons." />
+          <SectionHeader eyebrow="Project Views" title="Details from related renovation work." copy="These archive images show the kind of site work, finishes, and trade coordination represented in this project template." />
           <div className="mt-10 grid gap-5 md:grid-cols-2">
-            {["Before", "After"].map((label) => (
-              <div key={label} className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-[#eee9e1] bg-[#f7f3ed] shadow-sm">
-                <Image src="/placeholders/before-after.svg" alt="" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
-                <span className="absolute left-4 top-4 rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#161616] shadow-sm">{label}</span>
+            {[
+              { label: "Site Work", image: project.gallery[0] ?? project.image },
+              { label: "Finishing Detail", image: project.gallery[2] ?? project.image },
+            ].map((item) => (
+              <div key={item.label} className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-[#eee9e1] bg-[#f7f3ed] shadow-sm">
+                <Image src={item.image} alt="" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+                <span className="absolute left-4 top-4 rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#161616] shadow-sm">{item.label}</span>
               </div>
             ))}
           </div>
@@ -95,7 +98,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </Section>
       <Section className="bg-[#faf7f1]">
         <Container>
-          <SectionHeader eyebrow="Related Projects" title="More project templates." />
+          <SectionHeader eyebrow="Related Projects" title="More renovation projects." />
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {related.map((item) => (
               <ProjectCard key={item.slug} project={item} />

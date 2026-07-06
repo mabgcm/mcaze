@@ -18,7 +18,7 @@ export default function ServiceAreasPage() {
         eyebrow="Service Areas"
         title="Renovation services across the GTA."
         copy="McAze supports homeowners in established neighbourhoods, new communities, townhomes, detached homes, and urban properties throughout the region."
-        image="/placeholders/renovation-4.svg"
+        image="/images/site/service-area.webp"
         primaryCta={{ label: "Request a Quote", href: "/contact" }}
       />
       <Section>

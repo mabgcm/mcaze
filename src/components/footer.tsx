@@ -51,34 +51,50 @@ function SocialIcon({ icon }: SocialIconProps) {
 export function Footer() {
   return (
     <footer className="border-t border-[#eee9e1] bg-[#161616] text-white">
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-14 sm:px-8 lg:grid-cols-[1.2fr_2fr]">
-        <div>
+      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-14 sm:px-8 lg:grid-cols-[1.05fr_2.15fr]">
+        <div className="max-w-md">
           <Link href="/" className="inline-flex" aria-label={`${siteConfig.name} home`}>
             <BrandLogo src={siteConfig.footerLogo} className="h-auto w-[190px]" />
           </Link>
           <p className="mt-5 max-w-md leading-7 text-white/70">
             Premium renovation and property improvement services for homeowners across the Greater Toronto Area.
           </p>
-          <div className="mt-6 space-y-2 text-sm text-white/70">
-            <p>{siteConfig.phone}</p>
-            {siteConfig.emails.map((email) => (
-              <p key={email}>
-                <a href={`mailto:${email}`} className="transition hover:text-[#F59D28]">
-                  {email}
+
+          <div className="mt-7 grid gap-5 text-sm text-white/70">
+            <div>
+              <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-white/45">Office Address</h2>
+              <address className="mt-2 not-italic leading-7">
+                <a href={siteConfig.mapUrl} target="_blank" rel="noopener noreferrer" className="transition hover:text-[#F59D28]">
+                  {siteConfig.address.street}
+                  <br />
+                  {siteConfig.address.city}, {siteConfig.address.region} {siteConfig.address.postalCode}
                 </a>
-              </p>
-            ))}
-            <p>
-              <a href={siteConfig.url} className="transition hover:text-[#F59D28]">
-                {siteConfig.displayUrl}
-              </a>
-            </p>
-            <p>
-              {siteConfig.address.street}
-              <br />
-              {siteConfig.address.city}, {siteConfig.address.region} {siteConfig.address.postalCode}
-            </p>
+              </address>
+            </div>
+            <div>
+              <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-white/45">Contact</h2>
+              <div className="mt-2 space-y-2">
+                <p>
+                  <a href={`tel:${siteConfig.phone.replace(/[^+\d]/g, "")}`} className="transition hover:text-[#F59D28]">
+                    {siteConfig.phone}
+                  </a>
+                </p>
+                {siteConfig.emails.map((email) => (
+                  <p key={email}>
+                    <a href={`mailto:${email}`} className="transition hover:text-[#F59D28]">
+                      {email}
+                    </a>
+                  </p>
+                ))}
+                <p>
+                  <a href={siteConfig.url} className="transition hover:text-[#F59D28]">
+                    {siteConfig.displayUrl}
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
+
           <div className="mt-7 flex flex-wrap gap-3" aria-label="Social media links">
             {socialLinks.map((item) => (
               <a
@@ -95,11 +111,12 @@ export function Footer() {
             ))}
           </div>
         </div>
-        <div className="grid gap-8 sm:grid-cols-3">
+
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[0.9fr_1.7fr_0.9fr]">
           {footerNav.map((group) => (
             <div key={group.title}>
               <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-white/55">{group.title}</h2>
-              <ul className="mt-5 space-y-3">
+              <ul className={group.title === "Services" ? "mt-5 grid gap-3 sm:grid-cols-2" : "mt-5 space-y-3"}>
                 {group.items.map((item) => (
                   <li key={item.href}>
                     <Link href={item.href} className="text-sm text-white/75 transition hover:text-[#F59D28]">

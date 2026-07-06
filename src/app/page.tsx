@@ -26,6 +26,7 @@ export default function HomePage() {
         eyebrow="Canadian renovation company"
         title="Renovation work with calm planning and sharp execution."
         copy="McAze helps GTA homeowners improve kitchens, bathrooms, basements, interiors, and exterior spaces with organized project management and carefully finished work."
+        image="/images/site/hero-renovation.webp"
         primaryCta={{ label: "Request a Quote", href: "/contact" }}
         secondaryCta={{ label: "View Services", href: "/services" }}
       />

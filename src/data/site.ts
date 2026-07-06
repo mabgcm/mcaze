@@ -5,6 +5,10 @@ export const siteConfig = {
   legalName: "McAze Renovations",
   url: "https://www.mcaze.ca",
   displayUrl: "McAze.ca",
+  websites: [
+    { label: "McAze.ca", href: "https://www.mcaze.ca" },
+    { label: "mcaze.com", href: "https://mcaze.com" },
+  ],
   logo: "/logo.png",
   footerLogo: "/logo-footer.png",
   phone: "+1 (416) 555-0198",
@@ -17,6 +21,10 @@ export const siteConfig = {
     postalCode: "M1T 1N9",
     country: "CA",
   },
+  mapUrl:
+    "https://www.google.com/maps/search/?api=1&query=5%20Abbotsfield%20Gate%20Ln%2C%20Scarborough%2C%20ON%20M1T%201N9",
+  mapEmbedUrl:
+    "https://www.google.com/maps?q=5%20Abbotsfield%20Gate%20Ln%2C%20Scarborough%2C%20ON%20M1T%201N9&output=embed",
   hours: [
     "Monday to Friday: 8:00 AM - 6:00 PM",
     "Saturday: 9:00 AM - 3:00 PM",
@@ -66,6 +74,13 @@ export const footerNav = [
       { label: "Bathroom Renovation", href: "/services/bathroom-renovation" },
       { label: "Basement Renovation", href: "/services/basement-renovation" },
       { label: "Painting", href: "/services/painting" },
+      { label: "Drywall", href: "/services/drywall" },
+      { label: "Flooring", href: "/services/flooring" },
+      { label: "Deck & Fence", href: "/services/deck-fence" },
+      { label: "Landscaping", href: "/services/landscaping" },
+      { label: "Snow Removal", href: "/services/snow-removal" },
+      { label: "Demolition", href: "/services/demolition" },
+      { label: "Electrical", href: "/services/electrical" },
     ],
   },
   {
