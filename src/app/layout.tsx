@@ -32,6 +32,9 @@ export const metadata: Metadata = {
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
+  verification: {
+    google: "VEM_QIhCmH5_DTI39UD1scRyxbno5XrALjbm_9jbygg",
+  },
   alternates: {
     canonical: siteConfig.url,
   },
