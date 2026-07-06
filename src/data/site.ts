@@ -3,11 +3,10 @@ import type { NavItem } from "@/lib/types";
 export const siteConfig = {
   name: "McAze",
   legalName: "McAze Renovations",
-  url: "https://www.mcaze.ca",
+  url: "https://mcaze.ca",
   displayUrl: "McAze.ca",
   websites: [
-    { label: "McAze.ca", href: "https://www.mcaze.ca" },
-    { label: "mcaze.com", href: "https://mcaze.com" },
+    { label: "McAze.ca", href: "https://mcaze.ca" },
   ],
   logo: "/logo.png",
   footerLogo: "/logo-footer.png",

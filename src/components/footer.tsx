@@ -56,7 +56,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-14 sm:px-8 lg:grid-cols-[1.05fr_2.15fr]">
         <div className="max-w-md">
           <Link href="/" className="inline-flex" aria-label={`${siteConfig.name} home`}>
-            <BrandLogo src={siteConfig.footerLogo} className="h-auto w-[190px]" />
+            <BrandLogo src={siteConfig.footerLogo} className="h-auto w-[240px] sm:w-[270px]" />
           </Link>
           <p className="mt-5 max-w-md leading-7 text-white/70">
             Premium renovation and property improvement services for homeowners across the Greater Toronto Area.

@@ -43,12 +43,26 @@ export function organizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": ["Organization", "HomeAndConstructionBusiness"],
+    "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.legalName,
     url: siteConfig.url,
     email: siteConfig.email,
     telephone: siteConfig.phone,
-    logo: absoluteUrl(siteConfig.logo),
+    logo: {
+      "@type": "ImageObject",
+      "@id": `${siteConfig.url}/#logo`,
+      url: absoluteUrl(siteConfig.logo),
+      contentUrl: absoluteUrl(siteConfig.logo),
+    },
     sameAs: Object.values(siteConfig.social),
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: siteConfig.phone,
+      email: siteConfig.email,
+      contactType: "customer service",
+      areaServed: "CA",
+      availableLanguage: ["en"],
+    },
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.address.street,
@@ -57,9 +71,25 @@ export function organizationSchema() {
       postalCode: siteConfig.address.postalCode,
       addressCountry: siteConfig.address.country,
     },
+  };
+}
+
+export function webSiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${siteConfig.url}/#website`,
+    url: siteConfig.url,
+    name: siteConfig.name,
+    publisher: {
+      "@id": `${siteConfig.url}/#organization`,
+    },
     potentialAction: {
       "@type": "SearchAction",
-      target: `${siteConfig.url}/blog?search={search_term_string}`,
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${siteConfig.url}/blog?search={search_term_string}`,
+      },
       "query-input": "required name=search_term_string",
     },
   };
@@ -71,11 +101,16 @@ export function localBusinessSchema() {
     "@type": "LocalBusiness",
     "@id": `${siteConfig.url}/#localbusiness`,
     name: siteConfig.legalName,
-    image: absoluteUrl(siteConfig.logo),
+    image: {
+      "@id": `${siteConfig.url}/#logo`,
+    },
     url: siteConfig.url,
     telephone: siteConfig.phone,
     email: siteConfig.email,
     priceRange: "$$",
+    branchOf: {
+      "@id": `${siteConfig.url}/#organization`,
+    },
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.address.street,
@@ -92,11 +127,16 @@ export function breadcrumbSchema(items: Array<{ name: string; href: string }>) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": `${siteConfig.url}/#breadcrumb`,
     itemListElement: items.map((item, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: absoluteUrl(item.href),
+      item: {
+        "@id": absoluteUrl(item.href),
+        url: absoluteUrl(item.href),
+        name: item.name,
+      },
     })),
   };
 }
@@ -120,6 +160,8 @@ export function serviceSchema(service: Service) {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": `${siteConfig.url}/services/${service.slug}#service`,
+    url: `${siteConfig.url}/services/${service.slug}`,
     name: service.title,
     description: service.description,
     provider: {
@@ -131,9 +173,18 @@ export function serviceSchema(service: Service) {
 }
 
 export function articleSchema(post: BlogPost) {
+  const url = `${siteConfig.url}/blog/${post.slug}`;
+
   return {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `${url}#article`,
+    url,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+      url,
+    },
     headline: post.title,
     description: post.excerpt,
     image: absoluteUrl(post.image),
@@ -145,20 +196,27 @@ export function articleSchema(post: BlogPost) {
     },
     publisher: {
       "@type": "Organization",
+      "@id": `${siteConfig.url}/#organization`,
       name: siteConfig.name,
       logo: {
         "@type": "ImageObject",
+        "@id": `${siteConfig.url}/#logo`,
         url: absoluteUrl(siteConfig.logo),
+        contentUrl: absoluteUrl(siteConfig.logo),
       },
     },
   };
 }
 
 export function imageObjectSchema(url: string, name: string) {
+  const imageUrl = absoluteUrl(url);
+
   return {
     "@context": "https://schema.org",
     "@type": "ImageObject",
-    contentUrl: absoluteUrl(url),
+    "@id": `${imageUrl}#image`,
+    url: imageUrl,
+    contentUrl: imageUrl,
     name,
   };
 }

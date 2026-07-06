@@ -1,13 +1,34 @@
 export function ContactForm() {
+  const reassuranceItems = [
+    "Written scope before construction",
+    "Transparent pricing conversation",
+    "Professional advice before you commit",
+    "Response within one business day when possible",
+  ];
+
   return (
     <form className="grid gap-5 rounded-2xl border border-[#eee9e1] bg-white p-6 shadow-sm" action="/contact" method="post">
-      <div className="rounded-2xl border border-[#eee9e1] bg-[#faf7f1] p-5">
-        <h2 className="text-lg font-semibold text-[#161616]">Free estimate, no obligation.</h2>
-        <div className="mt-4 grid gap-3 text-sm leading-6 text-[#5d5a55] sm:grid-cols-2">
-          <p>Written scope before construction.</p>
-          <p>Transparent pricing conversation.</p>
-          <p>Professional advice before you commit.</p>
-          <p>Response within one business day when possible.</p>
+      <div className="rounded-2xl border border-[#eee9e1] bg-[#faf7f1] p-5 shadow-sm">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#b86f12]">Estimate request</p>
+            <h2 className="mt-2 text-xl font-semibold text-[#161616]">Free estimate, no obligation.</h2>
+          </div>
+          <span className="inline-flex w-fit rounded-full border border-[#F59D28]/30 bg-white px-3 py-1 text-xs font-semibold text-[#b86f12]">
+            Fast follow-up
+          </span>
+        </div>
+        <div className="mt-5 grid gap-3 sm:grid-cols-2">
+          {reassuranceItems.map((item) => (
+            <div key={item} className="flex items-center gap-3 rounded-full border border-[#eee9e1] bg-white px-4 py-3 text-sm font-semibold text-[#4c4842] shadow-sm">
+              <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#F59D28]/15 text-[#b86f12]" aria-hidden="true">
+                <svg viewBox="0 0 16 16" className="h-3.5 w-3.5 fill-none stroke-current stroke-[2]">
+                  <path d="m4 8 2.5 2.5L12 5" />
+                </svg>
+              </span>
+              <span>{item}</span>
+            </div>
+          ))}
         </div>
       </div>
       <div className="grid gap-5 sm:grid-cols-2">
