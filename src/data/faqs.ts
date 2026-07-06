@@ -4,12 +4,12 @@ export const faqs: FaqItem[] = [
   {
     question: "What renovation services does McAze provide?",
     answer:
-      "McAze handles home renovations and commercial renovations including kitchens, bathrooms, basement finishing, drywall, painting, flooring, decks, demolition, landscaping, electrical coordination, and seasonal services across the GTA.",
+      "McAze handles home and light commercial renovation work, including kitchens, bathrooms, basement finishing, drywall, painting, flooring, decks, demolition, landscaping, electrical coordination, and seasonal property services across the GTA.",
   },
   {
     question: "Which areas do you serve?",
     answer:
-      "We regularly serve Vaughan, Markham, Richmond Hill, Toronto, North York, Mississauga, Scarborough, and nearby Greater Toronto Area communities. If your property is close to these areas, we can review the location with your project details.",
+      "We regularly work in Vaughan, Markham, Richmond Hill, Toronto, North York, Mississauga, Scarborough, and nearby Greater Toronto Area communities. If your property is just outside those areas, contact us with the address and project details so we can confirm availability.",
   },
   {
     question: "How long does a renovation usually take?",
@@ -19,17 +19,17 @@ export const faqs: FaqItem[] = [
   {
     question: "Do you provide free estimates?",
     answer:
-      "Yes. We provide free estimates after understanding the location, scope, timing, and project goals. For larger renovations, a site visit helps us prepare a clearer proposal with assumptions, allowances, exclusions, and next steps.",
+      "Yes. We can start with a free estimate after learning the location, scope, timing, and goals. For larger renovations, a site visit is usually the best way to prepare a useful proposal with assumptions, allowances, exclusions, and next steps.",
   },
   {
     question: "How much does a renovation cost?",
     answer:
-      "Cost depends on size, materials, existing conditions, demolition, specialty trades, and finish level. We avoid vague pricing when details matter. Once the scope is reviewed, we provide a written estimate so you understand what is included and what could change.",
+      "Renovation cost depends on size, materials, existing conditions, demolition, specialty trades, and finish level. We avoid giving one-size-fits-all pricing when details matter. Once the scope is reviewed, we provide a written estimate showing what is included and what could change.",
   },
   {
     question: "Do I need permits for my renovation?",
     answer:
-      "Some renovations require permits, especially structural changes, plumbing changes, basement work, and certain electrical or exterior scopes. We identify permit considerations early and explain the practical path before the schedule is finalized.",
+      "Some projects need permits, especially structural changes, plumbing changes, basement work, certain electrical scopes, and some exterior work. We flag permit considerations early and explain the practical path before the schedule is finalized.",
   },
   {
     question: "Can you help with design and material choices?",
@@ -39,12 +39,12 @@ export const faqs: FaqItem[] = [
   {
     question: "Who manages the project?",
     answer:
-      "McAze coordinates the renovation scope, schedule, communication, site protection, and trade handoffs. Homeowners receive clear updates and know what decisions are needed before each stage moves forward.",
+      "McAze coordinates the renovation scope, schedule, communication, site protection, and trade handoffs. You will know what is happening, what decisions are needed, and what stage comes next before the work moves forward.",
   },
   {
     question: "Do you work in occupied homes?",
     answer:
-      "Yes. Many projects happen while homeowners continue living in the property. We plan access, dust control, material storage, working areas, and daily cleanup so the disruption is managed as carefully as possible.",
+      "Yes. Many renovations happen while homeowners continue living in the property. We plan access, dust control, material storage, working areas, and daily cleanup so the disruption is managed as carefully as possible.",
   },
   {
     question: "How do you protect the home during construction?",
@@ -54,12 +54,12 @@ export const faqs: FaqItem[] = [
   {
     question: "Are you insured?",
     answer:
-      "McAze carries appropriate coverage for renovation work and can discuss project requirements before work begins. If a scope requires licensed specialty trades, we coordinate those responsibilities clearly.",
+      "McAze carries appropriate coverage for renovation work and can review project requirements before work begins. If a scope requires licensed specialty trades, those responsibilities are identified clearly in the planning stage.",
   },
   {
     question: "Is your work covered by warranty?",
     answer:
-      "Warranty expectations are discussed with the scope and materials. Product warranties vary by manufacturer, while workmanship concerns are handled through the final walkthrough and follow-up process defined for the project.",
+      "Warranty expectations are discussed with the scope and selected materials. Product warranties vary by manufacturer, while workmanship concerns are handled through the final walkthrough and the follow-up process agreed for the project.",
   },
   {
     question: "How are payments handled?",

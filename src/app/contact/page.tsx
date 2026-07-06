@@ -13,11 +13,11 @@ export const metadata = createMetadata({
 export default function ContactPage() {
   return (
     <>
-      <Hero eyebrow="Contact" title="Tell us what you want to improve." copy="Share the project location, rough scope, timeline, and any details that will help us understand the work. McAze will follow up with practical next steps." image="/images/site/contact-quote.webp" />
+      <Hero eyebrow="Contact" title="Request a free renovation estimate." copy="Share the project location, rough scope, timeline, and any details that will help us understand the work. McAze will follow up with practical next steps, no obligation, and a clear path toward a written estimate." image="/images/site/contact-quote.webp" />
       <Section>
         <Container className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
-            <SectionHeader title="Request a quote" copy="This form is ready to connect to a server action, CRM, or future CMS workflow when required." />
+            <SectionHeader title="Tell us about your project." copy="You do not need final drawings or material selections to start. A rough scope is enough for us to understand the project, explain next steps, and prepare a practical estimate conversation." />
             <div className="mt-8">
               <ContactForm />
             </div>

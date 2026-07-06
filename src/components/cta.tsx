@@ -2,8 +2,8 @@ import { Button } from "@/components/button";
 import { Container, Section } from "@/components/section";
 
 export function Cta({
-  title = "Ready to plan a renovation with fewer surprises?",
-  copy = "Tell us what you want to improve. We will review the scope, explain the practical next steps, and provide a clear path forward.",
+  title = "Ready to discuss your renovation?",
+  copy = "Request a free, no-obligation estimate. We will review your scope, explain practical next steps, and outline a clear written path before any construction decisions are made.",
 }: {
   title?: string;
   copy?: string;
@@ -17,7 +17,7 @@ export function Cta({
             <p className="mt-4 text-pretty leading-8 text-white/70">{copy}</p>
           </div>
           <div className="mt-8 shrink-0 lg:mt-0">
-            <Button href="/contact">Request a Quote</Button>
+            <Button href="/contact">Get Free Estimate</Button>
           </div>
         </div>
       </Container>

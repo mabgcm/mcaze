@@ -19,7 +19,7 @@ export default function PortfolioPage() {
         title="Project pages ready for real renovation work."
         copy="These portfolio templates are structured for galleries, details, before-and-after sections, related projects, and strong internal linking."
         image="/images/site/portfolio-main-floor.webp"
-        primaryCta={{ label: "Start a Project", href: "/contact" }}
+        primaryCta={{ label: "Discuss Your Project", href: "/contact" }}
       />
       <Section>
         <Container>

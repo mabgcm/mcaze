@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { BrandLogo } from "@/components/brand-logo";
-import { footerNav, siteConfig, socialLinks } from "@/data/site";
+import { footerNav, legalLinks, siteConfig, socialLinks } from "@/data/site";
 
 type SocialIconProps = {
   icon: (typeof socialLinks)[number]["icon"];
@@ -49,6 +49,8 @@ function SocialIcon({ icon }: SocialIconProps) {
 }
 
 export function Footer() {
+  const credibilityItems = ["Licensed", "Insured", "WSIB Covered", "Written Estimates"];
+
   return (
     <footer className="border-t border-[#eee9e1] bg-[#161616] text-white">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-14 sm:px-8 lg:grid-cols-[1.05fr_2.15fr]">
@@ -59,6 +61,14 @@ export function Footer() {
           <p className="mt-5 max-w-md leading-7 text-white/70">
             Premium renovation and property improvement services for homeowners across the Greater Toronto Area.
           </p>
+
+          <div className="mt-6 flex flex-wrap gap-2" aria-label="Business credibility">
+            {credibilityItems.map((item) => (
+              <span key={item} className="rounded-full border border-white/15 bg-white/[0.06] px-3 py-1 text-xs font-semibold text-white/70">
+                {item}
+              </span>
+            ))}
+          </div>
 
           <div className="mt-7 grid gap-5 text-sm text-white/70">
             <div>
@@ -92,6 +102,14 @@ export function Footer() {
                   </a>
                 </p>
               </div>
+            </div>
+            <div>
+              <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-white/45">Business Hours</h2>
+              <ul className="mt-2 space-y-1 leading-7">
+                {siteConfig.hours.map((hour) => (
+                  <li key={hour}>{hour}</li>
+                ))}
+              </ul>
             </div>
           </div>
 
@@ -130,9 +148,19 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-6 text-sm text-white/55 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-6 text-sm text-white/55 lg:flex-row lg:items-center lg:justify-between sm:px-8">
           <p>© {new Date().getFullYear()} {siteConfig.legalName}. All rights reserved.</p>
-          <p>Built for accessibility, speed, and search visibility.</p>
+          <nav aria-label="Footer legal links">
+            <ul className="flex flex-wrap gap-x-5 gap-y-2">
+              {legalLinks.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="transition hover:text-[#F59D28]">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
       </div>
     </footer>

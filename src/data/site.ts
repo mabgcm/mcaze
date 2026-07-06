@@ -48,6 +48,12 @@ export const socialLinks = [
   { label: "X", href: siteConfig.social.x, icon: "x" },
 ] as const;
 
+export const legalLinks: NavItem[] = [
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms & Conditions", href: "/terms-and-conditions" },
+  { label: "Sitemap", href: "/sitemap.xml" },
+];
+
 export const mainNav: NavItem[] = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },

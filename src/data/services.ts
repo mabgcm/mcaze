@@ -32,7 +32,7 @@ export const services: Service[] = [
     title: "Kitchen Renovation",
     shortTitle: "Kitchens",
     excerpt:
-      "Kitchen renovation work includes layout improvements, cabinetry coordination, flooring, lighting, surfaces, painting, and final finishing. Homeowners choose McAze when they want a practical kitchen that looks refined, works better every day, and is managed with clear scheduling. It is ideal for families updating dated kitchens, improving storage, or preparing a home for long-term value.",
+      "A kitchen renovation can involve layout changes, cabinetry coordination, counters, lighting, flooring, painting, and finishing details. McAze helps families create kitchens that work better for cooking, storage, and daily traffic. This service suits dated kitchens, awkward layouts, and homeowners who want a refined update without losing sight of budget, timing, and long-term value.",
     description:
       "A kitchen renovation succeeds when layout, materials, trades, and timing are handled with discipline. McAze builds kitchens that feel calm, practical, and carefully finished, from demolition through cabinetry, surfaces, lighting, flooring, and final details.",
     image: "/images/site/kitchen-renovation.webp",
@@ -46,7 +46,7 @@ export const services: Service[] = [
     title: "Bathroom Renovation",
     shortTitle: "Bathrooms",
     excerpt:
-      "Bathroom renovations include demolition, waterproofing coordination, tile, fixture placement, ventilation planning, drywall repair, painting, and finish details. Homeowners choose this service for cleaner layouts, better moisture protection, and a bathroom that feels easier to maintain. It is suited for main bathrooms, ensuites, powder rooms, and older spaces that need a dependable refresh.",
+      "Bathroom work needs careful planning because small rooms carry plumbing, ventilation, tile, waterproofing, fixtures, and storage decisions. We renovate ensuites, powder rooms, family bathrooms, and older spaces that need better moisture control. Homeowners usually come to us for cleaner layouts, durable finishes, and a bathroom that feels easier to maintain every day.",
     description:
       "Bathrooms demand precision. We focus on proper prep, ventilation, waterproofing, tile setting, fixture placement, and details that stand up to moisture and daily wear.",
     image: "/images/site/bathroom-renovation.webp",
@@ -60,7 +60,7 @@ export const services: Service[] = [
     title: "Basement Renovation",
     shortTitle: "Basements",
     excerpt:
-      "Basement renovation and finishing can include framing coordination, insulation planning, drywall, flooring, lighting, painting, storage, and trim. Homeowners choose it to add comfortable living space without moving. It works well for family rooms, home offices, guest areas, playrooms, gyms, and lower levels that need better lighting, warmth, and everyday function.",
+      "Basement finishing turns underused lower levels into practical living space for work, guests, kids, fitness, storage, or family time. McAze plans framing coordination, insulation considerations, drywall, flooring, lighting, trim, and painting around the existing conditions. It is a strong option for homeowners who need more room but want to stay in the same home.",
     description:
       "We convert unfinished or dated basements into usable living space with attention to insulation, lighting, ceiling heights, moisture considerations, and code-aware planning.",
     image: "/images/site/basement-renovation.webp",
@@ -74,7 +74,7 @@ export const services: Service[] = [
     title: "Painting",
     shortTitle: "Painting",
     excerpt:
-      "Painting services include surface preparation, patching, sanding, priming, clean application, trim work, and interior or exterior touchups. Homeowners choose professional painting when they want sharp lines, durable coverage, and less disruption than a rushed DIY job. It is useful after renovations, before listing a home, or when rooms need a cleaner finished look.",
+      "Professional painting starts with preparation: patching, sanding, priming, masking, clean application, and trim attention. We handle interior refreshes, exterior touchups, post-renovation painting, and pre-sale updates. Homeowners choose this service when they want rooms to feel finished, colours to look consistent, and the work to happen with less mess than a rushed DIY approach.",
     description:
       "Good paint work starts before the first coat. McAze handles patching, sanding, priming, protection, and clean application for a finish that looks settled into the home.",
     image: "/images/site/painting.webp",
@@ -88,7 +88,7 @@ export const services: Service[] = [
     title: "Drywall",
     shortTitle: "Drywall",
     excerpt:
-      "Drywall work includes board installation, repairs, taping, mudding, sanding, ceiling patches, and ready-for-paint finishing. Homeowners choose McAze because smooth walls and clean corners affect the quality of every room. This service fits basements, kitchens, bathrooms, damaged walls, layout changes, and renovation areas that need a straight, finished surface.",
+      "Drywall is the base layer for how a renovated room finally feels. McAze installs boards, repairs damage, tapes, muds, sands, patches ceilings, and prepares surfaces for paint. This service fits basements, layout changes, kitchens, bathrooms, and damaged walls where clean corners, smooth surfaces, and dust-conscious work make the next finish look better.",
     description:
       "From basement boards to patch repairs, we keep drywall work straight, smooth, and ready for paint. Proper boarding and finishing set the tone for every room that follows.",
     image: "/images/site/drywall.webp",
@@ -102,7 +102,7 @@ export const services: Service[] = [
     title: "Flooring",
     shortTitle: "Flooring",
     excerpt:
-      "Flooring services include removal, subfloor review, layout planning, installation, transitions, trims, and finishing details. Homeowners choose flooring updates to improve comfort, durability, resale value, and the way rooms connect visually. It is a strong fit for main floors, basements, kitchens, rental units, and homes where worn surfaces make the space feel dated.",
+      "New flooring can change how a home feels underfoot and how rooms connect visually. We review existing surfaces, removal needs, subfloor conditions, layout direction, transitions, trims, and installation details. It works well for main floors, basements, kitchens, rentals, and homes where worn materials are making otherwise good spaces feel tired.",
     description:
       "McAze installs flooring with a focus on substrate prep, layout, transitions, trims, and clean finishing so the result feels intentional from room to room.",
     image: "/images/site/flooring.webp",
@@ -116,7 +116,7 @@ export const services: Service[] = [
     title: "Deck & Fence",
     shortTitle: "Decks & Fences",
     excerpt:
-      "Deck and fence work includes repairs, replacement, framing coordination, boards, posts, gates, railings, staining, and weather-aware finishing. Homeowners choose it to improve privacy, outdoor use, curb appeal, and safety. It is useful for backyards, side yards, aging wood structures, and homes that need stronger exterior spaces for family use.",
+      "Deck and fence projects improve privacy, safety, curb appeal, and how a backyard can actually be used. McAze handles repairs, replacement planning, framing coordination, boards, posts, gates, railings, staining, and weather-aware finishing. It is useful for aging wood structures, side yards, family outdoor areas, and homes that need a stronger exterior setup.",
     description:
       "We build and renew decks and fences with attention to layout, structure, drainage, fastening, and finishes suited to Canadian weather.",
     image: "/images/site/deck-fence.webp",
@@ -130,7 +130,7 @@ export const services: Service[] = [
     title: "Landscaping",
     shortTitle: "Landscaping",
     excerpt:
-      "Landscaping improvements can include cleanup, edging, grading awareness, planting coordination, walkways, surface improvements, and practical exterior repairs. Homeowners choose this service to make outdoor areas cleaner, safer, and easier to maintain. It is suited for front entries, backyards, rental properties, and homes where the exterior needs structure without overcomplication.",
+      "Landscaping support focuses on practical exterior improvements rather than overbuilt features. Depending on the property, work may include cleanup, edging, grading awareness, planting coordination, walkways, surface repairs, and tidier outdoor circulation. Homeowners use this service for front entries, backyards, rental properties, and exterior spaces that need structure, safety, and easier maintenance.",
     description:
       "Our landscaping work focuses on practical exterior improvements, clean edges, usable surfaces, and details that support the home rather than overpower it.",
     image: "/images/site/landscaping.webp",
@@ -144,7 +144,7 @@ export const services: Service[] = [
     title: "Snow Removal",
     shortTitle: "Snow Removal",
     excerpt:
-      "Snow removal supports winter access with clearing for driveways, walkways, entrances, and light commercial areas when conditions require it. Homeowners choose dependable service to reduce slip risks and keep daily routines moving. It is best for families, seniors, rental properties, and homeowners who want reliable winter support during heavier weather.",
+      "Snow removal keeps driveways, walkways, entrances, and small commercial access points usable during winter weather. The service is designed for homeowners, seniors, families, rental properties, and businesses that need dependable clearing when conditions become difficult. It helps reduce slip concerns, protect routines, and keep the property accessible after heavier snowfall.",
     description:
       "McAze provides seasonal snow removal support for driveways, walkways, and access areas, with responsive service during winter weather.",
     image: "/images/site/snow-removal.webp",
@@ -158,7 +158,7 @@ export const services: Service[] = [
     title: "Demolition",
     shortTitle: "Demolition",
     excerpt:
-      "Selective demolition includes controlled removal, protection of surrounding finishes, debris handling, and preparation for the next renovation stage. Homeowners choose controlled demolition because it reduces damage, dust, and delays. It is useful before kitchens, bathrooms, basements, flooring, drywall repairs, and layout changes where careful removal matters.",
+      "Selective demolition should prepare a space without creating unnecessary damage. McAze handles controlled removal, protection of nearby finishes, debris handling, and readiness for the next trade. It is commonly needed before kitchens, bathrooms, basements, flooring, drywall repairs, and layout adjustments where a careful start can prevent delays later.",
     description:
       "Renovation demolition should be controlled, not chaotic. We protect what stays, remove what must go, and prepare the space for the next trade.",
     image: "/images/site/demolition.webp",
@@ -172,7 +172,7 @@ export const services: Service[] = [
     title: "Electrical",
     shortTitle: "Electrical",
     excerpt:
-      "Electrical renovation coordination includes lighting layouts, fixture placement, device planning, rough-in coordination, and finish alignment with licensed professionals where required. Homeowners choose it because electrical details affect comfort, safety, and how renovated spaces function. It fits kitchens, bathrooms, basements, offices, and older homes needing better lighting plans.",
+      "Electrical planning affects how comfortable and useful a renovated space becomes. McAze coordinates lighting layouts, fixture placement, switch and device planning, rough-in timing, and finish alignment with licensed professionals where required. It is important for kitchens, bathrooms, basements, offices, additions, and older homes that need safer, better-positioned lighting.",
     description:
       "Electrical details shape how a renovated space works. McAze coordinates electrical scope with licensed professionals where required, keeping placement, code, and finishes aligned.",
     image: "/images/site/electrical.webp",

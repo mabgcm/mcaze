@@ -5,42 +5,42 @@ export const cities: City[] = [
     slug: "vaughan",
     name: "Vaughan",
     intro:
-      "McAze supports Vaughan homeowners with kitchen renovations, bathroom updates, basement finishing, drywall, painting, flooring, and exterior improvements planned around real home conditions. We understand the mix of newer subdivisions, established family homes, townhomes, and custom properties across Vaughan. Our work focuses on practical scopes, tidy job sites, and finishes that suit daily life while improving long-term comfort and value.",
+      "Vaughan renovation projects often range from newer subdivision homes that need personalization to established properties ready for larger updates. McAze works with homeowners planning kitchens, bathrooms, basements, drywall, painting, flooring, and exterior improvements across family homes, townhomes, and custom properties. We focus on practical scopes, clear scheduling, and tidy job sites so the finished space feels upgraded without making the renovation harder than it needs to be.",
     neighborhoods: ["Maple", "Woodbridge", "Kleinburg", "Thornhill Woods"],
   },
   {
     slug: "markham",
     name: "Markham",
     intro:
-      "Markham homes often need renovation planning that respects busy family schedules, finished living areas, and neighbourhood logistics. McAze helps with kitchens, bathrooms, basements, painting, flooring, drywall, decks, and general home improvements across townhomes, detached homes, and older properties. We focus on clear estimates, careful protection, and dependable coordination so the project feels organized from the first visit to the final walkthrough.",
+      "In Markham, many renovations happen in busy homes where family routines, parking, neighbours, and finished living areas all matter. McAze helps plan kitchen renovations, bathroom updates, basement finishing, painting, flooring, drywall, decks, and general improvements for detached homes, townhomes, and older properties. Our approach is straightforward: define the scope early, protect the home carefully, and keep homeowners informed before decisions become urgent.",
     neighborhoods: ["Unionville", "Cornell", "Berczy Village", "Buttonville"],
   },
   {
     slug: "richmond-hill",
     name: "Richmond Hill",
     intro:
-      "In Richmond Hill, McAze works with homeowners who want cleaner layouts, better finishes, and practical upgrades without losing control of the project. Our renovation services include bathrooms, kitchens, basement finishing, painting, drywall, flooring, and exterior work. We plan around access, material choices, trade timing, and household routines so the finished space feels polished, durable, and comfortable for everyday family life.",
+      "Richmond Hill homeowners often want renovations that feel polished but still practical for everyday family life. McAze supports bathroom renovations, kitchen remodeling, basement finishing, drywall, painting, flooring, and exterior work with careful attention to access, materials, timing, and cleanup. Whether the goal is a cleaner layout, better storage, or a more durable finish, we keep the planning grounded in how the home is actually used.",
     neighborhoods: ["Oak Ridges", "Bayview Hill", "Mill Pond", "Jefferson"],
   },
   {
     slug: "toronto",
     name: "Toronto",
     intro:
-      "Toronto renovations require careful logistics, especially in older homes, narrow lots, condos, and busy neighbourhoods. McAze plans around access, parking, neighbours, material handling, protection, and the realities of renovating occupied spaces. From bathroom and kitchen updates to drywall, painting, flooring, and selective demolition, we keep the scope practical and the communication clear throughout the project.",
+      "Toronto renovation work usually comes with extra logistics: older home conditions, tight access, condo rules, parking limits, neighbours, and material handling. McAze plans those details before the work starts, especially for occupied homes where daily life continues around the project. We handle kitchen and bathroom updates, drywall, painting, flooring, selective demolition, and finishing work with clear communication and realistic sequencing.",
     neighborhoods: ["Midtown", "The Beaches", "Leslieville", "High Park"],
   },
   {
     slug: "north-york",
     name: "North York",
     intro:
-      "North York homeowners rely on renovation planning that balances older building conditions, family routines, and modern finish expectations. McAze supports targeted updates and larger home renovations, including kitchens, bathrooms, basements, flooring, painting, drywall, and exterior improvements. We take time to define the scope, protect the home, and coordinate the work so each stage supports the next.",
+      "North York includes many home styles, from older detached houses and bungalows to condos and newer family properties. McAze helps homeowners make targeted updates or larger improvements involving kitchens, bathrooms, basements, flooring, painting, drywall, and exterior work. We pay attention to existing conditions, protection, and trade order so each stage supports the next instead of creating avoidable rework.",
     neighborhoods: ["Willowdale", "Bayview Village", "Don Mills", "York Mills"],
   },
   {
     slug: "mississauga",
     name: "Mississauga",
     intro:
-      "Mississauga homes range from established detached properties to townhomes, condos, and rental spaces that need practical renovation support. McAze brings organized planning to kitchen renovations, bathroom updates, basement finishing, painting, flooring, drywall, decks, and general improvements. Homeowners choose us for clear scopes, steady communication, and workmanship that improves comfort without making the process harder than it needs to be.",
+      "Mississauga properties can vary widely, from established detached homes and townhouses to condos, rental units, and light commercial spaces. McAze brings organized planning to kitchen renovations, bathroom updates, basement finishing, painting, flooring, drywall, decks, and general improvements. The work is built around clear expectations, practical material choices, and steady communication so the project improves comfort without adding unnecessary complexity.",
     neighborhoods: ["Port Credit", "Streetsville", "Erin Mills", "Cooksville"],
   },
 ];

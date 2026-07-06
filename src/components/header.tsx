@@ -18,7 +18,7 @@ export function Header() {
           ))}
         </nav>
         <div className="hidden lg:block">
-          <Button href="/contact">Request a Quote</Button>
+          <Button href="/contact">Get Free Estimate</Button>
         </div>
         <details className="group relative lg:hidden">
           <summary className="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-full border border-[#dedbd5] text-[#161616]">
@@ -33,7 +33,7 @@ export function Header() {
                 </Link>
               ))}
               <Button href="/contact" className="mt-3 w-full">
-                Request a Quote
+                Get Free Estimate
               </Button>
             </nav>
           </div>

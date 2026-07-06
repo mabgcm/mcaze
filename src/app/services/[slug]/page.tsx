@@ -37,7 +37,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
   return (
     <>
-      <Hero eyebrow="Service" title={service.title} copy={service.description} image={service.image} primaryCta={{ label: "Request a Quote", href: "/contact" }} secondaryCta={{ label: "All Services", href: "/services" }} />
+      <Hero eyebrow="Service" title={service.title} copy={service.description} image={service.image} primaryCta={{ label: "Get Free Estimate", href: "/contact" }} secondaryCta={{ label: "Explore Services", href: "/services" }} />
       <JsonLd data={serviceSchema(service)} />
       <Section>
         <Container className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">

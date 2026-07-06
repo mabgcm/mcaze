@@ -33,7 +33,7 @@ export default async function CityPage({ params }: CityPageProps) {
 
   return (
     <>
-      <Hero eyebrow="Service Area" title={`Renovation Company in ${city.name}`} copy={city.intro} image="/images/site/service-area.webp" primaryCta={{ label: "Request a Quote", href: "/contact" }} />
+      <Hero eyebrow="Service Area" title={`Renovation Company in ${city.name}`} copy={city.intro} image="/images/site/service-area.webp" primaryCta={{ label: "Get Free Estimate", href: "/contact" }} />
       <Section>
         <Container className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <SectionHeader eyebrow={city.name} title={`Home renovation services in ${city.name}.`} />

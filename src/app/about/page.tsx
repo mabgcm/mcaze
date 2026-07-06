@@ -19,7 +19,7 @@ export default function AboutPage() {
         title="Renovation work led by practical planning and pride in the finish."
         copy="McAze was built for homeowners who want a renovation partner that communicates clearly, protects the home, and takes the details seriously."
         image="/images/site/about-consultation.webp"
-        primaryCta={{ label: "Start a Project", href: "/contact" }}
+        primaryCta={{ label: "Schedule a Consultation", href: "/contact" }}
       />
       <Section>
         <Container className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
