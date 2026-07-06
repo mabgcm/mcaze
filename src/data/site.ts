@@ -11,7 +11,8 @@ export const siteConfig = {
   ],
   logo: "/logo.png",
   footerLogo: "/logo-footer.png",
-  phone: "+1 (416) 555-0198",
+  phone: "+1 (647) 673-3343",
+  whatsapp: "+1 (647) 673-3343",
   email: "info@mcaze.ca",
   emails: ["info@mcaze.ca", "samir.m@mcaze.ca"],
   address: {

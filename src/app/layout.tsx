@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { JsonLd } from "@/components/json-ld";
+import { WhatsAppButton } from "@/components/whatsapp-button";
 import { localBusinessSchema, organizationSchema } from "@/lib/seo";
 import { siteConfig } from "@/data/site";
 import "./globals.css";
@@ -82,6 +83,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <WhatsAppButton />
         <JsonLd data={organizationSchema()} />
         <JsonLd data={localBusinessSchema()} />
         <Analytics />

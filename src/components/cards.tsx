@@ -9,9 +9,11 @@ export function ServiceCard({ service }: { service: Service }) {
       <div className="relative mb-6 aspect-[16/10] overflow-hidden rounded-xl bg-[#f7f3ed]">
         <Image src={service.image} alt="" fill sizes="(min-width: 1024px) 30vw, 100vw" className="object-cover transition duration-300 group-hover:scale-105" />
       </div>
-      <h3 className="text-xl font-semibold text-[#161616]">{service.title}</h3>
+      <article>
+        <h3 className="text-xl font-semibold text-[#161616]">{service.title}</h3>
       <p className="mt-3 leading-7 text-[#5d5a55]">{service.excerpt}</p>
       <span className="mt-5 inline-flex text-sm font-semibold text-[#b86f12]">View service</span>
+      </article>
     </Link>
   );
 }
@@ -24,11 +26,11 @@ export function ProjectCard({ project }: { project: Project }) {
       <div className="relative aspect-[4/3] bg-[#f7f3ed]">
         <Image src={project.image} alt="" fill sizes="(min-width: 1024px) 30vw, 100vw" className="object-cover transition duration-300 group-hover:scale-105" />
       </div>
-      <div className="p-5">
+      <article className="p-5">
         <p className="text-sm font-semibold text-[#b86f12]">{service?.title ?? "Renovation"}</p>
         <h3 className="mt-2 text-xl font-semibold text-[#161616]">{project.title}</h3>
         <p className="mt-3 leading-7 text-[#5d5a55]">{project.location}</p>
-      </div>
+      </article>
     </Link>
   );
 }
@@ -45,10 +47,10 @@ export function CityCard({ city }: { city: City }) {
 
 export function FeatureCard({ title, copy }: { title: string; copy: string }) {
   return (
-    <div className="rounded-2xl border border-[#eee9e1] bg-white p-6 shadow-sm">
+    <article className="rounded-2xl border border-[#eee9e1] bg-white p-6 shadow-sm">
       <div className="mb-5 h-10 w-10 rounded-full bg-[#F59D28]/15" />
       <h3 className="text-xl font-semibold text-[#161616]">{title}</h3>
       <p className="mt-3 leading-7 text-[#5d5a55]">{copy}</p>
-    </div>
+    </article>
   );
 }

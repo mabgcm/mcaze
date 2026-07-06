@@ -3,11 +3,11 @@ import type { Project } from "@/lib/types";
 export const projects: Project[] = [
   {
     slug: "vaughan-main-floor-renovation",
-    title: "Main Floor Renovation",
+    title: "Complete Kitchen Remodel - Vaughan",
     location: "Vaughan, ON",
     serviceSlug: "kitchen-renovation",
     summary:
-      "A brighter main floor with improved circulation, updated kitchen finishes, new flooring, and coordinated painting.",
+      "A Vaughan kitchen and main-floor update with improved circulation, updated finishes, new flooring, coordinated painting, and lighting details planned around daily family use.",
     scope: ["Kitchen refresh", "Flooring replacement", "Interior painting", "Lighting coordination"],
     year: "2026",
     image: "/images/site/portfolio-main-floor.webp",
@@ -15,11 +15,11 @@ export const projects: Project[] = [
   },
   {
     slug: "richmond-hill-basement-suite",
-    title: "Finished Basement Suite",
-    location: "Richmond Hill, ON",
+    title: "Basement Finishing - Markham",
+    location: "Markham, ON",
     serviceSlug: "basement-renovation",
     summary:
-      "A lower level planned for family use with drywall, flooring, lighting, storage, and a clean neutral finish.",
+      "A Markham basement finishing project planned for practical family space, with drywall, flooring, lighting coordination, storage, and a clean neutral finish.",
     scope: ["Framing coordination", "Drywall", "Flooring", "Painting"],
     year: "2026",
     image: "/images/site/portfolio-basement.webp",
@@ -27,11 +27,11 @@ export const projects: Project[] = [
   },
   {
     slug: "markham-bathroom-update",
-    title: "Bathroom Update",
-    location: "Markham, ON",
+    title: "Modern Bathroom Renovation - Richmond Hill",
+    location: "Richmond Hill, ON",
     serviceSlug: "bathroom-renovation",
     summary:
-      "A compact bathroom renovation with improved storage, durable surfaces, updated fixtures, and a calm material palette.",
+      "A Richmond Hill bathroom renovation with improved storage, durable surfaces, updated fixtures, careful waterproofing coordination, and a calm material palette.",
     scope: ["Demolition", "Waterproofing coordination", "Tile", "Fixture installation"],
     year: "2026",
     image: "/images/site/portfolio-bathroom.webp",
