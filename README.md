@@ -16,6 +16,21 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Contact Form Email
+
+The contact form sends estimate requests with Nodemailer from a server action. Copy `.env.example` to `.env.local` and fill in your SMTP settings:
+
+```bash
+SMTP_HOST=smtp.example.com
+SMTP_PORT=587
+SMTP_USER=your-smtp-username
+SMTP_PASS=your-smtp-password
+SMTP_FROM="McAze <info@mcaze.ca>"
+CONTACT_TO_EMAIL=info@mcaze.ca
+```
+
+`CONTACT_TO_EMAIL` is the address that receives website form submissions.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

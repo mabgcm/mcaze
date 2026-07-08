@@ -10,7 +10,17 @@ export const metadata = createMetadata({
   path: "/contact",
 });
 
-export default function ContactPage() {
+type ContactPageProps = {
+  searchParams: Promise<{
+    sent?: string;
+    error?: string;
+  }>;
+};
+
+export default async function ContactPage({ searchParams }: ContactPageProps) {
+  const params = await searchParams;
+  const formStatus = params.sent === "1" ? "sent" : params.error === "config" ? "config-error" : params.error ? "error" : undefined;
+
   return (
     <>
       <Hero eyebrow="Contact" title="Request a free renovation estimate." copy="Share the project location, rough scope, timeline, and any details that will help us understand the work. McAze will follow up with practical next steps, no obligation, and a clear path toward a written estimate." image="/images/site/contact-quote.webp" />
@@ -19,7 +29,7 @@ export default function ContactPage() {
           <div>
             <SectionHeader title="Tell us about your project." copy="You do not need final drawings or material selections to start. A rough scope is enough for us to understand the project, explain next steps, and prepare a practical estimate conversation." />
             <div className="mt-8">
-              <ContactForm />
+              <ContactForm status={formStatus} />
             </div>
           </div>
           <aside className="space-y-6">

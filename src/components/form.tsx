@@ -1,4 +1,10 @@
-export function ContactForm() {
+import { sendContactEmail } from "@/app/contact/actions";
+
+type ContactFormProps = {
+  status?: "sent" | "error" | "config-error";
+};
+
+export function ContactForm({ status }: ContactFormProps) {
   const reassuranceItems = [
     "Written scope before construction",
     "Transparent pricing conversation",
@@ -7,7 +13,22 @@ export function ContactForm() {
   ];
 
   return (
-    <form className="grid gap-5 rounded-2xl border border-[#eee9e1] bg-white p-6 shadow-sm" action="/contact" method="post">
+    <form className="grid gap-5 rounded-2xl border border-[#eee9e1] bg-white p-6 shadow-sm" action={sendContactEmail}>
+      {status === "sent" ? (
+        <p className="rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm font-semibold text-green-800">
+          Thank you. Your estimate request has been sent and we will follow up soon.
+        </p>
+      ) : null}
+      {status === "error" ? (
+        <p className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-800">
+          We could not send your request. Please try again or contact us directly by phone or email.
+        </p>
+      ) : null}
+      {status === "config-error" ? (
+        <p className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-800">
+          Email settings are missing. Please configure SMTP values before using the contact form.
+        </p>
+      ) : null}
       <div className="rounded-2xl border border-[#eee9e1] bg-[#faf7f1] p-5 shadow-sm">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
           <div>
