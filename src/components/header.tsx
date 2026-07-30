@@ -21,9 +21,13 @@ export function Header() {
           <Button href="/contact">Get Free Estimate</Button>
         </div>
         <details className="group relative lg:hidden">
-          <summary className="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-full border border-[#dedbd5] text-[#161616]">
+          <summary className="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-full border border-[#161616] text-[#161616] transition hover:border-[#F59D28] hover:text-[#F59D28] focus:outline-none focus:ring-2 focus:ring-[#F59D28] focus:ring-offset-2 [&::-webkit-details-marker]:hidden">
             <span className="sr-only">Open menu</span>
-            <span className="block h-0.5 w-5 bg-current shadow-[0_6px_0_current,0_-6px_0_current]" />
+            <span aria-hidden="true" className="relative block h-5 w-5">
+              <span className="absolute left-0 top-1 h-0.5 w-5 rounded-full bg-current transition duration-200 group-open:top-[9px] group-open:rotate-45" />
+              <span className="absolute left-0 top-[9px] h-0.5 w-5 rounded-full bg-current transition duration-200 group-open:opacity-0" />
+              <span className="absolute bottom-1 left-0 h-0.5 w-5 rounded-full bg-current transition duration-200 group-open:bottom-auto group-open:top-[9px] group-open:-rotate-45" />
+            </span>
           </summary>
           <div className="absolute right-0 mt-3 w-[min(88vw,360px)] rounded-2xl border border-[#eee9e1] bg-white p-4 shadow-xl">
             <nav className="grid gap-1" aria-label="Mobile navigation">

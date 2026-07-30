@@ -151,7 +151,7 @@ export default function HomePage() {
         eyebrow="Canadian renovation company"
         title="Home Renovation Contractor in Vaughan, Markham, Richmond Hill & the Greater Toronto Area (GTA)"
         copy="McAze helps homeowners and businesses plan Kitchen Renovations, Bathroom Renovations, Basement Finishing, Drywall, Painting, Flooring, Decks, Home Renovations, and Commercial Renovations with practical advice, careful scheduling, and workmanship that respects the property."
-        image="/images/site/hero-renovation.webp"
+        image="/images/site/homepage-hero-mcaze-team.webp"
         primaryCta={{ label: "Get Free Estimate", href: "/contact" }}
         secondaryCta={{ label: "Explore Services", href: "/services" }}
         reassuranceItems={["No obligation", "Written scope before construction", "Clear timelines and pricing"]}
