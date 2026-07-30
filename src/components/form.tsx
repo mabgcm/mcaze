@@ -1,4 +1,5 @@
 import { sendContactEmail } from "@/app/contact/actions";
+import { SpamProtectionFields } from "@/components/spam-protection-fields";
 
 type ContactFormProps = {
   status?: "sent" | "error" | "config-error";
@@ -13,7 +14,8 @@ export function ContactForm({ status }: ContactFormProps) {
   ];
 
   return (
-    <form className="grid gap-5 rounded-2xl border border-[#eee9e1] bg-white p-6 shadow-sm" action={sendContactEmail}>
+    <form className="relative grid gap-5 rounded-2xl border border-[#eee9e1] bg-white p-6 shadow-sm" action={sendContactEmail}>
+      <SpamProtectionFields startedAt={Date.now().toString()} />
       {status === "sent" ? (
         <p className="rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm font-semibold text-green-800">
           Thank you. Your estimate request has been sent and we will follow up soon.
@@ -55,16 +57,16 @@ export function ContactForm({ status }: ContactFormProps) {
       <div className="grid gap-5 sm:grid-cols-2">
         <label className="grid gap-2 text-sm font-semibold text-[#161616]">
           Name
-          <input name="name" required autoComplete="name" className="min-h-12 rounded-xl border border-[#dedbd5] px-4 text-base font-normal outline-none focus:border-[#F59D28]" />
+          <input name="name" required maxLength={80} autoComplete="name" className="min-h-12 rounded-xl border border-[#dedbd5] px-4 text-base font-normal outline-none focus:border-[#F59D28]" />
         </label>
         <label className="grid gap-2 text-sm font-semibold text-[#161616]">
           Phone
-          <input name="phone" type="tel" required autoComplete="tel" className="min-h-12 rounded-xl border border-[#dedbd5] px-4 text-base font-normal outline-none focus:border-[#F59D28]" />
+          <input name="phone" type="tel" required maxLength={30} autoComplete="tel" className="min-h-12 rounded-xl border border-[#dedbd5] px-4 text-base font-normal outline-none focus:border-[#F59D28]" />
         </label>
       </div>
       <label className="grid gap-2 text-sm font-semibold text-[#161616]">
         Email
-        <input name="email" type="email" required autoComplete="email" className="min-h-12 rounded-xl border border-[#dedbd5] px-4 text-base font-normal outline-none focus:border-[#F59D28]" />
+        <input name="email" type="email" required maxLength={254} autoComplete="email" className="min-h-12 rounded-xl border border-[#dedbd5] px-4 text-base font-normal outline-none focus:border-[#F59D28]" />
       </label>
       <label className="grid gap-2 text-sm font-semibold text-[#161616]">
         Project type
@@ -79,7 +81,7 @@ export function ContactForm({ status }: ContactFormProps) {
       <label className="grid gap-2 text-sm font-semibold text-[#161616]">
         Tell us about the project
         <span className="text-sm font-normal leading-6 text-[#6f6a62]">Location, rough timeline, and what you want to improve are enough to start.</span>
-        <textarea name="message" rows={6} required className="rounded-xl border border-[#dedbd5] px-4 py-3 text-base font-normal outline-none focus:border-[#F59D28]" />
+        <textarea name="message" rows={6} required minLength={20} maxLength={4000} className="rounded-xl border border-[#dedbd5] px-4 py-3 text-base font-normal outline-none focus:border-[#F59D28]" />
       </label>
       <button className="min-h-12 rounded-full bg-[#F59D28] px-6 font-semibold text-[#161616] transition hover:bg-[#e78f18]" type="submit">
         Get Free Estimate
