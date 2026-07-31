@@ -240,7 +240,7 @@ export default function HomePage() {
 
       <Section>
         <Container>
-          <SectionHeader eyebrow="Testimonials" title="What homeowners notice most." copy="The best renovation experience is not only about the finished space. Homeowners remember whether communication was clear, the home was respected, and the work felt organized." />
+          <SectionHeader eyebrow="Google Reviews" title="What McAze customers say on Google." copy="Recent feedback from customers who shared their experience on McAze Renovation's public Google Business Profile." />
           <div className="mt-10">
             <Testimonials />
           </div>
