@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CityCard, FeatureCard, ProjectCard, ServiceCard } from "@/components/cards";
 import { Cta } from "@/components/cta";
 import { FaqList } from "@/components/faq";
@@ -21,25 +22,43 @@ export const metadata = createMetadata({
 const process = [
   {
     title: "Consultation",
+    image: "/images/site/home-process-consultation.webp",
     copy:
       "We start by learning what you want to improve, how the space is used, and what timing or budget expectations matter. This first conversation helps us understand the property, identify obvious constraints, and decide whether a site visit is the right next step.",
   },
   {
     title: "Planning",
+    image: "/images/site/home-process-planning.webp",
     copy:
       "After reviewing the space, we define the scope, materials, assumptions, schedule, and trade requirements. You receive a clear proposal that explains what is included, what is excluded, and what decisions are needed before construction begins.",
   },
   {
     title: "Construction",
+    image: "/images/site/home-process-construction.webp",
     copy:
       "Work is scheduled in practical stages so demolition, rough work, finishes, and cleanup stay coordinated. We protect the home, communicate progress, manage trade handoffs, and keep the renovation moving without rushing details that affect the final result.",
   },
   {
     title: "Walkthrough",
+    image: "/images/site/home-process-walkthrough.webp",
     copy:
       "Before closing the project, we review the completed work with you, note touchups, answer care questions, and confirm any final details. The goal is a clean handoff where the space feels finished, usable, and ready for everyday life.",
   },
 ];
+
+const homeServiceImages: Record<string, string> = {
+  "kitchen-renovation": "/images/site/home-service-kitchen-mcaze.webp",
+  "bathroom-renovation": "/images/site/home-service-bathroom-mcaze.webp",
+  "basement-renovation": "/images/site/home-service-basement-mcaze.webp",
+  painting: "/images/site/home-service-painting-mcaze.webp",
+  drywall: "/images/site/home-service-drywall-mcaze.webp",
+  flooring: "/images/site/home-service-flooring-mcaze.webp",
+  "deck-fence": "/images/site/home-service-deck-fence-mcaze.webp",
+  landscaping: "/images/site/home-service-landscaping-mcaze.webp",
+  "snow-removal": "/images/site/home-service-snow-removal-mcaze.webp",
+  demolition: "/images/site/home-service-demolition-mcaze.webp",
+  electrical: "/images/site/home-service-electrical-mcaze.webp",
+};
 
 const trustBar = [
   "Licensed & Insured",
@@ -81,24 +100,6 @@ const trustSignals = [
   {
     title: "Warranty",
     copy: "Product and workmanship expectations are reviewed before work begins and confirmed through the final walkthrough process.",
-  },
-];
-
-const reviewPlaceholders = [
-  {
-    title: "Google Business Profile",
-    metric: "Live rating",
-    copy: "Reserved for the verified Google rating, review count, and profile link once the approved reviews widget or API connection is ready.",
-  },
-  {
-    title: "Verified Review Feed",
-    metric: "Recent reviews",
-    copy: "Prepared for authentic homeowner reviews with reviewer names, dates, ratings, and source attribution pulled from Google.",
-  },
-  {
-    title: "Review Highlights",
-    metric: "Common themes",
-    copy: "A future summary area for communication, cleanliness, workmanship, scheduling, and project organization patterns.",
   },
 ];
 
@@ -197,7 +198,7 @@ export default function HomePage() {
           />
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3" aria-label="McAze renovation services">
             {services.map((service) => (
-              <ServiceCard key={service.slug} service={service} />
+              <ServiceCard key={service.slug} service={service} image={homeServiceImages[service.slug]} />
             ))}
           </div>
         </Container>
@@ -211,11 +212,22 @@ export default function HomePage() {
               title="A renovation company built around clarity, respect, and clean workmanship."
               copy="Renovations affect the most personal parts of a property. Our work is organized around clear communication, practical sequencing, and job sites that feel managed from start to finish."
             />
-            <div className="grid gap-6 sm:grid-cols-2">
-              <FeatureCard title="Clear communication" copy="Homeowners should not have to chase updates or guess what happens next. We explain scope, timing, decisions, and changes in plain language so the renovation feels organized from the first visit." />
-              <FeatureCard title="Clean job sites" copy="Renovation work is disruptive, but the home should still be respected. We plan access, floor protection, dust-conscious habits, material storage, and daily cleanup around the rooms that remain in use." />
-              <FeatureCard title="Reliable scheduling" copy="Good results depend on practical sequencing, not rushed promises. McAze coordinates demolition, drywall, painting, flooring, electrical coordination, and finishing so each stage supports the next." />
-              <FeatureCard title="Attention to detail" copy="The final impression comes from transitions, trim, touchups, alignment, and cleanup. We treat those details as part of the project plan so the finished space feels complete rather than patched together." />
+            <div>
+              <div className="relative mb-6 aspect-[3/2] overflow-hidden rounded-2xl bg-[#f7f3ed] shadow-sm">
+                <Image
+                  src="/images/site/home-why-mcaze-teamwork.webp"
+                  alt="McAze renovation team coordinating work on an active job site"
+                  fill
+                  sizes="(min-width: 1024px) 55vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="grid gap-6 sm:grid-cols-2">
+                <FeatureCard title="Clear communication" copy="Homeowners should not have to chase updates or guess what happens next. We explain scope, timing, decisions, and changes in plain language so the renovation feels organized from the first visit." />
+                <FeatureCard title="Clean job sites" copy="Renovation work is disruptive, but the home should still be respected. We plan access, floor protection, dust-conscious habits, material storage, and daily cleanup around the rooms that remain in use." />
+                <FeatureCard title="Reliable scheduling" copy="Good results depend on practical sequencing, not rushed promises. McAze coordinates demolition, drywall, painting, flooring, electrical coordination, and finishing so each stage supports the next." />
+                <FeatureCard title="Attention to detail" copy="The final impression comes from transitions, trim, touchups, alignment, and cleanup. We treat those details as part of the project plan so the finished space feels complete rather than patched together." />
+              </div>
             </div>
           </div>
           <div className="mt-12">
@@ -296,22 +308,6 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      <Section className="bg-[#faf7f1]">
-        <Container>
-          <SectionHeader eyebrow="Google Reviews" title="Prepared for verified Google Reviews." copy="This layout is ready for a future Google Reviews feed without showing fake reviews. Once connected, it can display verified ratings, review dates, customer names, and source links." />
-          <div className="mt-10 grid gap-5 md:grid-cols-3" aria-label="Google Reviews placeholders">
-            {reviewPlaceholders.map((item) => (
-              <article key={item.title} className="rounded-2xl border border-[#eee9e1] bg-white p-6 shadow-sm">
-                <p className="text-sm font-semibold text-[#b86f12]">Ready to Connect</p>
-                <p className="mt-3 text-3xl font-semibold text-[#161616]">{item.metric}</p>
-                <h3 className="mt-3 text-xl font-semibold text-[#161616]">{item.title}</h3>
-                <p className="mt-3 leading-7 text-[#5d5a55]">{item.copy}</p>
-              </article>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
       <Section>
         <Container>
           <SectionHeader eyebrow="Blog" title="Latest Renovation Insights" copy="Helpful renovation planning articles will appear here as the blog grows. These placeholders reserve space for practical homeowner guidance without adding unfinished posts." />
@@ -346,7 +342,7 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      <Cta />
+      <Cta image="/images/site/home-cta-mcaze-team.webp" />
     </>
   );
 }

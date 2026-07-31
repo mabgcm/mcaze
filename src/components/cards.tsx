@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { City, Project, Service } from "@/lib/types";
 import { getService } from "@/data/services";
 
-export function ServiceCard({ service }: { service: Service }) {
+export function ServiceCard({ service, image }: { service: Service; image?: string }) {
   return (
     <Link
       href={`/services/${service.slug}`}
@@ -11,7 +11,7 @@ export function ServiceCard({ service }: { service: Service }) {
       className="group block rounded-2xl border border-[#eee9e1] bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
     >
       <div className="relative mb-6 aspect-[16/10] overflow-hidden rounded-xl bg-[#f7f3ed]">
-        <Image src={service.image} alt="" fill sizes="(min-width: 1024px) 30vw, 100vw" className="object-cover transition duration-300 group-hover:scale-105" />
+        <Image src={image ?? service.image} alt="" fill sizes="(min-width: 1024px) 30vw, 100vw" className="object-cover transition duration-300 group-hover:scale-105" />
       </div>
       <article>
         <h3 className="text-xl font-semibold text-[#161616]">{service.title}</h3>
