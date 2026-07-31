@@ -103,24 +103,6 @@ const trustSignals = [
   },
 ];
 
-const beforeAfterPlaceholders = [
-  {
-    title: "Kitchen Transformation",
-    location: "Vaughan",
-    copy: "Prepared for before and after photos, scope notes, material details, and the finished result once project photography is available.",
-  },
-  {
-    title: "Bathroom Update",
-    location: "Richmond Hill",
-    copy: "Ready to show the original condition, planning priorities, waterproofing notes, fixture choices, and final renovation outcome.",
-  },
-  {
-    title: "Basement Finishing",
-    location: "Markham",
-    copy: "Structured for side-by-side progress photos, layout improvements, lighting changes, flooring details, and completed living space photos.",
-  },
-];
-
 const insightPlaceholders = [
   {
     category: "Planning",
@@ -207,27 +189,27 @@ export default function HomePage() {
       <Section className="bg-[#faf7f1]">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-            <SectionHeader
-              eyebrow="Why McAze"
-              title="A renovation company built around clarity, respect, and clean workmanship."
-              copy="Renovations affect the most personal parts of a property. Our work is organized around clear communication, practical sequencing, and job sites that feel managed from start to finish."
-            />
             <div>
-              <div className="relative mb-6 aspect-[3/2] overflow-hidden rounded-2xl bg-[#f7f3ed] shadow-sm">
+              <SectionHeader
+                eyebrow="Why McAze"
+                title="A renovation company built around clarity, respect, and clean workmanship."
+                copy="Renovations affect the most personal parts of a property. Our work is organized around clear communication, practical sequencing, and job sites that feel managed from start to finish."
+              />
+              <div className="relative mt-8 aspect-[4/3] overflow-hidden rounded-2xl bg-[#f7f3ed] shadow-sm lg:aspect-[5/4]">
                 <Image
                   src="/images/site/home-why-mcaze-teamwork.webp"
                   alt="McAze renovation team coordinating work on an active job site"
                   fill
-                  sizes="(min-width: 1024px) 55vw, 100vw"
+                  sizes="(min-width: 1024px) 42vw, 100vw"
                   className="object-cover"
                 />
               </div>
-              <div className="grid gap-6 sm:grid-cols-2">
-                <FeatureCard title="Clear communication" copy="Homeowners should not have to chase updates or guess what happens next. We explain scope, timing, decisions, and changes in plain language so the renovation feels organized from the first visit." />
-                <FeatureCard title="Clean job sites" copy="Renovation work is disruptive, but the home should still be respected. We plan access, floor protection, dust-conscious habits, material storage, and daily cleanup around the rooms that remain in use." />
-                <FeatureCard title="Reliable scheduling" copy="Good results depend on practical sequencing, not rushed promises. McAze coordinates demolition, drywall, painting, flooring, electrical coordination, and finishing so each stage supports the next." />
-                <FeatureCard title="Attention to detail" copy="The final impression comes from transitions, trim, touchups, alignment, and cleanup. We treat those details as part of the project plan so the finished space feels complete rather than patched together." />
-              </div>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2">
+              <FeatureCard title="Clear communication" copy="Homeowners should not have to chase updates or guess what happens next. We explain scope, timing, decisions, and changes in plain language so the renovation feels organized from the first visit." />
+              <FeatureCard title="Clean job sites" copy="Renovation work is disruptive, but the home should still be respected. We plan access, floor protection, dust-conscious habits, material storage, and daily cleanup around the rooms that remain in use." />
+              <FeatureCard title="Reliable scheduling" copy="Good results depend on practical sequencing, not rushed promises. McAze coordinates demolition, drywall, painting, flooring, electrical coordination, and finishing so each stage supports the next." />
+              <FeatureCard title="Attention to detail" copy="The final impression comes from transitions, trim, touchups, alignment, and cleanup. We treat those details as part of the project plan so the finished space feels complete rather than patched together." />
             </div>
           </div>
           <div className="mt-12">
@@ -251,29 +233,6 @@ export default function HomePage() {
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {projects.map((project) => (
               <ProjectCard key={project.slug} project={project} />
-            ))}
-          </div>
-        </Container>
-      </Section>
-
-      <Section>
-        <Container>
-          <SectionHeader eyebrow="Before & After" title="Prepared for future renovation transformations." copy="This section is ready for real before and after comparisons once completed project photography is approved. It is structured to show the original condition, the scope, and the result clearly." />
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {beforeAfterPlaceholders.map((item) => (
-              <article key={item.title} className="rounded-2xl border border-[#eee9e1] bg-white p-5 shadow-sm">
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="grid aspect-[4/3] place-items-center rounded-xl border border-dashed border-[#dedbd5] bg-[#faf7f1] text-xs font-semibold uppercase tracking-[0.14em] text-[#6f6a62]">
-                    Before
-                  </div>
-                  <div className="grid aspect-[4/3] place-items-center rounded-xl border border-dashed border-[#dedbd5] bg-[#faf7f1] text-xs font-semibold uppercase tracking-[0.14em] text-[#6f6a62]">
-                    After
-                  </div>
-                </div>
-                <p className="mt-5 text-sm font-semibold text-[#b86f12]">{item.location}</p>
-                <h3 className="mt-2 text-xl font-semibold text-[#161616]">{item.title}</h3>
-                <p className="mt-3 leading-7 text-[#5d5a55]">{item.copy}</p>
-              </article>
             ))}
           </div>
         </Container>
