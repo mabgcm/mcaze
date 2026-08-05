@@ -32,11 +32,17 @@ export function ProjectCard({ project }: { project: Project }) {
       className="group block overflow-hidden rounded-2xl border border-[#eee9e1] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md"
     >
       <div className="relative aspect-[4/3] bg-[#f7f3ed]">
-        <Image src={project.image} alt="" fill sizes="(min-width: 1024px) 30vw, 100vw" className="object-cover transition duration-300 group-hover:scale-105" />
+        <Image
+          src={project.image}
+          alt={project.imageAlt ?? project.title}
+          fill
+          sizes="(min-width: 1024px) 30vw, 100vw"
+          className="object-cover transition duration-300 group-hover:scale-105"
+        />
       </div>
       <article className="p-5">
         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#b86f12]">Project Type</p>
-        <p className="mt-2 text-sm font-semibold text-[#161616]">{service?.title ?? "Renovation"}</p>
+        <p className="mt-2 text-sm font-semibold text-[#161616]">{project.projectType ?? service?.title ?? "Renovation"}</p>
         <h3 className="mt-2 text-xl font-semibold text-[#161616]">{project.title}</h3>
         <div className="mt-4 grid gap-1 text-sm">
           <span className="font-semibold text-[#161616]">Location</span>

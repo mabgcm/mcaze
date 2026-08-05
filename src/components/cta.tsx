@@ -6,10 +6,12 @@ export function Cta({
   title = "Ready to discuss your renovation?",
   copy = "Request a free, no-obligation estimate. We will review your scope, explain practical next steps, and outline a clear written path before any construction decisions are made.",
   image,
+  buttonLabel = "Get Free Estimate",
 }: {
   title?: string;
   copy?: string;
   image?: string;
+  buttonLabel?: string;
 }) {
   return (
     <Section>
@@ -32,7 +34,7 @@ export function Cta({
             <p className="mt-4 text-pretty leading-8 text-white/70">{copy}</p>
           </div>
           <div className="relative z-10 mt-8 shrink-0 lg:mt-0">
-            <Button href="/contact">Get Free Estimate</Button>
+            <Button href="/contact">{buttonLabel}</Button>
           </div>
         </div>
       </Container>

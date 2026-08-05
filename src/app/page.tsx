@@ -229,7 +229,11 @@ export default function HomePage() {
 
       <Section className="bg-[#faf7f1]">
         <Container>
-          <SectionHeader eyebrow="Featured Projects" title="Project examples shaped around practical design and careful construction." copy="These project templates show the type of renovation work McAze supports across the GTA. Full case studies and photography can be added as completed projects are documented." />
+          <SectionHeader
+            eyebrow="Featured Projects"
+            title="Real project details shaped around careful planning and construction."
+            copy="Explore McAze work across Ontario through detailed project scopes, construction-stage photography, technical decisions, and the practical process behind each result."
+          />
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {projects.map((project) => (
               <ProjectCard key={project.slug} project={project} />

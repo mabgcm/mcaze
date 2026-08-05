@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/data/site";
-import type { BlogPost, FaqItem, Service } from "@/lib/types";
+import type { BlogPost, FaqItem, Project, Service } from "@/lib/types";
 import { absoluteUrl, titleTemplate } from "@/lib/utils";
 
 type MetadataInput = {
@@ -218,5 +218,37 @@ export function imageObjectSchema(url: string, name: string) {
     url: imageUrl,
     contentUrl: imageUrl,
     name,
+  };
+}
+
+export function projectSchema(project: Project) {
+  const url = `${siteConfig.url}/portfolio/${project.slug}`;
+  const images = [project.image, ...(project.galleryItems?.map((item) => item.image) ?? project.gallery)].map(absoluteUrl);
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${url}#project`,
+    url,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+    headline: project.title,
+    description: project.seoDescription ?? project.summary,
+    image: images,
+    datePublished: "2026-08-05",
+    dateModified: "2026-08-05",
+    about: project.categories,
+    contentLocation: {
+      "@type": "Place",
+      name: project.location,
+    },
+    author: {
+      "@id": `${siteConfig.url}/#organization`,
+    },
+    publisher: {
+      "@id": `${siteConfig.url}/#organization`,
+    },
   };
 }

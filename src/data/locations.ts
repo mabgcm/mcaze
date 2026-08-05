@@ -2,6 +2,13 @@ import type { City } from "@/lib/types";
 
 export const cities: City[] = [
   {
+    slug: "barrie",
+    name: "Barrie",
+    intro:
+      "Barrie construction and renovation projects range from established in-town homes to new residential properties on larger wooded or sloped sites. McAze supports homeowners and builders with organized site preparation, foundation and structural coordination, interior renovation work, drywall, painting, flooring, and exterior improvements. We plan access, material movement, changing grades, weather exposure, and trade sequencing early so each completed stage gives the next crew a reliable starting point.",
+    neighborhoods: ["South Barrie", "Ardagh", "Holly", "Painswick"],
+  },
+  {
     slug: "vaughan",
     name: "Vaughan",
     intro:

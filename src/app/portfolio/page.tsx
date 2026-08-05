@@ -6,8 +6,8 @@ import { projects } from "@/data/projects";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "Portfolio",
-  description: "View McAze renovation project placeholders and portfolio templates for kitchens, bathrooms, basements, and full-home improvements.",
+  title: "Renovation Projects & Portfolio",
+  description: "Explore McAze renovation and construction projects across Markham and the GTA, including detailed scopes, installation methods and project galleries.",
   path: "/portfolio",
 });
 
@@ -16,14 +16,14 @@ export default function PortfolioPage() {
     <>
       <Hero
         eyebrow="Portfolio"
-        title="Project pages ready for real renovation work."
-        copy="These portfolio templates are structured for galleries, details, before-and-after sections, related projects, and strong internal linking."
-        image="/images/site/portfolio-main-floor.webp"
+        title="Real project details. Careful work from preparation to finish."
+        copy="Explore completed McAze work across Markham and the Greater Toronto Area, with project scopes, construction-stage details, galleries, and the decisions behind each result."
+        image="/images/portfolio/markham-window-door/markham-new-construction-windows-side-elevation.webp"
         primaryCta={{ label: "Discuss Your Project", href: "/contact" }}
       />
       <Section>
         <Container>
-          <SectionHeader title="Featured projects" copy="Replace the placeholder images and project notes with completed McAze work as the portfolio grows." />
+          <SectionHeader title="Featured projects" copy="See how McAze plans, coordinates, and completes renovation and construction work across the GTA." />
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {projects.map((project) => (
               <ProjectCard key={project.slug} project={project} />
