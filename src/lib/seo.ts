@@ -224,31 +224,70 @@ export function imageObjectSchema(url: string, name: string) {
 export function projectSchema(project: Project) {
   const url = `${siteConfig.url}/portfolio/${project.slug}`;
   const images = [project.image, ...(project.galleryItems?.map((item) => item.image) ?? project.gallery)].map(absoluteUrl);
+  const galleryItems = project.galleryItems ?? project.gallery.map((image, index) => ({
+    image,
+    alt: `${project.title} project image ${index + 1}`,
+    caption: `${project.title} project image ${index + 1}`,
+  }));
 
   return {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "@id": `${url}#project`,
-    url,
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": url,
-    },
-    headline: project.title,
-    description: project.seoDescription ?? project.summary,
-    image: images,
-    datePublished: "2026-08-05",
-    dateModified: "2026-08-05",
-    about: project.categories,
-    contentLocation: {
-      "@type": "Place",
-      name: project.location,
-    },
-    author: {
-      "@id": `${siteConfig.url}/#organization`,
-    },
-    publisher: {
-      "@id": `${siteConfig.url}/#organization`,
-    },
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `${url}#project`,
+        url,
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": url,
+        },
+        headline: project.title,
+        description: project.seoDescription ?? project.summary,
+        image: images,
+        datePublished: "2026-08-05",
+        dateModified: "2026-08-05",
+        about: project.categories,
+        contentLocation: {
+          "@type": "Place",
+          name: project.location,
+        },
+        author: {
+          "@id": `${siteConfig.url}/#organization`,
+        },
+        publisher: {
+          "@id": `${siteConfig.url}/#organization`,
+        },
+        provider: {
+          "@type": "HomeAndConstructionBusiness",
+          "@id": `${siteConfig.url}/#organization`,
+        },
+        mentions: {
+          "@type": "Service",
+          ...(project.projectType?.toLowerCase().includes("commercial")
+            ? { additionalType: "https://schema.org/CommercialConstruction" }
+            : {}),
+          serviceType: project.projectType === "Residential renovation" ? "Residential Remodeling" : project.projectType,
+          provider: {
+            "@id": `${siteConfig.url}/#organization`,
+          },
+          areaServed: project.location,
+        },
+        hasPart: {
+          "@id": `${url}#gallery`,
+        },
+      },
+      {
+        "@type": "ImageGallery",
+        "@id": `${url}#gallery`,
+        name: project.galleryTitle ?? `${project.title} Gallery`,
+        description: project.galleryCopy ?? project.summary,
+        associatedMedia: galleryItems.map((item) => ({
+          "@type": "ImageObject",
+          contentUrl: absoluteUrl(item.image),
+          name: item.alt,
+          caption: item.caption,
+        })),
+      },
+    ],
   };
 }

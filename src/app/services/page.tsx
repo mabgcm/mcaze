@@ -18,7 +18,7 @@ export default function ServicesPage() {
         eyebrow="Services"
         title="Renovation services with one clear standard."
         copy="From full room renovations to focused finishing work, McAze brings structure, clean execution, and practical recommendations to every scope."
-        image="/images/site/contractor-tablet.webp"
+        image="/images/site/home-process-construction.webp"
         primaryCta={{ label: "Get Free Estimate", href: "/contact" }}
       />
       <Section>
