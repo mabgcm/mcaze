@@ -72,7 +72,7 @@ export function Footer() {
 
           <div className="mt-7 grid gap-5 text-sm text-white/70">
             <div>
-              <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-white/45">Office Address</h2>
+              <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-white/45">Office Address</h3>
               <address className="mt-2 not-italic leading-7">
                 <a href={siteConfig.mapUrl} target="_blank" rel="noopener noreferrer" className="transition hover:text-[#F59D28]">
                   {siteConfig.address.street}
@@ -82,7 +82,7 @@ export function Footer() {
               </address>
             </div>
             <div>
-              <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-white/45">Contact</h2>
+              <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-white/45">Contact</h3>
               <div className="mt-2 space-y-2">
                 <p>
                   <a href={`tel:${siteConfig.phone.replace(/[^+\d]/g, "")}`} className="transition hover:text-[#F59D28]">
@@ -104,7 +104,7 @@ export function Footer() {
               </div>
             </div>
             <div>
-              <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-white/45">Business Hours</h2>
+              <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-white/45">Business Hours</h3>
               <ul className="mt-2 space-y-1 leading-7">
                 {siteConfig.hours.map((hour) => (
                   <li key={hour}>{hour}</li>
@@ -133,7 +133,7 @@ export function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[0.9fr_1.7fr_0.9fr]">
           {footerNav.map((group) => (
             <div key={group.title}>
-              <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-white/55">{group.title}</h2>
+              <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-white/55">{group.title}</h3>
               <ul className={group.title === "Services" ? "mt-5 grid gap-3 sm:grid-cols-2" : "mt-5 space-y-3"}>
                 {group.items.map((item) => (
                   <li key={item.href}>

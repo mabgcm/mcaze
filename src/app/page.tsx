@@ -70,10 +70,10 @@ const trustBar = [
 ];
 
 const conversionStats = [
-  { value: "GTA", label: "Years serving GTA", note: "Local renovation focus" },
-  { value: "Project-based", label: "Completed projects", note: "Portfolio numbers coming soon" },
-  { value: "Google", label: "Rating", note: "Ready for live review data" },
-  { value: "1 business day", label: "Response time", note: "For most estimate requests" },
+  { value: "26+", label: "Years of experience", note: "Serving the Greater Toronto Area" },
+  { value: "200+", label: "Completed projects", note: "Residential and commercial work" },
+  { value: "5.0", label: "Google rating", note: "Based on 19 Google reviews" },
+  { value: "1 business day", label: "Typical response time", note: "For most estimate requests" },
 ];
 
 const trustSignals = [

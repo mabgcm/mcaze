@@ -1,4 +1,8 @@
 import type { Service } from "@/lib/types";
+import { bathroomServiceContent } from "@/data/bathroom-service-content";
+import { basementServiceContent } from "@/data/basement-service-content";
+import { commercialServiceContent } from "@/data/commercial-service-content";
+import { flooringServiceContent } from "@/data/flooring-service-content";
 
 const commonProcess = [
   "Site review and practical scope planning",
@@ -44,6 +48,9 @@ export const services: Service[] = [
   {
     slug: "bathroom-renovation",
     title: "Bathroom Renovation",
+    seoTitle: "Bathroom Renovation Toronto & GTA",
+    seoDescription:
+      "Plan a full bathroom renovation in Toronto or the GTA with McAze. Explore costs, timelines, permits, waterproofing, tile, showers and the renovation process.",
     shortTitle: "Bathrooms",
     excerpt:
       "Bathroom work needs careful planning because small rooms carry plumbing, ventilation, tile, waterproofing, fixtures, and storage decisions. We renovate ensuites, powder rooms, family bathrooms, and older spaces that need better moisture control. Homeowners usually come to us for cleaner layouts, durable finishes, and a bathroom that feels easier to maintain every day.",
@@ -52,12 +59,47 @@ export const services: Service[] = [
     image: "/images/site/home-service-bathroom-mcaze.webp",
     benefits: ["Waterproof assemblies", "Better ventilation", "Efficient layouts", "Polished tile work"],
     process: commonProcess,
-    faqs: commonFaqs,
+    faqs: [
+      {
+        question: "Do you provide a written bathroom renovation estimate?",
+        answer:
+          "Yes. McAze prepares a written estimate based on the existing bathroom, intended scope, selections, allowances, access conditions and known trade requirements.",
+      },
+      {
+        question: "Can McAze repair water damage during the renovation?",
+        answer:
+          "Yes, where the damage falls within the agreed scope. The source and extent are assessed after affected finishes are opened, and specialized assessment may be recommended for major structural or mould-related concerns.",
+      },
+      {
+        question: "Can you renovate a bathroom in an occupied home?",
+        answer:
+          "Yes. McAze plans protection, controlled demolition, debris removal and daily cleanup. Homeowners should retain access to another bathroom or arrange an alternative where the property has only one.",
+      },
+      {
+        question: "Do you renovate condominium bathrooms?",
+        answer:
+          "Yes, subject to the building's renovation rules. Owners should obtain the property-management requirements for insurance, work hours, elevator access, protection and water shutdowns before scheduling.",
+      },
+      {
+        question: "Are bathroom renovation permits included?",
+        answer:
+          "Permit requirements depend on the work. McAze identifies likely coordination needs during scope planning, while the exact municipal, electrical and condominium requirements are confirmed for the property.",
+      },
+      {
+        question: "Does McAze serve areas outside Toronto?",
+        answer:
+          "McAze provides bathroom renovation services across the Greater Toronto Area, including Vaughan, Markham, Richmond Hill, North York and Mississauga, subject to project scope and availability.",
+      },
+    ],
     related: ["drywall", "flooring", "electrical"],
+    pageContent: bathroomServiceContent,
   },
   {
     slug: "basement-renovation",
     title: "Basement Renovation",
+    seoTitle: "Basement Renovation Toronto & GTA",
+    seoDescription:
+      "Plan a basement renovation in Toronto or the GTA with McAze. Learn about costs, timelines, permits, legal suites, moisture, insulation, flooring and our process.",
     shortTitle: "Basements",
     excerpt:
       "Basement finishing turns underused lower levels into practical living space for work, guests, kids, fitness, storage, or family time. McAze plans framing coordination, insulation considerations, drywall, flooring, lighting, trim, and painting around the existing conditions. It is a strong option for homeowners who need more room but want to stay in the same home.",
@@ -66,8 +108,95 @@ export const services: Service[] = [
     image: "/images/site/home-service-basement-mcaze.webp",
     benefits: ["More living space", "Improved lighting", "Moisture-aware planning", "Code-conscious execution"],
     process: commonProcess,
-    faqs: commonFaqs,
+    faqs: [
+      {
+        question: "Does McAze provide a written basement renovation estimate?",
+        answer:
+          "Yes. McAze prepares a written estimate based on the basement condition, intended use, plans, approvals, selections, allowances and known trade requirements.",
+      },
+      {
+        question: "Can McAze finish an unfinished basement?",
+        answer:
+          "Yes. The scope can include framing, insulation, drywall, ceilings, flooring, lighting, trim and painting after moisture, mechanical, permit and trade requirements are reviewed.",
+      },
+      {
+        question: "Can you add a bathroom to a basement?",
+        answer:
+          "A basement bathroom is possible in many homes. Drainage, venting, water supply, ceiling height, electrical work, ventilation and permit requirements must be assessed before the location and price are confirmed.",
+      },
+      {
+        question: "Does McAze build legal basement apartments?",
+        answer:
+          "McAze can review and coordinate secondary-suite construction subject to the property, approved design, permits, zoning and required licensed-professional involvement.",
+      },
+      {
+        question: "Should a basement be waterproofed before renovation?",
+        answer:
+          "Active leakage and known moisture problems should be resolved before new finishes conceal the foundation. The appropriate repair or flood-protection work depends on the source and may require a specialist.",
+      },
+      {
+        question: "Does McAze renovate basements outside Toronto?",
+        answer:
+          "McAze provides basement renovation services across the GTA, including Vaughan, Markham, Richmond Hill, North York and Mississauga, subject to project scope and availability.",
+      },
+    ],
     related: ["drywall", "flooring", "painting"],
+    pageContent: basementServiceContent,
+  },
+  {
+    slug: "commercial-renovation",
+    title: "Commercial Renovation",
+    seoTitle: "Commercial Renovation Toronto & GTA",
+    seoDescription:
+      "Plan a commercial renovation, tenant improvement or fit-out in Toronto and the GTA with McAze. Explore costs, timelines, permits, leases and our process.",
+    shortTitle: "Commercial",
+    excerpt:
+      "Commercial renovations need to support operations, approvals, customers, staff and the opening schedule. McAze coordinates offices, retail spaces, restaurants and other business properties around permits, landlord requirements, building systems, equipment and durable finishes.",
+    description:
+      "McAze plans commercial renovations and tenant improvements around the intended business use, property requirements, regulated trades, durable finishes and operational handover.",
+    image:
+      "/images/portfolio/woodbridge-fast-food-renovation/commercial-kitchen-equipment-installation-woodbridge.webp",
+    benefits: [
+      "Business-focused planning",
+      "Permit and trade coordination",
+      "Durable commercial finishes",
+      "Operational handover",
+    ],
+    process: commonProcess,
+    faqs: [
+      {
+        question: "Does McAze provide written commercial renovation estimates?",
+        answer:
+          "Yes. The estimate is based on the intended business use, site conditions, drawings, lease requirements, approvals, trade scope, selections, allowances and exclusions.",
+      },
+      {
+        question: "Can McAze renovate an occupied commercial property?",
+        answer:
+          "Some projects can be phased or completed after hours. Safety, exits, dust, noise, utilities, property rules and the business operation must be reviewed before an occupied-work plan is confirmed.",
+      },
+      {
+        question: "Does McAze complete restaurant fit-outs?",
+        answer:
+          "Yes, subject to scope and required specialists. McAze's Woodbridge project included insulated panels, kitchen equipment, exhaust-hood systems, refrigerated displays and cold-room installation.",
+      },
+      {
+        question: "Are commercial renovation permits included?",
+        answer:
+          "Permit and design responsibilities are defined during scope planning. Requirements depend on the use, alterations and municipality, and may involve qualified designers, engineers and separate trade approvals.",
+      },
+      {
+        question: "Can McAze work with landlord construction requirements?",
+        answer:
+          "Yes. The available lease requirements and building construction manual are reviewed so access, insurance, work hours, protection, shutdowns and submission obligations can be reflected in the plan.",
+      },
+      {
+        question: "Where does McAze provide commercial renovation services?",
+        answer:
+          "McAze serves Toronto and GTA communities including Vaughan, Woodbridge, Mississauga, Markham, Richmond Hill and North York, subject to project type and availability.",
+      },
+    ],
+    related: ["demolition", "drywall", "electrical"],
+    pageContent: commercialServiceContent,
   },
   {
     slug: "painting",
@@ -100,6 +229,9 @@ export const services: Service[] = [
   {
     slug: "flooring",
     title: "Flooring",
+    seoTitle: "Flooring Installation Toronto & GTA",
+    seoDescription:
+      "Plan flooring installation in Toronto and the GTA with McAze. Compare hardwood, engineered wood, vinyl and laminate, plus costs, preparation and timelines.",
     shortTitle: "Flooring",
     excerpt:
       "New flooring can change how a home feels underfoot and how rooms connect visually. We review existing surfaces, removal needs, subfloor conditions, layout direction, transitions, trims, and installation details. It works well for main floors, basements, kitchens, rentals, and homes where worn materials are making otherwise good spaces feel tired.",
@@ -108,8 +240,40 @@ export const services: Service[] = [
     image: "/images/site/home-service-flooring-mcaze.webp",
     benefits: ["Proper substrate prep", "Clean transitions", "Durable materials", "Consistent finish"],
     process: commonProcess,
-    faqs: commonFaqs,
+    faqs: [
+      {
+        question: "Does McAze provide a written flooring installation estimate?",
+        answer:
+          "Yes. The estimate identifies the measured scope, selected product, removal, preparation assumptions, installation method, trims, transitions, allowances and exclusions.",
+      },
+      {
+        question: "Can McAze remove the existing flooring?",
+        answer:
+          "Yes, when included in the agreed scope. Suspected hazardous materials or concealed conditions may require testing, specialist work or a separately approved change before removal continues.",
+      },
+      {
+        question: "Can you repair or level the subfloor?",
+        answer:
+          "McAze can complete appropriate preparation within the confirmed scope. The exact work is often determined after the existing floor is removed and the substrate can be inspected.",
+      },
+      {
+        question: "Does McAze install flooring in condominiums?",
+        answer:
+          "Yes, subject to the corporation's approval, acoustic requirements, work hours, elevator booking, protection rules and contractor documentation.",
+      },
+      {
+        question: "Can flooring be installed in an occupied home?",
+        answer:
+          "Often yes. Rooms, furniture, access, pets, dust and product-specific curing requirements must be planned before the installation sequence is confirmed.",
+      },
+      {
+        question: "Where does McAze install flooring?",
+        answer:
+          "McAze serves Toronto and GTA communities including Vaughan, Markham, Richmond Hill, North York and Mississauga, subject to scope and availability.",
+      },
+    ],
     related: ["kitchen-renovation", "basement-renovation", "painting"],
+    pageContent: flooringServiceContent,
   },
   {
     slug: "deck-fence",

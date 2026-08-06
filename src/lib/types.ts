@@ -11,6 +11,8 @@ export type FaqItem = {
 export type Service = {
   slug: string;
   title: string;
+  seoTitle?: string;
+  seoDescription?: string;
   shortTitle: string;
   excerpt: string;
   description: string;
@@ -19,6 +21,26 @@ export type Service = {
   process: string[];
   faqs: FaqItem[];
   related: string[];
+  pageContent?: {
+    heroEyebrow: string;
+    heroCopy: string;
+    secondaryCta?: { label: string; href: string };
+    introQuestion: string;
+    intro: string[];
+    questions: Array<{
+      eyebrow?: string;
+      question: string;
+      paragraphs: string[];
+      bullets?: string[];
+      sourceLink?: { label: string; href: string };
+    }>;
+    projectSlugs?: string[];
+    projectQuestion?: string;
+    relatedQuestion?: string;
+    faqQuestion?: string;
+    ctaQuestion?: string;
+    ctaCopy?: string;
+  };
 };
 
 export type City = {

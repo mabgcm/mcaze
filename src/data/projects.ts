@@ -1,11 +1,17 @@
 import type { Project } from "@/lib/types";
+import { competitionVenueModularWashrooms } from "@/data/competition-venue-modular-washrooms";
 import { gtaBathroomRenovation } from "@/data/gta-bathroom-renovation";
 import { mississaugaCommercialDoorWindow } from "@/data/mississauga-commercial-door-window";
 import { northYorkCondo } from "@/data/north-york-condo";
 import { thornhillTownhouse } from "@/data/thornhill-townhouse";
+import { torontoTemporaryCompetitionSeating } from "@/data/toronto-temporary-competition-seating";
+import { torontoTemporarySiteManagementOffices } from "@/data/toronto-temporary-site-management-offices";
 import { woodbridgeFastFoodRenovation } from "@/data/woodbridge-fast-food-renovation";
 
 export const projects: Project[] = [
+  torontoTemporaryCompetitionSeating,
+  competitionVenueModularWashrooms,
+  torontoTemporarySiteManagementOffices,
   woodbridgeFastFoodRenovation,
   gtaBathroomRenovation,
   northYorkCondo,
