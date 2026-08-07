@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import { CampaignPopup } from "@/components/campaign-popup";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { JsonLd } from "@/components/json-ld";
@@ -88,7 +87,6 @@ export default function RootLayout({
         <Footer />
         <MobileEstimateBar />
         <WhatsAppButton />
-        <CampaignPopup />
         <JsonLd data={organizationSchema()} />
         <JsonLd data={webSiteSchema()} />
         <JsonLd data={localBusinessSchema()} />
