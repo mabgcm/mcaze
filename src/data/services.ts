@@ -3,6 +3,17 @@ import { bathroomServiceContent } from "@/data/bathroom-service-content";
 import { basementServiceContent } from "@/data/basement-service-content";
 import { commercialServiceContent } from "@/data/commercial-service-content";
 import { flooringServiceContent } from "@/data/flooring-service-content";
+import { paintingServiceContent } from "@/data/painting-service-content";
+import { exteriorPaintingServiceContent } from "@/data/exterior-painting-service-content";
+import { drywallServiceContent } from "@/data/drywall-service-content";
+import { demolitionServiceContent } from "@/data/demolition-service-content";
+import { deckConstructionServiceContent } from "@/data/deck-construction-service-content";
+import { fenceInstallationServiceContent } from "@/data/fence-installation-service-content";
+import { landscapingServiceContent } from "@/data/landscaping-service-content";
+import { generalContractingServiceContent } from "@/data/general-contracting-service-content";
+import { homeAdditionsServiceContent } from "@/data/home-additions-service-content";
+import { roofingServiceContent } from "@/data/roofing-service-content";
+import { homeRenovationServiceContent } from "@/data/home-renovation-service-content";
 
 const commonProcess = [
   "Site review and practical scope planning",
@@ -31,6 +42,31 @@ const commonFaqs = [
 ];
 
 export const services: Service[] = [
+  {
+    slug: "full-home-renovation",
+    title: "Full Home Renovation",
+    seoTitle: "Full Home Renovation Toronto & GTA | McAze",
+    seoDescription:
+      "Plan a full home renovation in Toronto with McAze. Learn about costs, permits, timelines, layout, structural work, trades, contracts and project handover.",
+    shortTitle: "Home Renovation",
+    excerpt:
+      "A full home renovation coordinates layout, structure, building systems, kitchens, bathrooms and finishes through one organized plan. McAze manages suitable major residential renovations across Toronto and the GTA.",
+    description:
+      "McAze coordinates whole-home renovations from defined design and permits through construction, trade sequencing, quality control and documented handover.",
+    image: "/images/site/homepage-hero-mcaze-team.webp",
+    benefits: ["One coordinated plan", "Whole-home trade sequencing", "Clear change control", "Organized handover"],
+    process: commonProcess,
+    faqs: [
+      { question: "Does McAze provide written full-home renovation estimates?", answer: "Yes. The proposal defines scope, allowances, exclusions, trade responsibilities, approvals, payment milestones and the change process." },
+      { question: "Does a full renovation require permits?", answer: "Permit needs depend on the work. Structural, layout, plumbing and other material alterations commonly require approval, while some cosmetic work may not." },
+      { question: "Can McAze coordinate designers and licensed trades?", answer: "Yes, when included in the scope. Appropriate qualified designers, engineers and licensed trades are coordinated for the work they are responsible for." },
+      { question: "Can homeowners stay during construction?", answer: "Sometimes, but whole-home work often disrupts safe access and utilities. The occupancy and temporary-relocation plan is established before scheduling." },
+      { question: "How are unexpected conditions handled?", answer: "The condition is documented, reviewed and addressed through an approved scope, price and schedule change before related work proceeds whenever practical." },
+      { question: "Where does McAze renovate homes?", answer: "McAze serves Toronto and GTA communities including Vaughan, Markham, Richmond Hill, North York and Mississauga, subject to scope and availability." },
+    ],
+    related: ["general-contracting", "kitchen-renovation", "bathroom-renovation"],
+    pageContent: homeRenovationServiceContent,
+  },
   {
     slug: "kitchen-renovation",
     title: "Kitchen Renovation",
@@ -200,21 +236,108 @@ export const services: Service[] = [
   },
   {
     slug: "painting",
-    title: "Painting",
-    shortTitle: "Painting",
+    title: "Interior Painting",
+    seoTitle: "Interior Painting Toronto & GTA",
+    seoDescription:
+      "Plan professional interior painting in Toronto and the GTA with McAze. Learn about costs, preparation, primer, paint sheen, VOCs, timing and our process.",
+    shortTitle: "Interior Painting",
     excerpt:
       "Professional painting starts with preparation: patching, sanding, priming, masking, clean application, and trim attention. We handle interior refreshes, exterior touchups, post-renovation painting, and pre-sale updates. Homeowners choose this service when they want rooms to feel finished, colours to look consistent, and the work to happen with less mess than a rushed DIY approach.",
     description:
-      "Good paint work starts before the first coat. McAze handles patching, sanding, priming, protection, and clean application for a finish that looks settled into the home.",
+      "McAze provides interior painting with careful protection, surface preparation, drywall repairs, priming, clean application and detailed final touchups.",
     image: "/images/site/home-service-painting-mcaze.webp",
     benefits: ["Careful prep", "Clean lines", "Low disruption", "Interior and exterior work"],
     process: commonProcess,
-    faqs: commonFaqs,
+    faqs: [
+      {
+        question: "Does McAze provide a written interior painting estimate?",
+        answer:
+          "Yes. The estimate identifies included rooms and surfaces, preparation assumptions, primer, paint products, coat assumptions, protection, cleanup and exclusions.",
+      },
+      {
+        question: "Can McAze repair drywall before painting?",
+        answer:
+          "Yes, when included in the agreed scope. Small holes, stable cracks and damaged areas can be prepared appropriately, while movement, moisture or extensive failure may require further assessment.",
+      },
+      {
+        question: "Can you paint an occupied home?",
+        answer:
+          "Often yes. McAze plans room access, furniture, protection, ventilation, children, pets and daily cleanup so the household understands which areas remain available.",
+      },
+      {
+        question: "Does McAze paint condominium interiors?",
+        answer:
+          "Yes, subject to the building's renovation rules, contractor requirements, work hours, parking, elevator bookings, protection and waste procedures.",
+      },
+      {
+        question: "Do you paint ceilings, trim and doors?",
+        answer:
+          "These surfaces can be included in the written scope. Their condition, preparation, primer, product and sheen are reviewed separately from the walls.",
+      },
+      {
+        question: "Where does McAze provide interior painting?",
+        answer:
+          "McAze serves Toronto and GTA communities including Vaughan, Markham, Richmond Hill, North York and Mississauga, subject to scope and availability.",
+      },
+    ],
     related: ["drywall", "flooring", "kitchen-renovation"],
+    pageContent: paintingServiceContent,
+  },
+  {
+    slug: "exterior-painting",
+    title: "Exterior Painting",
+    seoTitle: "Exterior Painting Toronto & GTA",
+    seoDescription:
+      "Plan exterior painting in Toronto and the GTA with McAze. Learn about costs, weather, preparation, wood, masonry, primer, heritage approval and our process.",
+    shortTitle: "Exterior Painting",
+    excerpt:
+      "Exterior painting protects and renews approved wood, trim, doors, railings, stucco and other suitable surfaces. McAze plans preparation, repairs, access, primers and coatings around the property's condition and Toronto weather rather than treating the work as a simple colour change.",
+    description:
+      "McAze provides exterior painting with weather-aware scheduling, safe access planning, careful preparation, compatible primers and surface-specific finish coatings.",
+    image: "/images/site/home-why-mcaze-teamwork.webp",
+    benefits: ["Weather-aware planning", "Careful surface preparation", "Safe access review", "Clean property protection"],
+    process: commonProcess,
+    faqs: [
+      {
+        question: "Does McAze provide a written exterior painting estimate?",
+        answer:
+          "Yes. The estimate identifies included elevations and components, preparation, repair assumptions, primer, finish products, coat assumptions, access, protection and exclusions.",
+      },
+      {
+        question: "Can McAze repair damaged exterior wood before painting?",
+        answer:
+          "Appropriate localized repairs can be included after inspection. Widespread rot, structural damage, active leakage or specialty restoration may require a separate scope or specialist assessment.",
+      },
+      {
+        question: "Can exterior painting proceed if rain is forecast?",
+        answer:
+          "Only when the selected product, dry surface and forecast provide a suitable application and curing window. McAze pauses or reschedules coating when conditions are not appropriate.",
+      },
+      {
+        question: "Does McAze paint brick?",
+        answer:
+          "Previously unpainted masonry is assessed carefully rather than automatically coated. Moisture behaviour, condition, reversibility and heritage requirements may make another approach or specialist advice more appropriate.",
+      },
+      {
+        question: "Does exterior painting require heritage approval?",
+        answer:
+          "It can for designated properties or work affecting heritage attributes. Owners should confirm the property status and required City of Toronto approval before work starts.",
+      },
+      {
+        question: "Where does McAze provide exterior painting?",
+        answer:
+          "McAze serves Toronto and GTA communities including Vaughan, Markham, Richmond Hill, North York and Mississauga, subject to scope, access and seasonal availability.",
+      },
+    ],
+    related: ["painting", "deck-construction", "landscaping"],
+    pageContent: exteriorPaintingServiceContent,
   },
   {
     slug: "drywall",
-    title: "Drywall",
+    title: "Drywall Installation & Repair",
+    seoTitle: "Drywall Installation & Repair Toronto & GTA",
+    seoDescription:
+      "Plan drywall installation or repair in Toronto and the GTA with McAze. Learn about costs, patches, ceilings, water damage, finish levels, permits and dust control.",
     shortTitle: "Drywall",
     excerpt:
       "Drywall is the base layer for how a renovated room finally feels. McAze installs boards, repairs damage, tapes, muds, sands, patches ceilings, and prepares surfaces for paint. This service fits basements, layout changes, kitchens, bathrooms, and damaged walls where clean corners, smooth surfaces, and dust-conscious work make the next finish look better.",
@@ -223,8 +346,40 @@ export const services: Service[] = [
     image: "/images/site/home-service-drywall-mcaze.webp",
     benefits: ["Smooth walls", "Reliable repairs", "Ready-for-paint finish", "Dust-conscious workflow"],
     process: commonProcess,
-    faqs: commonFaqs,
+    faqs: [
+      {
+        question: "Does McAze provide written drywall estimates?",
+        answer:
+          "Yes. The estimate identifies the measured scope, installation or repair method, board type, finish expectation, protection, cleanup and whether primer or painting is included.",
+      },
+      {
+        question: "Can McAze repair ceiling and wall holes?",
+        answer:
+          "Yes. McAze repairs suitable wall and ceiling openings after the surrounding material, support and reason for the damage have been reviewed.",
+      },
+      {
+        question: "Can water-damaged drywall be replaced?",
+        answer:
+          "Yes, after the water source is corrected and the assembly is dry. Mould, extensive contamination or unresolved leakage may require specialized assessment before reconstruction.",
+      },
+      {
+        question: "Is painting included with drywall repair?",
+        answer:
+          "It can be included. The written scope states whether the surface will be left sanded, primed or fully painted so the handoff is clear.",
+      },
+      {
+        question: "Can McAze work in occupied homes and condos?",
+        answer:
+          "Yes. McAze plans barriers, floor protection, dust management, debris routes and daily cleanup around occupants and condominium requirements.",
+      },
+      {
+        question: "Where does McAze provide drywall services?",
+        answer:
+          "McAze serves Toronto and GTA communities including Vaughan, Markham, Richmond Hill, North York and Mississauga, subject to project scope and availability.",
+      },
+    ],
     related: ["painting", "basement-renovation", "demolition"],
+    pageContent: drywallServiceContent,
   },
   {
     slug: "flooring",
@@ -276,9 +431,12 @@ export const services: Service[] = [
     pageContent: flooringServiceContent,
   },
   {
-    slug: "deck-fence",
-    title: "Deck & Fence",
-    shortTitle: "Decks & Fences",
+    slug: "deck-construction",
+    title: "Deck Construction",
+    seoTitle: "Deck Construction Toronto & GTA",
+    seoDescription:
+      "Plan deck construction in Toronto and the GTA with McAze. Learn about costs, permits, zoning, footings, framing, materials, stairs, guards and maintenance.",
+    shortTitle: "Decks",
     excerpt:
       "Deck and fence projects improve privacy, safety, curb appeal, and how a backyard can actually be used. McAze handles repairs, replacement planning, framing coordination, boards, posts, gates, railings, staining, and weather-aware finishing. It is useful for aging wood structures, side yards, family outdoor areas, and homes that need a stronger exterior setup.",
     description:
@@ -286,12 +444,48 @@ export const services: Service[] = [
     image: "/images/site/home-service-deck-fence-mcaze.webp",
     benefits: ["Solid framing", "Weather-ready details", "Better curb appeal", "Functional outdoor space"],
     process: commonProcess,
-    faqs: commonFaqs,
-    related: ["landscaping", "demolition", "painting"],
+    faqs: [
+      { question: "Does McAze provide written deck estimates?", answer: "Yes. The estimate identifies the design basis, materials, structural scope, stairs, guards, approvals, removal, disposal and exclusions." },
+      { question: "Can McAze replace an existing deck?", answer: "Yes. The old structure is reviewed to determine whether controlled removal, full replacement or a clearly defined repair is appropriate." },
+      { question: "Does a Toronto deck require a permit?", answer: "Many decks do, particularly elevated structures. Permit and zoning requirements are confirmed for the specific property before construction." },
+      { question: "Does McAze build composite decks?", answer: "Yes, where an approved composite system suits the project. Framing, spacing, fasteners and movement details follow the selected manufacturer." },
+      { question: "Can stairs and railings be included?", answer: "Yes. Approved stairs, landings, guards, handrails and related details can be included in the complete deck scope." },
+      { question: "Where does McAze build decks?", answer: "McAze serves Toronto and GTA communities including Vaughan, Markham, Richmond Hill, North York and Mississauga, subject to scope and availability." },
+    ],
+    related: ["fence-installation", "landscaping", "painting"],
+    pageContent: deckConstructionServiceContent,
+  },
+  {
+    slug: "fence-installation",
+    title: "Fence Installation",
+    seoTitle: "Fence Installation Toronto & GTA",
+    seoDescription:
+      "Plan fence installation in Toronto and the GTA with McAze. Learn about costs, height bylaws, property lines, materials, posts, gates, pool fences and repairs.",
+    shortTitle: "Fences",
+    excerpt:
+      "Fence installation improves privacy, safety and the way a yard is organized. McAze plans property-aware layouts, strong posts, practical gates and weather-ready materials for new fences and replacements across Toronto and the GTA.",
+    description:
+      "McAze installs and replaces residential fences with careful line planning, durable post foundations, reliable gates and details suited to Canadian weather.",
+    image: "/images/site/home-service-deck-fence-mcaze.webp",
+    benefits: ["Clear yard boundaries", "Stronger privacy", "Reliable gates", "Weather-ready details"],
+    process: commonProcess,
+    faqs: [
+      { question: "Does McAze provide written fence estimates?", answer: "Yes. The estimate defines length, height, materials, posts, concrete, gates, removal, disposal, finishing and exclusions." },
+      { question: "Does a Toronto fence need a permit?", answer: "Ordinary fences are governed by the Fence Bylaw, while pool enclosures require a specific zoning and permit process. Property-specific requirements are confirmed before work." },
+      { question: "Who confirms the property line?", answer: "The property owner is responsible for confirming the legal line, normally using a current survey or appropriate professional advice where the boundary is uncertain." },
+      { question: "Can McAze remove the old fence?", answer: "Yes, when included in the scope and after ownership, neighbour coordination, salvage items and access are confirmed." },
+      { question: "Can gates be included?", answer: "Yes. Person gates, selected double gates and suitable exterior hardware can be planned with properly supported posts and clearances." },
+      { question: "Where does McAze install fences?", answer: "McAze serves Toronto and GTA communities including Vaughan, Markham, Richmond Hill, North York and Mississauga, subject to scope and availability." },
+    ],
+    related: ["deck-construction", "landscaping", "exterior-painting"],
+    pageContent: fenceInstallationServiceContent,
   },
   {
     slug: "landscaping",
     title: "Landscaping",
+    seoTitle: "Landscaping Services Toronto & GTA",
+    seoDescription:
+      "Plan landscaping in Toronto and the GTA with McAze. Learn about costs, drainage, grading, interlock, plants, sod, tree permits and low-maintenance yards.",
     shortTitle: "Landscaping",
     excerpt:
       "Landscaping support focuses on practical exterior improvements rather than overbuilt features. Depending on the property, work may include cleanup, edging, grading awareness, planting coordination, walkways, surface repairs, and tidier outdoor circulation. Homeowners use this service for front entries, backyards, rental properties, and exterior spaces that need structure, safety, and easier maintenance.",
@@ -300,8 +494,91 @@ export const services: Service[] = [
     image: "/images/site/home-service-landscaping-mcaze.webp",
     benefits: ["Cleaner exterior spaces", "Improved access", "Seasonal planning", "Low-maintenance choices"],
     process: commonProcess,
-    faqs: commonFaqs,
-    related: ["deck-fence", "demolition", "snow-removal"],
+    faqs: [
+      { question: "Does McAze provide written landscaping estimates?", answer: "Yes. The estimate identifies measured areas, removal, preparation, materials, plant sizes, disposal, restoration and exclusions." },
+      { question: "Can landscaping improve yard drainage?", answer: "Suitable surface issues may be improved after the cause and lawful outlet are understood. Complex or permit-related drainage can require qualified design." },
+      { question: "Does McAze install interlock and walkways?", answer: "McAze can install or repair appropriate walkway and surface scopes with attention to excavation, base preparation, edges, drainage and transitions." },
+      { question: "Can McAze install sod and planting beds?", answer: "Yes. Soil preparation, sod, mulch and planting can be included with site-suited selections and clear establishment-care responsibilities." },
+      { question: "Are tree permits included?", answer: "Protected-tree work requires the applicable City process and qualified arborist documentation. These requirements are identified and coordinated separately where needed." },
+      { question: "Where does McAze provide landscaping?", answer: "McAze serves Toronto and GTA communities including Vaughan, Markham, Richmond Hill, North York and Mississauga, subject to scope and availability." },
+    ],
+    related: ["deck-construction", "fence-installation", "demolition"],
+    pageContent: landscapingServiceContent,
+  },
+  {
+    slug: "general-contracting",
+    title: "General Contracting",
+    seoTitle: "General Contractor Toronto & GTA | McAze",
+    seoDescription:
+      "Plan a Toronto renovation with McAze general contracting. Learn about costs, contracts, permits, trades, schedules, change orders, inspections and handover.",
+    shortTitle: "General Contracting",
+    excerpt:
+      "General contracting brings design, permits, materials, trades, inspections and finishing into one organized construction sequence. McAze manages suitable residential and commercial renovations across Toronto and the GTA with written scopes and clear owner decisions.",
+    description:
+      "McAze coordinates multi-trade renovation projects from scope and approvals through construction, quality control and documented handover.",
+    image: "/images/site/home-why-mcaze-team.webp",
+    benefits: ["One coordinated plan", "Clear trade sequencing", "Documented changes", "Organized handover"],
+    process: commonProcess,
+    faqs: [
+      { question: "Does McAze provide written general contracting estimates?", answer: "Yes. The proposal identifies the confirmed scope, allowances, exclusions, trade coordination, approvals, payment milestones and change process." },
+      { question: "Can McAze coordinate permits?", answer: "Permit preparation and coordination can be included when stated in the contract, while the property owner remains responsible for ensuring required approvals are obtained." },
+      { question: "Does McAze hire and schedule subcontractors?", answer: "Yes. McAze coordinates appropriate qualified trades, prerequisites, site access, inspections and handoffs within the confirmed project scope." },
+      { question: "How are unexpected conditions handled?", answer: "The condition is documented, options are reviewed and any material price or schedule change is approved before related work continues whenever practical." },
+      { question: "Can McAze manage occupied-home renovations?", answer: "Suitable projects can be phased around occupancy with defined protection, access and shutdown plans. Some scopes may require temporary relocation." },
+      { question: "Where does McAze provide general contracting?", answer: "McAze serves Toronto and GTA communities including Vaughan, Markham, Richmond Hill, North York and Mississauga, subject to scope and availability." },
+    ],
+    related: ["full-home-renovation", "kitchen-renovation", "basement-renovation"],
+    pageContent: generalContractingServiceContent,
+  },
+  {
+    slug: "home-additions-custom-renovations",
+    title: "Home Additions & Custom Renovations",
+    seoTitle: "Home Additions Toronto & Custom Renovations | McAze",
+    seoDescription:
+      "Plan a Toronto home addition with McAze. Learn about costs, zoning, minor variances, permits, design, foundations, structure, timelines and custom renovations.",
+    shortTitle: "Home Additions",
+    excerpt:
+      "Home additions and custom renovations create space by coordinating zoning, design, structure, building systems and finishes with the existing property. McAze manages suitable projects across Toronto and the GTA from buildable scope through handover.",
+    description:
+      "McAze coordinates carefully planned additions and custom renovations that connect approved design, durable construction and the everyday function of the existing home.",
+    image: "/images/site/home-process-construction.webp",
+    benefits: ["Feasibility-first planning", "Coordinated structure", "Integrated building systems", "Documented handover"],
+    process: commonProcess,
+    faqs: [
+      { question: "Does every home addition require a permit?", answer: "Yes. Toronto additions require building permits and must satisfy zoning and other applicable law before approved construction proceeds." },
+      { question: "Can McAze coordinate design and engineering?", answer: "Appropriate designers, engineers and other consultants can be coordinated when included in the scope. Professional design responsibility remains with the qualified provider." },
+      { question: "Can McAze build a second-storey addition?", answer: "Suitable second-storey additions can be considered after zoning, foundation, structure, stairs, services and temporary weather protection are properly assessed." },
+      { question: "Can homeowners stay during construction?", answer: "Sometimes, depending on safe access, utilities, weather exposure and project phasing. Major structural stages may require temporary relocation." },
+      { question: "How are unexpected conditions handled?", answer: "Concealed conditions are documented, reviewed with the applicable designer where needed and addressed through an approved scope, price and schedule change." },
+      { question: "Where does McAze build additions?", answer: "McAze serves Toronto and GTA communities including Vaughan, Markham, Richmond Hill, North York and Mississauga, subject to scope and availability." },
+    ],
+    related: ["general-contracting", "full-home-renovation", "demolition"],
+    pageContent: homeAdditionsServiceContent,
+  },
+  {
+    slug: "roofing-services",
+    title: "Roofing Services",
+    seoTitle: "Roofing Services Toronto & GTA | McAze",
+    seoDescription:
+      "Plan roof repair or replacement in Toronto with McAze. Learn about costs, leaks, shingles, ice dams, ventilation, decking, flashing, permits and warranties.",
+    shortTitle: "Roofing",
+    excerpt:
+      "Roofing protects the full building through coordinated shingles or membranes, underlayment, flashing, ventilation and sound decking. McAze assesses suitable residential repair and replacement scopes across Toronto and the GTA.",
+    description:
+      "McAze plans suitable roof repairs and replacements around the complete water-shedding system, safe access, property protection and clear documentation.",
+    image: "/images/site/hero-renovation.webp",
+    benefits: ["Evidence-based assessment", "Complete roof-system scope", "Weather-aware scheduling", "Thorough cleanup"],
+    process: commonProcess,
+    faqs: [
+      { question: "Does McAze provide written roofing estimates?", answer: "Yes. The proposal defines removal, materials, underlayment, flashing, ventilation, disposal, known repairs, concealed-condition pricing and exclusions." },
+      { question: "Can McAze repair a roof leak?", answer: "Suitable localized leaks can be assessed and repaired when the source, surrounding roof condition and safe access support a durable scope." },
+      { question: "Does shingle replacement require a Toronto permit?", answer: "Replacing existing roofing material generally does not require a permit when no structural work is involved. Structural or other regulated alterations require confirmation." },
+      { question: "Will damaged roof decking be replaced?", answer: "Damaged sheathing can be replaced within the agreed method or unit pricing after tear-off exposes its actual condition. Structural framing issues require separate review." },
+      { question: "Can roofing be completed in winter?", answer: "Some work can proceed when access, weather and manufacturer temperature requirements allow. Wet, icy or unsafe conditions can require delay or temporary protection." },
+      { question: "Where does McAze provide roofing services?", answer: "McAze serves suitable residential roofing scopes in Toronto and GTA communities including Vaughan, Markham, Richmond Hill, North York and Mississauga." },
+    ],
+    related: ["exterior-painting", "home-additions-custom-renovations", "general-contracting"],
+    pageContent: roofingServiceContent,
   },
   {
     slug: "snow-removal",
@@ -315,11 +592,14 @@ export const services: Service[] = [
     benefits: ["Safer access", "Reliable scheduling", "Residential support", "Winter-ready planning"],
     process: commonProcess,
     faqs: commonFaqs,
-    related: ["landscaping", "deck-fence", "demolition"],
+    related: ["landscaping", "deck-construction", "demolition"],
   },
   {
     slug: "demolition",
-    title: "Demolition",
+    title: "Demolition Services",
+    seoTitle: "Selective Demolition Services Toronto & GTA",
+    seoDescription:
+      "Plan selective demolition in Toronto and the GTA with McAze. Learn about costs, permits, asbestos, structural walls, dust control, disposal and our process.",
     shortTitle: "Demolition",
     excerpt:
       "Selective demolition should prepare a space without creating unnecessary damage. McAze handles controlled removal, protection of nearby finishes, debris handling, and readiness for the next trade. It is commonly needed before kitchens, bathrooms, basements, flooring, drywall repairs, and layout adjustments where a careful start can prevent delays later.",
@@ -328,8 +608,40 @@ export const services: Service[] = [
     image: "/images/site/home-service-demolition-mcaze.webp",
     benefits: ["Controlled removal", "Site protection", "Clean disposal", "Ready for rebuild"],
     process: commonProcess,
-    faqs: commonFaqs,
+    faqs: [
+      {
+        question: "Does McAze provide written demolition estimates?",
+        answer:
+          "Yes. The estimate identifies what is removed and retained, protection, access, debris handling, cleanup, exclusions and the intended handoff for rebuilding.",
+      },
+      {
+        question: "Does McAze remove load-bearing walls?",
+        answer:
+          "Structural removal proceeds only within an approved scope supported by the required drawings, engineering, permits, temporary support and inspections.",
+      },
+      {
+        question: "Is asbestos testing included?",
+        answer:
+          "Testing and abatement are separate specialist services unless expressly included. Suspect materials must be assessed before ordinary demolition disturbs them.",
+      },
+      {
+        question: "Can demolition happen in an occupied home?",
+        answer:
+          "Often yes for a suitable localized scope. McAze plans barriers, access, dust management, debris routes and daily cleanup around the household.",
+      },
+      {
+        question: "Can items be saved for reuse or donation?",
+        answer:
+          "Potentially. Salvage items must be identified before work because careful removal, storage and transport require a different scope from disposal.",
+      },
+      {
+        question: "Where does McAze provide demolition services?",
+        answer:
+          "McAze serves Toronto and GTA communities including Vaughan, Markham, Richmond Hill, North York and Mississauga, subject to scope and availability.",
+      },
+    ],
     related: ["drywall", "basement-renovation", "kitchen-renovation"],
+    pageContent: demolitionServiceContent,
   },
   {
     slug: "electrical",
