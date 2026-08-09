@@ -14,6 +14,7 @@ import { generalContractingServiceContent } from "@/data/general-contracting-ser
 import { homeAdditionsServiceContent } from "@/data/home-additions-service-content";
 import { roofingServiceContent } from "@/data/roofing-service-content";
 import { homeRenovationServiceContent } from "@/data/home-renovation-service-content";
+import { kitchenServiceContent } from "@/data/kitchen-service-content";
 
 const commonProcess = [
   "Site review and practical scope planning",
@@ -70,6 +71,9 @@ export const services: Service[] = [
   {
     slug: "kitchen-renovation",
     title: "Kitchen Renovation",
+    seoTitle: "Kitchen Renovation Toronto & GTA | McAze",
+    seoDescription:
+      "Plan a kitchen renovation in Toronto or the GTA with McAze. Explore costs, timelines, permits, layouts, cabinets, counters, electrical work and our process.",
     shortTitle: "Kitchens",
     excerpt:
       "A kitchen renovation can involve layout changes, cabinetry coordination, counters, lighting, flooring, painting, and finishing details. McAze helps families create kitchens that work better for cooking, storage, and daily traffic. This service suits dated kitchens, awkward layouts, and homeowners who want a refined update without losing sight of budget, timing, and long-term value.",
@@ -78,8 +82,16 @@ export const services: Service[] = [
     image: "/images/site/home-service-kitchen-mcaze.webp",
     benefits: ["Smarter layouts", "Durable finishes", "Coordinated trades", "Clean site protection"],
     process: commonProcess,
-    faqs: commonFaqs,
-    related: ["bathroom-renovation", "flooring", "electrical"],
+    faqs: [
+      { question: "Does McAze provide written kitchen renovation estimates?", answer: "Yes. The proposal defines the intended scope, known trade work, allowances, exclusions, responsibilities and schedule assumptions for the property." },
+      { question: "Can McAze change the kitchen layout?", answer: "Yes, where the structure, services, clearances, approvals and budget support the proposed layout. The practical options are reviewed before ordering." },
+      { question: "Does a kitchen renovation require a permit?", answer: "Permit needs depend on the work. Structural or material alterations and certain plumbing or mechanical changes can require municipal approval; electrical work follows ESA requirements." },
+      { question: "Can homeowners stay during a kitchen renovation?", answer: "Often yes, with a safe temporary food-preparation plan. Larger structural or main-floor projects may make temporary relocation more practical." },
+      { question: "Does McAze renovate condo kitchens?", answer: "Yes, subject to the condominium corporation's approval, access, protection, work-hour and utility-shutdown requirements." },
+      { question: "Where does McAze renovate kitchens?", answer: "McAze serves Toronto and GTA communities including Vaughan, Markham, Richmond Hill, North York and Mississauga, subject to scope and availability." },
+    ],
+    related: ["bathroom-renovation", "flooring", "general-contracting"],
+    pageContent: kitchenServiceContent,
   },
   {
     slug: "bathroom-renovation",
