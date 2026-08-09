@@ -8,13 +8,13 @@ export function ServiceCard({ service, image }: { service: Service; image?: stri
     <Link
       href={`/services/${service.slug}`}
       aria-label={`View ${service.title} service`}
-      className="group block rounded-2xl border border-[#eee9e1] bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+      className="group block rounded-md border border-[#e7e2d8] bg-white p-4 shadow-[0_12px_35px_rgba(23,23,20,0.05)] transition hover:-translate-y-1 hover:border-[#F59D28]/60 hover:shadow-[0_18px_45px_rgba(23,23,20,0.1)]"
     >
-      <div className="relative mb-6 aspect-[16/10] overflow-hidden rounded-xl bg-[#f7f3ed]">
+      <div className="relative mb-6 aspect-[16/10] overflow-hidden rounded-sm bg-[#f7f3ed]">
         <Image src={image ?? service.image} alt="" fill sizes="(min-width: 1024px) 30vw, 100vw" className="object-cover transition duration-300 group-hover:scale-105" />
       </div>
       <article>
-        <h3 className="text-xl font-semibold text-[#161616]">{service.title}</h3>
+        <h3 className="display-title text-xl leading-tight text-[#161616]">{service.title}</h3>
         <p className="mt-3 leading-7 text-[#5d5a55]">{service.excerpt}</p>
         <span className="mt-5 inline-flex text-sm font-semibold text-[#b86f12]">View service</span>
       </article>
@@ -29,7 +29,7 @@ export function ProjectCard({ project }: { project: Project }) {
     <Link
       href={`/portfolio/${project.slug}`}
       aria-label={`View project: ${project.title}`}
-      className="group block overflow-hidden rounded-2xl border border-[#eee9e1] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+      className="group block overflow-hidden rounded-md border border-[#e7e2d8] bg-white shadow-[0_12px_35px_rgba(23,23,20,0.05)] transition hover:-translate-y-1 hover:border-[#F59D28]/60 hover:shadow-[0_18px_45px_rgba(23,23,20,0.1)]"
     >
       <div className="relative aspect-[4/3] bg-[#f7f3ed]">
         <Image
@@ -43,7 +43,7 @@ export function ProjectCard({ project }: { project: Project }) {
       <article className="p-5">
         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#b86f12]">Project Type</p>
         <p className="mt-2 text-sm font-semibold text-[#161616]">{project.projectType ?? service?.title ?? "Renovation"}</p>
-        <h3 className="mt-2 text-xl font-semibold text-[#161616]">{project.title}</h3>
+        <h3 className="display-title mt-2 text-xl leading-tight text-[#161616]">{project.title}</h3>
         <div className="mt-4 grid gap-1 text-sm">
           <span className="font-semibold text-[#161616]">Location</span>
           <span className="text-[#5d5a55]">{project.location}</span>
@@ -58,8 +58,9 @@ export function ProjectCard({ project }: { project: Project }) {
 
 export function CityCard({ city }: { city: City }) {
   return (
-    <Link href={`/service-areas/${city.slug}`} className="rounded-2xl border border-[#eee9e1] bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-      <h3 className="text-xl font-semibold text-[#161616]">{city.name}</h3>
+    <Link href={`/service-areas/${city.slug}`} className="group relative overflow-hidden rounded-md border border-[#e7e2d8] bg-white p-6 shadow-[0_12px_35px_rgba(23,23,20,0.05)] transition hover:-translate-y-1 hover:border-[#F59D28]/60 hover:shadow-[0_18px_45px_rgba(23,23,20,0.1)]">
+      <span className="absolute inset-y-0 left-0 w-1 bg-[#F59D28] transition group-hover:w-2" aria-hidden="true" />
+      <h3 className="display-title text-xl text-[#161616]">{city.name}</h3>
       <p className="mt-3 leading-7 text-[#5d5a55]">{city.intro}</p>
       <p className="mt-5 font-semibold leading-7 text-[#161616]">
         Planning a renovation in {city.name}? McAze can help you review the scope before you commit.
@@ -71,7 +72,7 @@ export function CityCard({ city }: { city: City }) {
 
 export function FeatureCard({ title, copy }: { title: string; copy: string }) {
   return (
-    <article className="rounded-2xl border border-[#eee9e1] bg-white p-7 shadow-sm">
+    <article className="rounded-md border border-[#e7e2d8] bg-white p-7 shadow-[0_12px_35px_rgba(23,23,20,0.05)]">
       <FeatureIcon title={title} />
       <h3 className="text-xl font-semibold text-[#161616]">{title}</h3>
       <p className="mt-3 leading-7 text-[#5d5a55]">{copy}</p>

@@ -16,7 +16,7 @@ export function Cta({
   return (
     <Section>
       <Container>
-        <div className="relative overflow-hidden rounded-3xl bg-[#161616] px-6 py-12 text-white shadow-sm sm:px-10 lg:flex lg:min-h-[390px] lg:items-center lg:justify-between lg:gap-10">
+        <div className="relative overflow-hidden rounded-md bg-[#171714] px-6 py-12 text-white shadow-[12px_12px_0_rgba(245,157,40,0.28)] sm:px-10 lg:flex lg:min-h-[390px] lg:items-center lg:justify-between lg:gap-10">
           {image ? (
             <>
               <Image
@@ -30,7 +30,7 @@ export function Cta({
             </>
           ) : null}
           <div className="relative z-10 max-w-2xl">
-            <h2 className="text-balance text-3xl font-semibold sm:text-4xl">{title}</h2>
+            <h2 className="display-title text-balance text-3xl leading-tight sm:text-4xl lg:text-5xl">{title}</h2>
             <p className="mt-4 text-pretty leading-8 text-white/70">{copy}</p>
           </div>
           <div className="relative z-10 mt-8 shrink-0 lg:mt-0">

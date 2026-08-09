@@ -52,7 +52,7 @@ export function Footer() {
   const credibilityItems = ["Licensed", "Insured", "WSIB Covered", "Written Estimates"];
 
   return (
-    <footer className="border-t border-[#eee9e1] bg-[#161616] text-white">
+    <footer className="border-t-4 border-[#F59D28] bg-[#171714] text-white">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-14 sm:px-8 lg:grid-cols-[1.05fr_2.15fr]">
         <div className="max-w-md">
           <Link href="/" className="inline-flex" aria-label={`${siteConfig.name} home`}>

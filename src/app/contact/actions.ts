@@ -151,6 +151,8 @@ function isRateLimited(key: string, fingerprint: string) {
 }
 
 export async function sendContactEmail(formData: FormData) {
+  const isCareerForm = formData.get("formType") === "career";
+  const returnPath = isCareerForm ? "/careers" : "/contact";
   const values = {
     name: getField(formData, "name"),
     phone: getField(formData, "phone"),
@@ -158,6 +160,30 @@ export async function sendContactEmail(formData: FormData) {
     service: getField(formData, "service"),
     message: getField(formData, "message"),
   };
+  const careerDetails = isCareerForm
+    ? {
+        location: String(formData.get("candidateLocation") ?? "").trim().slice(0, 100),
+        experience: String(formData.get("experienceYears") ?? "").trim().slice(0, 60),
+        availability: String(formData.get("availability") ?? "").trim().slice(0, 60),
+        preference: String(formData.get("employmentPreference") ?? "").trim().slice(0, 60),
+        workAuthorization: formData.get("authorizedToWork") === "Yes" ? "Yes" : "No",
+        driversLicence: formData.get("driversLicence") === "Yes" ? "Yes" : "No",
+        ownTools: formData.get("ownTools") === "Yes" ? "Yes" : "No",
+        canTravel: formData.get("canTravel") === "Yes" ? "Yes" : "No",
+      }
+    : null;
+  const resume = formData.get("resume");
+  const acceptedResumeTypes = new Set([
+    "application/pdf",
+    "application/msword",
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  ]);
+  const validResume =
+    isCareerForm &&
+    resume instanceof File &&
+    resume.size > 0 &&
+    resume.size <= 4 * 1024 * 1024 &&
+    acceptedResumeTypes.has(resume.type);
 
   const honeypot = formData.get("website");
   const startedAt = Number(formData.get("formStartedAt"));
@@ -168,9 +194,11 @@ export async function sendContactEmail(formData: FormData) {
     !Number.isFinite(startedAt) ||
     elapsed < minimumSubmissionTimeMs ||
     elapsed > maximumSubmissionTimeMs ||
-    !isValidSubmission(values)
+    !isValidSubmission(values) ||
+    (isCareerForm && (!careerDetails?.location || !careerDetails.experience || !careerDetails.availability || !careerDetails.preference || careerDetails.workAuthorization !== "Yes")) ||
+    (resume instanceof File && resume.size > 0 && !validResume)
   ) {
-    redirect("/contact?error=invalid");
+    redirect(`${returnPath}?error=invalid`);
   }
 
   const requestHeaders = await headers();
@@ -179,7 +207,7 @@ export async function sendContactEmail(formData: FormData) {
   const isHuman = await verifyTurnstile(typeof turnstileToken === "string" ? turnstileToken : "", remoteIp);
 
   if (!isHuman) {
-    redirect("/contact?error=verification");
+    redirect(`${returnPath}?error=verification`);
   }
 
   const fingerprint = createHash("sha256")
@@ -188,21 +216,34 @@ export async function sendContactEmail(formData: FormData) {
   const rateLimitKey = `${remoteIp}|${values.email.toLowerCase()}`;
 
   if (isRateLimited(rateLimitKey, fingerprint)) {
-    redirect("/contact?error=rate-limit");
+    redirect(`${returnPath}?error=rate-limit`);
   }
 
   const to = process.env.CONTACT_TO_EMAIL ?? siteConfig.email;
   const from = process.env.SMTP_FROM ?? process.env.SMTP_USER;
-  const subject = `New estimate request from ${values.name.replace(headerBreakPattern, " ")}`;
+  const requestLabel = isCareerForm ? "career inquiry" : "estimate request";
+  const subject = `New ${requestLabel} from ${values.name.replace(headerBreakPattern, " ")}`;
   const text = [
-    "New estimate request",
+    `New ${requestLabel}`,
     "",
     `Name: ${values.name}`,
     `Phone: ${values.phone}`,
     `Email: ${values.email}`,
-    `Project type: ${values.service}`,
+    `${isCareerForm ? "Area of interest" : "Project type"}: ${values.service}`,
+    ...(careerDetails
+      ? [
+          `Location: ${careerDetails.location}`,
+          `Experience: ${careerDetails.experience}`,
+          `Availability: ${careerDetails.availability}`,
+          `Employment preference: ${careerDetails.preference}`,
+          `Authorized to work in Canada: ${careerDetails.workAuthorization}`,
+          `Driver's licence / transportation: ${careerDetails.driversLicence}`,
+          `Own tools / safety equipment: ${careerDetails.ownTools}`,
+          `Can travel across the GTA: ${careerDetails.canTravel}`,
+        ]
+      : []),
     "",
-    "Project details:",
+    isCareerForm ? "Experience and introduction:" : "Project details:",
     values.message,
   ].join("\n");
   const safeValues = {
@@ -214,12 +255,20 @@ export async function sendContactEmail(formData: FormData) {
   };
 
   const html = `
-    <h2>New estimate request</h2>
+    <h2>New ${requestLabel}</h2>
     <p><strong>Name:</strong> ${safeValues.name}</p>
     <p><strong>Phone:</strong> ${safeValues.phone}</p>
     <p><strong>Email:</strong> ${safeValues.email}</p>
-    <p><strong>Project type:</strong> ${safeValues.service}</p>
-    <p><strong>Project details:</strong></p>
+    <p><strong>${isCareerForm ? "Area of interest" : "Project type"}:</strong> ${safeValues.service}</p>
+    ${careerDetails ? `<p><strong>Location:</strong> ${escapeHtml(careerDetails.location)}</p>
+    <p><strong>Experience:</strong> ${escapeHtml(careerDetails.experience)}</p>
+    <p><strong>Availability:</strong> ${escapeHtml(careerDetails.availability)}</p>
+    <p><strong>Employment preference:</strong> ${escapeHtml(careerDetails.preference)}</p>
+    <p><strong>Authorized to work in Canada:</strong> ${careerDetails.workAuthorization}</p>
+    <p><strong>Driver's licence / transportation:</strong> ${careerDetails.driversLicence}</p>
+    <p><strong>Own tools / safety equipment:</strong> ${careerDetails.ownTools}</p>
+    <p><strong>Can travel across the GTA:</strong> ${careerDetails.canTravel}</p>` : ""}
+    <p><strong>${isCareerForm ? "Experience and introduction" : "Project details"}:</strong></p>
     <p>${safeValues.message.replace(/\n/g, "<br />")}</p>
   `;
 
@@ -231,16 +280,19 @@ export async function sendContactEmail(formData: FormData) {
       subject,
       text,
       html,
+      attachments: validResume && resume instanceof File
+        ? [{ filename: resume.name.replace(/[^a-zA-Z0-9._-]/g, "_"), content: Buffer.from(await resume.arrayBuffer()), contentType: resume.type }]
+        : undefined,
     });
   } catch (error) {
     console.error("Contact form email failed:", error);
 
     if (error instanceof Error && error.message === "missing_email_config") {
-      redirect("/contact?error=config");
+      redirect(`${returnPath}?error=config`);
     }
 
-    redirect("/contact?error=send");
+    redirect(`${returnPath}?error=send`);
   }
 
-  redirect("/contact?sent=1");
+  redirect(`${returnPath}?sent=1`);
 }

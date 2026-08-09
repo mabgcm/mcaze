@@ -118,7 +118,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </Container>
       </nav>
 
-      <Section>
+      <Section compact>
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1.35fr_0.65fr] lg:gap-16">
             <article id="overview" className="scroll-mt-24">
@@ -156,7 +156,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </Container>
       </Section>
 
-      <Section className="bg-[#161616] text-white">
+      <Section compact className="bg-[#161616] text-white">
         <Container>
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <article>
@@ -185,7 +185,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </Container>
       </Section>
 
-      <Section>
+      <Section compact>
         <Container>
           <div id="scope" className="scroll-mt-24">
             <SectionHeader
@@ -235,7 +235,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </Container>
       </section>
 
-      <Section>
+      <Section compact>
         <Container>
           <div id="approach" className="mx-auto max-w-4xl scroll-mt-24">
             {project.contentSections?.map((section, index) => (
@@ -279,7 +279,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </Container>
       </Section>
 
-      <Section className="bg-[#faf7f1]">
+      <Section compact className="bg-[#faf7f1]">
         <Container>
           <div className="grid gap-6 lg:grid-cols-2">
             <article className="rounded-3xl border border-[#e8e1d7] bg-white p-7 shadow-sm sm:p-9">
@@ -312,7 +312,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </Container>
       </Section>
 
-      <Section>
+      <Section compact>
         <Container>
           <div id="project-gallery" className="scroll-mt-24">
             <SectionHeader
@@ -349,7 +349,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </Section>
 
       {project.faqs?.length ? (
-        <Section className="bg-[#faf7f1]">
+        <Section compact className="bg-[#faf7f1]">
           <Container>
             <div id="project-faq" className="grid scroll-mt-24 gap-10 lg:grid-cols-[0.65fr_1.35fr] lg:gap-16">
               <SectionHeader
@@ -378,7 +378,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </Section>
       ) : null}
 
-      <Section>
+      <Section compact>
         <Container>
           <div className="rounded-3xl border border-[#eee9e1] bg-white p-7 shadow-sm sm:p-10">
             <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
@@ -395,7 +395,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 </p>
                 {project.relatedLinks?.length ? (
                   <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold">
-                    {project.relatedLinks.map((item) => (
+                    {[...project.relatedLinks]
+                      .sort((a, b) => a.label.localeCompare(b.label, "en", { sensitivity: "base" }))
+                      .map((item) => (
                       <Link key={`${item.href}-${item.label}`} href={item.href} className="text-[#b86f12] hover:text-[#8f540a]">
                         {item.label}
                       </Link>
@@ -411,7 +413,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </Container>
       </Section>
 
-      <Section className="bg-[#faf7f1]">
+      <Section compact className="bg-[#faf7f1]">
         <Container>
           <SectionHeader eyebrow="Related projects" title="More McAze renovation work" />
           <div className="mt-10 grid gap-5 md:grid-cols-2">

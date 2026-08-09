@@ -132,6 +132,7 @@ export default function HomePage() {
   return (
     <>
       <Hero
+        compactTitle
         eyebrow="Canadian renovation company"
         title="Home Renovation Contractor in Vaughan, Markham, Richmond Hill & the Greater Toronto Area (GTA)"
         copy="McAze helps homeowners and businesses plan Kitchen Renovations, Bathroom Renovations, Basement Finishing, Drywall, Painting, Flooring, Decks, Home Renovations, and Commercial Renovations with practical advice, careful scheduling, and workmanship that respects the property."
@@ -162,8 +163,8 @@ export default function HomePage() {
         <Container className="py-8">
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {conversionStats.map((stat) => (
-              <article key={stat.label} className="rounded-2xl border border-[#eee9e1] bg-white p-5 shadow-sm">
-                <p className="text-2xl font-semibold text-[#161616]">{stat.value}</p>
+              <article key={stat.label} className="rounded-md border border-[#e2dcd1] bg-white p-5 shadow-[0_10px_30px_rgba(23,23,20,0.04)]">
+                <p className="display-title text-2xl text-[#161616]">{stat.value}</p>
                 <h2 className="mt-2 text-sm font-semibold text-[#161616]">{stat.label}</h2>
                 <p className="mt-1 text-sm leading-6 text-[#6f6a62]">{stat.note}</p>
               </article>
@@ -196,7 +197,7 @@ export default function HomePage() {
                 title="A renovation company built around clarity, respect, and clean workmanship."
                 copy="Renovations affect the most personal parts of a property. Our work is organized around clear communication, practical sequencing, and job sites that feel managed from start to finish."
               />
-              <div className="relative mt-8 aspect-[4/3] overflow-hidden rounded-2xl bg-[#f7f3ed] shadow-sm lg:aspect-[5/4]">
+              <div className="relative mt-8 aspect-[4/3] overflow-hidden rounded-md bg-[#f7f3ed] shadow-[10px_10px_0_rgba(245,157,40,0.22)] lg:aspect-[5/4]">
                 <Image
                   src="/images/site/home-why-mcaze-teamwork.webp"
                   alt="McAze renovation team coordinating work on an active job site"

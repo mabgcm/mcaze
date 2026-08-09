@@ -114,7 +114,7 @@ export const cities: City[] = [
     neighborhoods: ["Stonehaven", "Glenway Estates", "Summerhill Estates", "Historic Main Street"],
     pageContent: newmarketPageContent,
   },
-];
+].sort((a, b) => a.name.localeCompare(b.name, "en", { sensitivity: "base" }));
 
 export function getCity(slug: string) {
   return cities.find((city) => city.slug === slug);

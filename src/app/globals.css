@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #161616;
+  --background: #fbfaf7;
+  --foreground: #171714;
+  --surface: #ffffff;
+  --ink-soft: #5e5b54;
+  --line: #e7e2d8;
+  --accent: #f59d28;
+  --accent-deep: #a95e08;
 }
 
 @theme inline {
@@ -28,6 +33,17 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(23, 23, 20, 0.018) 1px, transparent 1px), linear-gradient(90deg, rgba(23, 23, 20, 0.018) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: linear-gradient(to bottom, black, transparent 70%);
+}
+
 a {
   text-decoration: none;
 }
@@ -47,4 +63,23 @@ img {
 
 .text-pretty {
   text-wrap: pretty;
+}
+
+.display-title {
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 750;
+  letter-spacing: -0.04em;
+}
+
+.eyebrow-rule {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.eyebrow-rule::before {
+  content: "";
+  width: 2rem;
+  height: 2px;
+  background: var(--accent);
 }

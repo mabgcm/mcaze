@@ -1,5 +1,6 @@
 import { sendContactEmail } from "@/app/contact/actions";
 import { SpamProtectionFields } from "@/components/spam-protection-fields";
+import { services } from "@/data/services";
 
 type ContactFormProps = {
   status?: "sent" | "error" | "config-error";
@@ -71,10 +72,12 @@ export function ContactForm({ status }: ContactFormProps) {
       <label className="grid gap-2 text-sm font-semibold text-[#161616]">
         Project type
         <select name="service" className="min-h-12 rounded-xl border border-[#dedbd5] px-4 text-base font-normal outline-none focus:border-[#F59D28]">
-          <option>Kitchen Renovation</option>
-          <option>Bathroom Renovation</option>
-          <option>Basement Renovation</option>
-          <option>Painting</option>
+          <option value="">Select a project type</option>
+          {[...services]
+            .sort((a, b) => a.title.localeCompare(b.title, "en", { sensitivity: "base" }))
+            .map((service) => (
+              <option key={service.slug} value={service.title}>{service.title}</option>
+            ))}
           <option>Other</option>
         </select>
       </label>

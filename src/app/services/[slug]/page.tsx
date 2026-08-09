@@ -35,7 +35,10 @@ export default async function ServicePage({ params }: ServicePageProps) {
   const { slug } = await params;
   const service = getService(slug);
   if (!service) notFound();
-  const related = service.related.map(getService).filter(Boolean);
+  const related = service.related
+    .map(getService)
+    .filter(Boolean)
+    .sort((a, b) => a!.title.localeCompare(b!.title, "en", { sensitivity: "base" }));
   const pageContent = service.pageContent;
   const featuredProjects = pageContent?.projectSlugs
     ?.map((projectSlug) => projects.find((project) => project.slug === projectSlug))

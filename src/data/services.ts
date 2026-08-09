@@ -308,7 +308,7 @@ export const services: Service[] = [
       "Exterior painting protects and renews approved wood, trim, doors, railings, stucco and other suitable surfaces. McAze plans preparation, repairs, access, primers and coatings around the property's condition and Toronto weather rather than treating the work as a simple colour change.",
     description:
       "McAze provides exterior painting with weather-aware scheduling, safe access planning, careful preparation, compatible primers and surface-specific finish coatings.",
-    image: "/images/site/home-why-mcaze-teamwork.webp",
+    image: "/images/site/exterior-painting-mcaze.webp",
     benefits: ["Weather-aware planning", "Careful surface preparation", "Safe access review", "Clean property protection"],
     process: commonProcess,
     faqs: [
@@ -480,7 +480,7 @@ export const services: Service[] = [
       "Fence installation improves privacy, safety and the way a yard is organized. McAze plans property-aware layouts, strong posts, practical gates and weather-ready materials for new fences and replacements across Toronto and the GTA.",
     description:
       "McAze installs and replaces residential fences with careful line planning, durable post foundations, reliable gates and details suited to Canadian weather.",
-    image: "/images/site/home-service-deck-fence-mcaze.webp",
+    image: "/images/site/fence-installation-mcaze.webp",
     benefits: ["Clear yard boundaries", "Stronger privacy", "Reliable gates", "Weather-ready details"],
     process: commonProcess,
     faqs: [
@@ -530,7 +530,7 @@ export const services: Service[] = [
       "General contracting brings design, permits, materials, trades, inspections and finishing into one organized construction sequence. McAze manages suitable residential and commercial renovations across Toronto and the GTA with written scopes and clear owner decisions.",
     description:
       "McAze coordinates multi-trade renovation projects from scope and approvals through construction, quality control and documented handover.",
-    image: "/images/site/home-why-mcaze-team.webp",
+    image: "/images/site/home-why-mcaze-teamwork.webp",
     benefits: ["One coordinated plan", "Clear trade sequencing", "Documented changes", "Organized handover"],
     process: commonProcess,
     faqs: [
@@ -580,7 +580,7 @@ export const services: Service[] = [
       "Roofing protects the full building through coordinated shingles or membranes, underlayment, flashing, ventilation and sound decking. McAze assesses suitable residential repair and replacement scopes across Toronto and the GTA.",
     description:
       "McAze plans suitable roof repairs and replacements around the complete water-shedding system, safe access, property protection and clear documentation.",
-    image: "/images/site/hero-renovation.webp",
+    image: "/images/site/roofing-services-mcaze.webp",
     benefits: ["Evidence-based assessment", "Complete roof-system scope", "Weather-aware scheduling", "Thorough cleanup"],
     process: commonProcess,
     faqs: [
@@ -693,7 +693,7 @@ export const services: Service[] = [
     related: ["kitchen-renovation", "bathroom-renovation", "basement-renovation"],
     pageContent: electricalServiceContent,
   },
-];
+].sort((a, b) => a.title.localeCompare(b.title, "en", { sensitivity: "base" }));
 
 export function getService(slug: string) {
   return services.find((service) => service.slug === slug);

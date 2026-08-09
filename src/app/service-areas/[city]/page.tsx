@@ -42,7 +42,8 @@ export default async function CityPage({ params }: CityPageProps) {
   if (content) {
     const featuredServices = content.serviceSlugs
       .map((slug) => services.find((service) => service.slug === slug))
-      .filter((service): service is NonNullable<typeof service> => Boolean(service));
+      .filter((service): service is NonNullable<typeof service> => Boolean(service))
+      .sort((a, b) => a.title.localeCompare(b.title, "en", { sensitivity: "base" }));
     const featuredProjects = (content.projectSlugs ?? [])
       .map((slug) => projects.find((project) => project.slug === slug))
       .filter((project): project is NonNullable<typeof project> => Boolean(project));
