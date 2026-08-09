@@ -15,6 +15,8 @@ import { homeAdditionsServiceContent } from "@/data/home-additions-service-conte
 import { roofingServiceContent } from "@/data/roofing-service-content";
 import { homeRenovationServiceContent } from "@/data/home-renovation-service-content";
 import { kitchenServiceContent } from "@/data/kitchen-service-content";
+import { snowRemovalServiceContent } from "@/data/snow-removal-service-content";
+import { electricalServiceContent } from "@/data/electrical-service-content";
 
 const commonProcess = [
   "Site review and practical scope planning",
@@ -595,6 +597,9 @@ export const services: Service[] = [
   {
     slug: "snow-removal",
     title: "Snow Removal",
+    seoTitle: "Snow Removal Toronto & GTA | McAze",
+    seoDescription:
+      "Arrange residential or light-commercial snow removal in Toronto and the GTA. Learn about pricing, seasonal plans, response timing, de-icing and property responsibilities.",
     shortTitle: "Snow Removal",
     excerpt:
       "Snow removal keeps driveways, walkways, entrances, and small commercial access points usable during winter weather. The service is designed for homeowners, seniors, families, rental properties, and businesses that need dependable clearing when conditions become difficult. It helps reduce slip concerns, protect routines, and keep the property accessible after heavier snowfall.",
@@ -603,8 +608,16 @@ export const services: Service[] = [
     image: "/images/site/home-service-snow-removal-mcaze.webp",
     benefits: ["Safer access", "Reliable scheduling", "Residential support", "Winter-ready planning"],
     process: commonProcess,
-    faqs: commonFaqs,
+    faqs: [
+      { question: "Does McAze provide written snow removal quotes?", answer: "Yes. The quote defines the property, clearing zones, service format, trigger, ice-treatment terms, snow storage, return visits and exclusions." },
+      { question: "Can I arrange seasonal snow removal?", answer: "Seasonal and per-visit availability depends on the address, route capacity and property scope. The applicable service format is confirmed before acceptance." },
+      { question: "Does snow removal include salting?", answer: "Only when the written scope includes or authorizes de-icing treatment. Material choice, application and extra visits depend on conditions and the agreed plan." },
+      { question: "Will McAze clear the City plow windrow?", answer: "The return-visit or windrow policy depends on the service agreement and storm conditions. It is not assumed unless expressly included." },
+      { question: "Does McAze remove snow from roofs?", answer: "Roof snow and ice are not included in ordinary ground-level snow removal. They require a separately assessed specialist scope and safe access." },
+      { question: "Where is snow removal available?", answer: "McAze considers suitable Toronto and GTA residential and light-commercial properties based on scope, route capacity and seasonal availability." },
+    ],
     related: ["landscaping", "deck-construction", "demolition"],
+    pageContent: snowRemovalServiceContent,
   },
   {
     slug: "demolition",
@@ -658,6 +671,9 @@ export const services: Service[] = [
   {
     slug: "electrical",
     title: "Electrical",
+    seoTitle: "Electrical Renovation Coordination Toronto & GTA | McAze",
+    seoDescription:
+      "Plan renovation electrical work in Toronto and the GTA with McAze and Licensed Electrical Contractors. Explore costs, ESA notifications, panels, rewiring and lighting.",
     shortTitle: "Electrical",
     excerpt:
       "Electrical planning affects how comfortable and useful a renovated space becomes. McAze coordinates lighting layouts, fixture placement, switch and device planning, rough-in timing, and finish alignment with licensed professionals where required. It is important for kitchens, bathrooms, basements, offices, additions, and older homes that need safer, better-positioned lighting.",
@@ -666,8 +682,16 @@ export const services: Service[] = [
     image: "/images/site/home-service-electrical-mcaze.webp",
     benefits: ["Better lighting plans", "Code-aware coordination", "Fixture planning", "Clean finish integration"],
     process: commonProcess,
-    faqs: commonFaqs,
+    faqs: [
+      { question: "Does McAze perform electrical work directly?", answer: "McAze coordinates the renovation scope. Regulated electrical work for hire is assigned to the appropriately Licensed Electrical Contractor responsible for its work, ESA notification and inspections." },
+      { question: "Does electrical work require an ESA notification?", answer: "Most new wiring and device work requires notification, subject to defined exemptions. The responsible Licensed Electrical Contractor confirms the requirement for the actual scope." },
+      { question: "Can McAze coordinate a panel upgrade?", answer: "Yes, within a suitable renovation scope. The licensed contractor reviews capacity and coordinates the required ESA, utility and shutdown steps." },
+      { question: "Can electrical work be completed in an occupied home?", answer: "Many localized scopes can, with planned outages and safe access. Larger rewiring or service work may require alternative arrangements during certain stages." },
+      { question: "Does McAze coordinate condo electrical work?", answer: "Yes, subject to the condominium corporation's rules, building systems, access requirements and the Licensed Electrical Contractor's assessment." },
+      { question: "Where does McAze coordinate electrical work?", answer: "McAze coordinates suitable renovation electrical scopes across Toronto and GTA communities, subject to project fit and licensed-contractor availability." },
+    ],
     related: ["kitchen-renovation", "bathroom-renovation", "basement-renovation"],
+    pageContent: electricalServiceContent,
   },
 ];
 
