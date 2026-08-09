@@ -48,6 +48,28 @@ export type City = {
   name: string;
   intro: string;
   neighborhoods: string[];
+  pageContent?: {
+    seoTitle: string;
+    seoDescription: string;
+    heroEyebrow: string;
+    heroTitle: string;
+    heroCopy: string;
+    image: string;
+    introQuestion: string;
+    intro: string[];
+    questions: Array<{
+      eyebrow?: string;
+      question: string;
+      paragraphs: string[];
+      bullets?: string[];
+      sourceLink?: { label: string; href: string };
+    }>;
+    serviceSlugs: string[];
+    projectSlugs?: string[];
+    faqs: FaqItem[];
+    ctaTitle: string;
+    ctaCopy: string;
+  };
 };
 
 export type Project = {

@@ -172,6 +172,26 @@ export function serviceSchema(service: Service) {
   };
 }
 
+export function localServiceSchema(city: string, description: string, path: string) {
+  const url = absoluteUrl(path);
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${url}#service`,
+    url,
+    name: `Home Renovation Services in ${city}`,
+    description,
+    serviceType: "Home renovation and general contracting",
+    provider: { "@id": `${siteConfig.url}/#localbusiness` },
+    areaServed: {
+      "@type": "City",
+      name: city,
+      containedInPlace: { "@type": "AdministrativeArea", name: "Ontario" },
+    },
+  };
+}
+
 export function articleSchema(post: BlogPost) {
   const url = `${siteConfig.url}/blog/${post.slug}`;
 
