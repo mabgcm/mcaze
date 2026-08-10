@@ -61,6 +61,7 @@ export const mainNav: NavItem[] = [
   { label: "Service Areas", href: "/service-areas" },
   { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/faq" },
+  { label: "Team", href: "/team" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -73,6 +74,7 @@ export const footerNav = [
       { label: "Contact", href: "/contact" },
       { label: "FAQ", href: "/faq" },
       { label: "Portfolio", href: "/portfolio" },
+      { label: "Team", href: "/team" },
     ],
   },
   {
