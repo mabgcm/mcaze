@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Cta } from "@/components/cta";
+import { InternalLinks } from "@/components/internal-links";
 import { Container, Section } from "@/components/section";
 import { createMetadata } from "@/lib/seo";
 
@@ -128,6 +129,11 @@ export default function TeamPage() {
         </Container>
       </Section>
 
+      <InternalLinks title="Connect with the McAze team" links={[
+        { label: "About McAze", href: "/about", description: "Learn about the standards behind our work." },
+        { label: "Careers at McAze", href: "/careers", description: "Explore current opportunities and submit an application." },
+        { label: "See our portfolio", href: "/portfolio", description: "Review projects coordinated by the McAze team." },
+      ]} />
       <Cta />
     </>
   );

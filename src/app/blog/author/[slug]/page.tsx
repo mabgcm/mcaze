@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Hero } from "@/components/hero";
+import { InternalLinks } from "@/components/internal-links";
 import { Container, Section, SectionHeader } from "@/components/section";
 import { authors, blogPosts, getAuthor } from "@/data/blog";
 import { createMetadata } from "@/lib/seo";
@@ -41,6 +42,11 @@ export default async function AuthorPage({ params }: AuthorPageProps) {
           </div>
         </Container>
       </Section>
+      <InternalLinks title="Learn more from McAze" links={[
+        { label: "Visit the blog", href: "/blog" },
+        { label: "Meet the team", href: "/team" },
+        { label: "View completed projects", href: "/portfolio" },
+      ]} />
     </>
   );
 }

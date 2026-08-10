@@ -4,6 +4,7 @@ import { Breadcrumb } from "@/components/breadcrumb";
 import { Cta } from "@/components/cta";
 import { Hero } from "@/components/hero";
 import { JsonLd } from "@/components/json-ld";
+import { InternalLinks } from "@/components/internal-links";
 import { Container, Section, SectionHeader } from "@/components/section";
 import { blogPosts, getPost } from "@/data/blog";
 import { articleSchema, createMetadata } from "@/lib/seo";
@@ -64,6 +65,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         </Container>
       </Section>
+      <InternalLinks title="Turn renovation research into a project plan" links={[
+        { label: "Explore related services", href: "/services" },
+        { label: "See completed McAze work", href: "/portfolio" },
+        { label: "Check renovation service areas", href: "/service-areas" },
+      ]} />
       <Cta title="Subscribe for practical renovation notes." copy="Newsletter signup placement is ready for a future email provider or CMS integration." />
     </>
   );

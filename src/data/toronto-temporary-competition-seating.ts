@@ -45,7 +45,7 @@ export const torontoTemporaryCompetitionSeating: Project = {
   localLinkLabel: "Discuss a Toronto Grandstand Project",
   relatedLinks: [
     { label: "Commercial construction and renovation", href: "/services" },
-    { label: "Structural framing services", href: "/services/framing" },
+    { label: "General contracting and structural coordination", href: "/services/general-contracting" },
     { label: "Electrical services for event facilities", href: "/services/electrical" },
     {
       label: "Temporary site management offices",

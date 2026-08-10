@@ -1,6 +1,7 @@
 import { Cta } from "@/components/cta";
 import { FaqList } from "@/components/faq";
 import { Hero } from "@/components/hero";
+import { InternalLinks } from "@/components/internal-links";
 import { Container, Section } from "@/components/section";
 import { faqs } from "@/data/faqs";
 import { createMetadata } from "@/lib/seo";
@@ -20,6 +21,11 @@ export default function FaqPage() {
           <FaqList items={faqs} withSchema />
         </Container>
       </Section>
+      <InternalLinks title="Continue planning your renovation" links={[
+        { label: "Explore renovation services", href: "/services" },
+        { label: "Find your service area", href: "/service-areas" },
+        { label: "Review completed projects", href: "/portfolio" },
+      ]} />
       <Cta />
     </>
   );

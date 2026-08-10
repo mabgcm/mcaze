@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Hero } from "@/components/hero";
+import { InternalLinks } from "@/components/internal-links";
 import { Container, Section, SectionHeader } from "@/components/section";
 import { blogPosts, blogCategories, getCategory } from "@/data/blog";
 import { createMetadata } from "@/lib/seo";
@@ -41,6 +42,11 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           </div>
         </Container>
       </Section>
+      <InternalLinks title="Continue exploring McAze resources" links={[
+        { label: "All blog categories", href: "/blog" },
+        { label: "Renovation services", href: "/services" },
+        { label: "Frequently asked questions", href: "/faq" },
+      ]} />
     </>
   );
 }

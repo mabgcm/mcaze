@@ -10,6 +10,7 @@ import { Container, Section, SectionHeader } from "@/components/section";
 import { getProject, projects } from "@/data/projects";
 import { getService } from "@/data/services";
 import { createMetadata, faqSchema, projectSchema } from "@/lib/seo";
+import { cities } from "@/data/locations";
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
@@ -38,7 +39,20 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   if (!project) notFound();
 
   const service = getService(project.serviceSlug);
-  const related = projects.filter((item) => item.slug !== project.slug).slice(0, 2);
+  const related = projects
+    .filter((item) => item.slug !== project.slug)
+    .sort((a, b) => {
+      const aScore = Number(a.serviceSlug === project.serviceSlug) + Number(a.location === project.location);
+      const bScore = Number(b.serviceSlug === project.serviceSlug) + Number(b.location === project.location);
+      return bScore - aScore;
+    })
+    .slice(0, 2);
+  const matchedCity = cities.find((city) => project.location.toLowerCase().includes(city.name.toLowerCase()));
+  const projectLinks = [
+    ...(service ? [{ label: service.title, href: `/services/${service.slug}` }] : []),
+    ...(matchedCity ? [{ label: `Renovation services in ${matchedCity.name}`, href: `/service-areas/${matchedCity.slug}` }] : []),
+    ...(project.relatedLinks ?? []),
+  ].filter((item, index, items) => items.findIndex((candidate) => candidate.href === item.href) === index);
   const galleryItems =
     project.galleryItems ??
     project.gallery.map((image, index) => ({
@@ -393,9 +407,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   {project.localCopy ??
                     "Request an estimate to review the property, intended scope, site conditions and practical next steps before construction begins."}
                 </p>
-                {project.relatedLinks?.length ? (
+                {projectLinks.length ? (
                   <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold">
-                    {[...project.relatedLinks]
+                    {[...projectLinks]
                       .sort((a, b) => a.label.localeCompare(b.label, "en", { sensitivity: "base" }))
                       .map((item) => (
                       <Link key={`${item.href}-${item.label}`} href={item.href} className="text-[#b86f12] hover:text-[#8f540a]">

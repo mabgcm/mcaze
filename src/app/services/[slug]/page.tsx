@@ -5,10 +5,12 @@ import { Cta } from "@/components/cta";
 import { FaqList } from "@/components/faq";
 import { Hero } from "@/components/hero";
 import { JsonLd } from "@/components/json-ld";
+import { InternalLinks } from "@/components/internal-links";
 import { ProcessSteps } from "@/components/process";
 import { Container, Section, SectionHeader } from "@/components/section";
 import { getService, services } from "@/data/services";
 import { projects } from "@/data/projects";
+import { cities } from "@/data/locations";
 import { createMetadata, serviceSchema } from "@/lib/seo";
 
 export function generateStaticParams() {
@@ -43,6 +45,15 @@ export default async function ServicePage({ params }: ServicePageProps) {
   const featuredProjects = pageContent?.projectSlugs
     ?.map((projectSlug) => projects.find((project) => project.slug === projectSlug))
     .filter((project) => project !== undefined);
+  const priorityAreaSlugs = ["toronto", "vaughan", "markham", "richmond-hill", "north-york", "mississauga"];
+  const serviceAreaLinks = priorityAreaSlugs
+    .map((areaSlug) => cities.find((city) => city.slug === areaSlug))
+    .filter((city): city is NonNullable<typeof city> => Boolean(city))
+    .map((city) => ({
+      label: `${service.shortTitle} in ${city.name}`,
+      href: `/service-areas/${city.slug}`,
+      description: `Planning and service information for ${city.name}.`,
+    }));
 
   if (pageContent) {
     return (
@@ -108,6 +119,12 @@ export default async function ServicePage({ params }: ServicePageProps) {
             </div>
           </Container>
         </Section>
+        <InternalLinks
+          eyebrow="Service Areas"
+          title={`Where does McAze provide ${service.title.toLowerCase()}?`}
+          copy="Connect this service with local renovation guidance for the communities McAze serves across Toronto and the GTA."
+          links={serviceAreaLinks}
+        />
         <Section className="bg-[#faf7f1]">
           <Container>
             <SectionHeader eyebrow="Frequently Asked Questions" title={pageContent.faqQuestion ?? `What do homeowners ask about ${service.title.toLowerCase()}?`} />
@@ -167,6 +184,11 @@ export default async function ServicePage({ params }: ServicePageProps) {
           </div>
         </Container>
       </Section>
+      <InternalLinks
+        eyebrow="Service Areas"
+        title={`Explore ${service.title.toLowerCase()} across the GTA`}
+        links={serviceAreaLinks}
+      />
       <Cta title={`Planning a ${service.title.toLowerCase()} project?`} />
     </>
   );

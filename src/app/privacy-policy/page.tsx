@@ -44,6 +44,7 @@ export default function PrivacyPolicyPage() {
             eyebrow="Privacy"
             title="Privacy Policy"
             copy="This page explains how McAze handles information submitted through the website and during renovation inquiries."
+            headingLevel="h1"
           />
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {sections.map((section) => (

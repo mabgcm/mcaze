@@ -1,5 +1,6 @@
 import { ContactForm } from "@/components/form";
 import { Hero } from "@/components/hero";
+import { InternalLinks } from "@/components/internal-links";
 import { Container, Section, SectionHeader } from "@/components/section";
 import { siteConfig } from "@/data/site";
 import { createMetadata } from "@/lib/seo";
@@ -111,6 +112,11 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
           </aside>
         </Container>
       </Section>
+      <InternalLinks title="Helpful links before requesting an estimate" links={[
+        { label: "Browse all services", href: "/services" },
+        { label: "Check service areas", href: "/service-areas" },
+        { label: "View completed projects", href: "/portfolio" },
+      ]} />
     </>
   );
 }

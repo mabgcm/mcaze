@@ -44,6 +44,7 @@ export default function TermsAndConditionsPage() {
             eyebrow="Terms"
             title="Terms & Conditions"
             copy="These terms outline how to use the McAze website and how renovation information should be interpreted before a written project agreement is prepared."
+            headingLevel="h1"
           />
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {sections.map((section) => (

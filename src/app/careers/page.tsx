@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CareerForm } from "@/components/career-form";
 import { Hero } from "@/components/hero";
+import { InternalLinks } from "@/components/internal-links";
 import { Container, Section, SectionHeader } from "@/components/section";
 import { createMetadata } from "@/lib/seo";
 
@@ -83,6 +84,11 @@ export default async function CareersPage({ searchParams }: CareersPageProps) {
           <CareerForm status={status} />
         </Container>
       </Section>
+      <InternalLinks title="Learn more about McAze before you apply" links={[
+        { label: "Meet the team", href: "/team" },
+        { label: "About McAze", href: "/about" },
+        { label: "View our project portfolio", href: "/portfolio" },
+      ]} />
     </>
   );
 }

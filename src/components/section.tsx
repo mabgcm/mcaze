@@ -14,16 +14,20 @@ export function SectionHeader({
   title,
   copy,
   align = "left",
+  headingLevel = "h2",
 }: {
   eyebrow?: string;
   title: string;
   copy?: string;
   align?: "left" | "center";
+  headingLevel?: "h1" | "h2";
 }) {
+  const Heading = headingLevel;
+
   return (
     <div className={cn("max-w-3xl", align === "center" && "mx-auto text-center")}>
       {eyebrow ? <p className="eyebrow-rule mb-4 text-xs font-bold uppercase tracking-[0.2em] text-[#a95e08]">{eyebrow}</p> : null}
-      <h2 className="display-title text-balance text-3xl leading-[1.05] text-[#171714] sm:text-4xl lg:text-5xl">{title}</h2>
+      <Heading className="display-title text-balance text-3xl leading-[1.05] text-[#171714] sm:text-4xl lg:text-5xl">{title}</Heading>
       {copy ? <p className="mt-5 text-pretty text-base leading-8 text-[#5d5a55] sm:text-lg">{copy}</p> : null}
     </div>
   );

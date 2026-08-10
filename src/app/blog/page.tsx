@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Cta } from "@/components/cta";
 import { Hero } from "@/components/hero";
+import { InternalLinks } from "@/components/internal-links";
 import { Container, Section, SectionHeader } from "@/components/section";
 import { blogCategories, blogPosts } from "@/data/blog";
 import { createMetadata } from "@/lib/seo";
@@ -42,6 +43,11 @@ export default function BlogPage() {
           <p className="mt-8 text-sm text-[#6f6a62]">Published posts: {blogPosts.length}</p>
         </Container>
       </Section>
+      <InternalLinks title="Plan your project while the resource library grows" links={[
+        { label: "Explore renovation services", href: "/services" },
+        { label: "Browse completed projects", href: "/portfolio" },
+        { label: "Read common renovation questions", href: "/faq" },
+      ]} />
       <Cta title="Want renovation advice for your own home?" />
     </>
   );

@@ -7,13 +7,14 @@ type HeroProps = {
   title: string;
   copy: string;
   image?: string;
+  imageAlt?: string;
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
   reassuranceItems?: string[];
   compactTitle?: boolean;
 };
 
-export function Hero({ eyebrow, title, copy, image = "/placeholders/hero.svg", primaryCta, secondaryCta, reassuranceItems, compactTitle = false }: HeroProps) {
+export function Hero({ eyebrow, title, copy, image = "/placeholders/hero.svg", imageAlt, primaryCta, secondaryCta, reassuranceItems, compactTitle = false }: HeroProps) {
   return (
     <section className="relative overflow-hidden border-b border-[#e7e2d8] bg-[#fbfaf7]">
       <div className="absolute right-0 top-0 hidden h-full w-[42%] bg-[#f1ece3] lg:block" aria-hidden="true" />
@@ -44,7 +45,7 @@ export function Hero({ eyebrow, title, copy, image = "/placeholders/hero.svg", p
           ) : null}
         </div>
         <div className="relative aspect-[4/3] overflow-hidden rounded-md border border-[#d9d2c5] bg-[#f7f3ed] shadow-[14px_14px_0_rgba(245,157,40,0.28)] lg:-mr-6">
-          <Image src={image} alt="" fill priority sizes="(min-width: 1024px) 56vw, 100vw" className="object-cover" />
+          <Image src={image} alt={imageAlt ?? `${title} — McAze renovation and construction`} fill priority sizes="(min-width: 1024px) 56vw, 100vw" className="object-cover" />
           <div className="absolute inset-x-0 bottom-0 h-1 bg-[#F59D28]" aria-hidden="true" />
         </div>
       </Container>

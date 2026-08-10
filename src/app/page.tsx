@@ -16,7 +16,7 @@ import { createMetadata } from "@/lib/seo";
 export const metadata = createMetadata({
   title: "Home Renovation Contractor in Vaughan, Markham & Richmond Hill",
   description:
-    "McAze is a home renovation contractor serving Vaughan, Markham, Richmond Hill, and the Greater Toronto Area with kitchen, bathroom, basement, drywall, painting, flooring, deck, and commercial renovation services.",
+    "McAze provides trusted home and commercial renovation services across Vaughan, Markham, Richmond Hill, Toronto, and the GTA.",
 });
 
 const process = [

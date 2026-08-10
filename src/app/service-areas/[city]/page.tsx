@@ -6,6 +6,7 @@ import { Cta } from "@/components/cta";
 import { FaqList } from "@/components/faq";
 import { Hero } from "@/components/hero";
 import { JsonLd } from "@/components/json-ld";
+import { InternalLinks } from "@/components/internal-links";
 import { Container, Section, SectionHeader } from "@/components/section";
 import { cities, getCity } from "@/data/locations";
 import { services } from "@/data/services";
@@ -38,6 +39,11 @@ export default async function CityPage({ params }: CityPageProps) {
   const city = getCity(citySlug);
   if (!city) notFound();
   const content = city.pageContent;
+  const nearbyCities = cities
+    .filter((item) => item.slug !== city.slug)
+    .sort((a, b) => a.name.localeCompare(b.name, "en", { sensitivity: "base" }))
+    .slice(0, 6)
+    .map((item) => ({ label: `Renovation services in ${item.name}`, href: `/service-areas/${item.slug}` }));
 
   if (content) {
     const featuredServices = content.serviceSlugs
@@ -95,6 +101,12 @@ export default async function CityPage({ params }: CityPageProps) {
             <div className="mt-10"><FaqList items={content.faqs} withSchema /></div>
           </Container>
         </Section>
+        <InternalLinks
+          eyebrow="Nearby Service Areas"
+          title={`Where else does McAze work near ${city.name}?`}
+          copy="Explore local renovation guidance for other communities served across Toronto and the GTA."
+          links={nearbyCities}
+        />
         <Cta title={content.ctaTitle} copy={content.ctaCopy} />
       </>
     );
@@ -130,6 +142,7 @@ export default async function CityPage({ params }: CityPageProps) {
           </div>
         </Container>
       </Section>
+      <InternalLinks eyebrow="Nearby Service Areas" title="Explore other communities we serve" links={nearbyCities} />
       <Cta title={`Planning renovation work in ${city.name}?`} />
     </>
   );
