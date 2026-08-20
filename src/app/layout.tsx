@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
@@ -91,6 +92,16 @@ export default function RootLayout({
         <JsonLd data={webSiteSchema()} />
         <JsonLd data={localBusinessSchema()} />
         <Analytics />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-SN5ZJ5W7PJ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-SN5ZJ5W7PJ');`}
+        </Script>
       </body>
     </html>
   );
