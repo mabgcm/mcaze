@@ -22,13 +22,13 @@ const teamMembers = [
     bio: "Samir brings together business strategy, project planning, field operations and client communication. His practical, accountable leadership keeps McAze focused on clear scopes, capable teams and responsible delivery from the first conversation through completion.",
   },
   {
-    name: "Kadri Yiğit",
+    name: "Kadir Yiğit",
     role: "GTA Supervisor",
     experience: "More than 10 years of construction experience",
     image: "/images/team/kadri-yigit-gta-supervisor.webp",
     imagePosition: "object-center",
-    alt: "Kadri Yiğit, GTA Supervisor at McAze, on an active construction site",
-    bio: "Kadri has more than a decade of experience across multifunctional construction projects. As GTA Supervisor, he coordinates job-site activity, supports trade sequencing and helps maintain McAze standards for safety, communication, workmanship and day-to-day progress.",
+    alt: "Kadir Yiğit, GTA Supervisor at McAze, on an active construction site",
+    bio: "Kadir has more than a decade of experience across multifunctional construction projects. As GTA Supervisor, he coordinates job-site activity, supports trade sequencing and helps maintain McAze standards for safety, communication, workmanship and day-to-day progress.",
   },
 ];
 
