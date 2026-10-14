@@ -246,7 +246,11 @@ export default function HomePage() {
 
       <Section>
         <Container>
-          <SectionHeader eyebrow="Google Reviews" title="What McAze customers say on Google." copy="Recent feedback from customers who shared their experience on McAze Renovation's public Google Business Profile." />
+          <SectionHeader
+            eyebrow="Google Reviews"
+            title="What McAze customers say on Google."
+            copy="McAze currently holds a 5.0 Google rating based on 51 public Google reviews from homeowners across the GTA."
+          />
           <div className="mt-10">
             <Testimonials />
           </div>
