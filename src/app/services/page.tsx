@@ -6,8 +6,9 @@ import { services } from "@/data/services";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "Services",
-  description: "Explore McAze renovation services including kitchens, bathrooms, basements, painting, drywall, flooring, landscaping, and more.",
+  title: "Renovation Services in Toronto & GTA",
+  description:
+    "Explore McAze renovation services including kitchens, bathrooms, basements, painting, drywall, flooring, landscaping, and more across Toronto and the GTA.",
   path: "/services",
 });
 

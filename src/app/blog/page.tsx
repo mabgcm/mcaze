@@ -7,8 +7,9 @@ import { blogCategories, blogPosts } from "@/data/blog";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "Blog",
-  description: "McAze renovation blog system with listing, categories, authors, related posts, table of contents, and article schema support.",
+  title: "Renovation Blog & Planning Guides",
+  description:
+    "Browse renovation planning ideas, material notes, and maintenance advice from McAze. Categories and author pages are ready as new articles are published.",
   path: "/blog",
 });
 
