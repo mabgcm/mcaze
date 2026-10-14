@@ -1,6 +1,29 @@
 import type { BlogPost } from "@/lib/types";
 
-export const blogPosts: BlogPost[] = [];
+export const blogPosts: BlogPost[] = [
+  {
+    slug: "bathroom-renovation-cost-vaughan-2027",
+    title: "Bathroom Renovation Cost in Vaughan: 2027 Price Guide",
+    excerpt:
+      "Planning a bathroom renovation in Vaughan? Compare realistic 2027 budget ranges, see what changes the price, understand permits and timelines, and learn how to evaluate contractor quotes.",
+    category: "Renovation Planning",
+    author: "McAze Team",
+    publishedAt: "2026-10-04",
+    updatedAt: "2026-10-04",
+    readingTime: "14 min read",
+    image: "/images/site/bathroom-renovation.webp",
+    headings: [
+      "2027 Vaughan bathroom renovation costs",
+      "Cost by bathroom type",
+      "Where the budget goes",
+      "What changes the final price",
+      "Permits and inspections",
+      "Timelines",
+      "How to compare quotes",
+      "Frequently asked questions",
+    ],
+  },
+];
 
 export const blogCategories = [
   {
