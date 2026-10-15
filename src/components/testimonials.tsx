@@ -1,3 +1,5 @@
+import { googleReviewSummary } from "@/data/site";
+
 const testimonials = [
   {
     name: "Lana A",
@@ -30,11 +32,11 @@ export function Testimonials() {
           <div>
             <p className="font-semibold text-[#161616]">Excellent on Google</p>
             <div className="mt-1 flex flex-wrap items-center gap-2">
-              <span className="text-lg font-bold text-[#161616]">5.0</span>
+              <span className="text-lg font-bold text-[#161616]">{googleReviewSummary.rating}</span>
               <span className="tracking-[0.1em] text-[#fbbc04]" aria-label="Five out of five stars">
                 ★★★★★
               </span>
-              <span className="text-sm text-[#6f6a62]">19 reviews</span>
+              <span className="text-sm text-[#6f6a62]">{googleReviewSummary.reviewCount} reviews</span>
             </div>
           </div>
         </div>

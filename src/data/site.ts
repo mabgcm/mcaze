@@ -119,3 +119,8 @@ export const footerNav = [
     ],
   },
 ];
+
+export const googleReviewSummary = {
+  rating: "5.0",
+  reviewCount: 51,
+};

@@ -48,7 +48,7 @@ export const services: Service[] = [
   {
     slug: "full-home-renovation",
     title: "Full Home Renovation",
-    seoTitle: "Full Home Renovation Toronto & GTA | McAze",
+    seoTitle: "Full Home Renovation Toronto & GTA",
     seoDescription:
       "Plan a full home renovation in Toronto with McAze. Learn about costs, permits, timelines, layout, structural work, trades, contracts and project handover.",
     shortTitle: "Home Renovation",
@@ -73,7 +73,7 @@ export const services: Service[] = [
   {
     slug: "kitchen-renovation",
     title: "Kitchen Renovation",
-    seoTitle: "Kitchen Renovation Toronto & GTA | McAze",
+    seoTitle: "Kitchen Renovation Toronto & GTA",
     seoDescription:
       "Plan a kitchen renovation in Toronto or the GTA with McAze. Explore costs, timelines, permits, layouts, cabinets, counters, electrical work and our process.",
     shortTitle: "Kitchens",
@@ -149,7 +149,7 @@ export const services: Service[] = [
     title: "Basement Renovation",
     seoTitle: "Basement Renovation Toronto & GTA",
     seoDescription:
-      "Plan a basement renovation in Toronto or the GTA with McAze. Learn about costs, timelines, permits, legal suites, moisture, insulation, flooring and our process.",
+      "Plan a basement renovation in Toronto or the GTA with McAze. Learn about costs, timelines, permits, legal suites, moisture, insulation and flooring.",
     shortTitle: "Basements",
     excerpt:
       "Basement finishing turns underused lower levels into practical living space for work, guests, kids, fitness, storage, or family time. McAze plans framing coordination, insulation considerations, drywall, flooring, lighting, trim, and painting around the existing conditions. It is a strong option for homeowners who need more room but want to stay in the same home.",
@@ -351,7 +351,7 @@ export const services: Service[] = [
     title: "Drywall Installation & Repair",
     seoTitle: "Drywall Installation & Repair Toronto & GTA",
     seoDescription:
-      "Plan drywall installation or repair in Toronto and the GTA with McAze. Learn about costs, patches, ceilings, water damage, finish levels, permits and dust control.",
+      "Plan drywall installation or repair in Toronto and the GTA with McAze. Learn about costs, patches, ceilings, water damage, finish levels and permits.",
     shortTitle: "Drywall",
     excerpt:
       "Drywall is the base layer for how a renovated room finally feels. McAze installs boards, repairs damage, tapes, muds, sands, patches ceilings, and prepares surfaces for paint. This service fits basements, layout changes, kitchens, bathrooms, and damaged walls where clean corners, smooth surfaces, and dust-conscious work make the next finish look better.",
@@ -522,7 +522,7 @@ export const services: Service[] = [
   {
     slug: "general-contracting",
     title: "General Contracting",
-    seoTitle: "General Contractor Toronto & GTA | McAze",
+    seoTitle: "General Contractor Toronto & GTA",
     seoDescription:
       "Plan a Toronto renovation with McAze general contracting. Learn about costs, contracts, permits, trades, schedules, change orders, inspections and handover.",
     shortTitle: "General Contracting",
@@ -547,7 +547,7 @@ export const services: Service[] = [
   {
     slug: "home-additions-custom-renovations",
     title: "Home Additions & Custom Renovations",
-    seoTitle: "Home Additions Toronto & Custom Renovations | McAze",
+    seoTitle: "Home Additions Toronto & Custom Renovations",
     seoDescription:
       "Plan a Toronto home addition with McAze. Learn about costs, zoning, minor variances, permits, design, foundations, structure, timelines and custom renovations.",
     shortTitle: "Home Additions",
@@ -572,7 +572,7 @@ export const services: Service[] = [
   {
     slug: "roofing-services",
     title: "Roofing Services",
-    seoTitle: "Roofing Services Toronto & GTA | McAze",
+    seoTitle: "Roofing Services Toronto & GTA",
     seoDescription:
       "Plan roof repair or replacement in Toronto with McAze. Learn about costs, leaks, shingles, ice dams, ventilation, decking, flashing, permits and warranties.",
     shortTitle: "Roofing",
@@ -597,9 +597,9 @@ export const services: Service[] = [
   {
     slug: "snow-removal",
     title: "Snow Removal",
-    seoTitle: "Snow Removal Toronto & GTA | McAze",
+    seoTitle: "Snow Removal Toronto & GTA",
     seoDescription:
-      "Arrange residential or light-commercial snow removal in Toronto and the GTA. Learn about pricing, seasonal plans, response timing, de-icing and property responsibilities.",
+      "Arrange residential or light-commercial snow removal in Toronto and the GTA. Learn about pricing, seasonal plans, response timing and property responsibilities.",
     shortTitle: "Snow Removal",
     excerpt:
       "Snow removal keeps driveways, walkways, entrances, and small commercial access points usable during winter weather. The service is designed for homeowners, seniors, families, rental properties, and businesses that need dependable clearing when conditions become difficult. It helps reduce slip concerns, protect routines, and keep the property accessible after heavier snowfall.",
@@ -671,9 +671,9 @@ export const services: Service[] = [
   {
     slug: "electrical",
     title: "Electrical",
-    seoTitle: "Electrical Renovation Coordination Toronto & GTA | McAze",
+    seoTitle: "Electrical Renovation Coordination Toronto & GTA",
     seoDescription:
-      "Plan renovation electrical work in Toronto and the GTA with McAze and Licensed Electrical Contractors. Explore costs, ESA notifications, panels, rewiring and lighting.",
+      "Plan renovation electrical work in Toronto and the GTA with McAze and Licensed Electrical Contractors. Explore costs, ESA notifications, panels and rewiring.",
     shortTitle: "Electrical",
     excerpt:
       "Electrical planning affects how comfortable and useful a renovated space becomes. McAze coordinates lighting layouts, fixture placement, switch and device planning, rough-in timing, and finish alignment with licensed professionals where required. It is important for kitchens, bathrooms, basements, offices, additions, and older homes that need safer, better-positioned lighting.",

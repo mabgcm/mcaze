@@ -11,10 +11,11 @@ import { faqs } from "@/data/faqs";
 import { cities } from "@/data/locations";
 import { projects } from "@/data/projects";
 import { services } from "@/data/services";
+import { googleReviewSummary } from "@/data/site";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "Home Renovation Contractor in Vaughan, Markham & Richmond Hill",
+  title: "Renovation Contractor in Vaughan, Markham & Richmond Hill",
   description:
     "McAze provides trusted home and commercial renovation services across Vaughan, Markham, Richmond Hill, Toronto, and the GTA.",
 });
@@ -73,7 +74,7 @@ const trustBar = [
 const conversionStats = [
   { value: "26+", label: "Years of experience", note: "Serving the Greater Toronto Area" },
   { value: "200+", label: "Completed projects", note: "Residential and commercial work" },
-  { value: "5.0", label: "Google rating", note: "Based on 51 Google reviews" },
+  { value: googleReviewSummary.rating, label: "Google rating", note: `Based on ${googleReviewSummary.reviewCount} Google reviews` },
   { value: "1 business day", label: "Typical response time", note: "For most estimate requests" },
 ];
 
@@ -249,7 +250,7 @@ export default function HomePage() {
           <SectionHeader
             eyebrow="Google Reviews"
             title="What McAze customers say on Google."
-            copy="McAze currently holds a 5.0 Google rating based on 51 public Google reviews from homeowners across the GTA."
+            copy={`McAze currently holds a ${googleReviewSummary.rating} Google rating based on ${googleReviewSummary.reviewCount} public Google reviews from homeowners across the GTA.`}
           />
           <div className="mt-10">
             <Testimonials />

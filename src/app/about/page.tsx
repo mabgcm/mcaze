@@ -7,7 +7,7 @@ import { Stats } from "@/components/stats";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "McAze Renovation | Trusted Home & Commercial Renovation Experts in GTA",
+  title: "Home & Commercial Renovation Experts in the GTA",
   description: "McAze provides residential and commercial renovation across the GTA with quality craftsmanship, reliable project management, and clear service.",
   path: "/about",
 });

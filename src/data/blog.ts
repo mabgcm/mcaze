@@ -5,7 +5,7 @@ export const blogPosts: BlogPost[] = [
     slug: "bathroom-renovation-cost-vaughan-2027",
     title: "Bathroom Renovation Cost in Vaughan: 2027 Price Guide",
     excerpt:
-      "Planning a bathroom renovation in Vaughan? Compare realistic 2027 budget ranges, see what changes the price, understand permits and timelines, and learn how to evaluate contractor quotes.",
+      "Planning a bathroom renovation in Vaughan? Compare realistic 2027 budget ranges, see what changes the price, and learn how to evaluate contractor quotes.",
     category: "Renovation Planning",
     author: "McAze Team",
     publishedAt: "2026-10-04",

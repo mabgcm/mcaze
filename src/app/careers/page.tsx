@@ -8,7 +8,7 @@ import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
   title: "Careers in Renovation & Construction",
-  description: "Explore construction and renovation career opportunities with McAze across Toronto and the GTA. Submit a career inquiry for field, coordination and subcontractor roles.",
+  description: "Explore construction and renovation career opportunities with McAze across Toronto and the GTA, including field, coordination and subcontractor roles.",
   path: "/careers",
   image: "/images/site/home-cta-mcaze-team.webp",
 });
