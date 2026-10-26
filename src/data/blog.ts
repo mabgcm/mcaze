@@ -2,6 +2,29 @@ import type { BlogPost } from "@/lib/types";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "basement-renovation-cost-toronto-2027",
+    title: "Basement Renovation Cost in Toronto: 2027 Price Guide",
+    excerpt:
+      "Planning a basement renovation in Toronto? Compare 2027 costs for a basic finish, a family basement with bathroom, and a legal second suite.",
+    category: "Renovation Planning",
+    author: "McAze Team",
+    publishedAt: "2026-10-26",
+    updatedAt: "2026-10-26",
+    readingTime: "16 min read",
+    image: "/images/site/basement-renovation.webp",
+    headings: [
+      "2027 Toronto basement renovation costs",
+      "Basement renovation cost by project type",
+      "Where the basement budget goes",
+      "What changes the final price",
+      "Permits and inspections",
+      "Legal second suites",
+      "Timelines",
+      "How to compare quotes",
+      "Frequently asked questions",
+    ],
+  },
+  {
     slug: "bathroom-renovation-cost-vaughan-2027",
     title: "Bathroom Renovation Cost in Vaughan: 2027 Price Guide",
     excerpt:

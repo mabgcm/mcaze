@@ -41,7 +41,7 @@ export default function BlogPage() {
                     <p className="mt-4 leading-7 text-[#5d5a55]">{post.excerpt}</p>
                     <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-[#6f6a62]">
                       <span>{post.author}</span><span aria-hidden="true">•</span>
-                      <time dateTime={post.publishedAt}>October 4, 2026</time><span aria-hidden="true">•</span>
+                      <time dateTime={post.publishedAt}>{new Date(`${post.publishedAt}T00:00:00`).toLocaleDateString("en-CA", { month: "long", day: "numeric", year: "numeric" })}</time><span aria-hidden="true">•</span>
                       <span>{post.readingTime}</span>
                     </div>
                     <p className="mt-6 font-semibold text-[#a95e08]">Read the guide →</p>
