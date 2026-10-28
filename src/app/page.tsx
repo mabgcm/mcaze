@@ -7,6 +7,7 @@ import { ProcessSteps } from "@/components/process";
 import { Container, Section, SectionHeader } from "@/components/section";
 import { Stats } from "@/components/stats";
 import { Testimonials } from "@/components/testimonials";
+import { blogPosts } from "@/data/blog";
 import { faqs } from "@/data/faqs";
 import { cities } from "@/data/locations";
 import { projects } from "@/data/projects";
@@ -102,30 +103,6 @@ const trustSignals = [
   {
     title: "Warranty",
     copy: "Product and workmanship expectations are reviewed before work begins and confirmed through the final walkthrough process.",
-  },
-];
-
-const insightPlaceholders = [
-  {
-    category: "Planning",
-    date: "Coming Soon",
-    readingTime: "5 min read",
-    title: "How to Plan a Kitchen Renovation Without Losing Daily Function",
-    copy: "A future article covering layout decisions, material lead times, temporary kitchen planning, and what to confirm before demolition.",
-  },
-  {
-    category: "Basements",
-    date: "Coming Soon",
-    readingTime: "6 min read",
-    title: "Basement Finishing Questions Homeowners Should Ask Early",
-    copy: "A future guide for moisture, lighting, ceiling height, flooring, storage, and permit considerations in GTA basements.",
-  },
-  {
-    category: "Finishes",
-    date: "Coming Soon",
-    readingTime: "4 min read",
-    title: "Choosing Paint, Flooring, and Trim Finishes That Work Together",
-    copy: "A future finish-selection note focused on durability, maintenance, colour flow, and avoiding expensive rework.",
   },
 ];
 
@@ -280,20 +257,30 @@ export default function HomePage() {
 
       <Section>
         <Container>
-          <SectionHeader eyebrow="Blog" title="Latest Renovation Insights" copy="Helpful renovation planning articles will appear here as the blog grows. These placeholders reserve space for practical homeowner guidance without adding unfinished posts." />
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {insightPlaceholders.map((item) => (
-              <article key={item.title} className="rounded-2xl border border-[#eee9e1] bg-white p-6 shadow-sm">
-                <div className="flex flex-wrap gap-x-3 gap-y-1 text-sm font-semibold text-[#b86f12]">
-                  <span>{item.category}</span>
-                  <span className="text-[#5d5a55]">{item.date}</span>
-                  <span className="text-[#5d5a55]">{item.readingTime}</span>
+          <SectionHeader eyebrow="Blog" title="Latest Renovation Insights" copy="Practical renovation planning guides from the McAze team — costs, permits, timelines, and what to check before you hire." />
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            {blogPosts.map((post) => (
+              <article key={post.slug} className="overflow-hidden rounded-2xl border border-[#eee9e1] bg-white shadow-sm">
+                <div className="relative aspect-[16/9] w-full overflow-hidden">
+                  <Image src={post.image} alt={post.title} fill className="object-cover" />
                 </div>
-                <h3 className="mt-3 text-xl font-semibold text-[#161616]">{item.title}</h3>
-                <p className="mt-3 leading-7 text-[#5d5a55]">{item.copy}</p>
-                <span className="mt-5 inline-flex text-sm font-semibold text-[#b86f12]">Continue Reading</span>
+                <div className="p-6">
+                  <div className="flex flex-wrap gap-x-3 gap-y-1 text-sm font-semibold text-[#b86f12]">
+                    <span>{post.category}</span>
+                    <span className="text-[#5d5a55]">{new Date(`${post.publishedAt}T00:00:00`).toLocaleDateString("en-CA", { month: "long", day: "numeric", year: "numeric" })}</span>
+                    <span className="text-[#5d5a55]">{post.readingTime}</span>
+                  </div>
+                  <h3 className="mt-3 text-xl font-semibold text-[#161616]">
+                    <a href={`/blog/${post.slug}`} className="hover:text-[#b86f12]">{post.title}</a>
+                  </h3>
+                  <p className="mt-3 leading-7 text-[#5d5a55]">{post.excerpt}</p>
+                  <a href={`/blog/${post.slug}`} className="mt-5 inline-flex text-sm font-semibold text-[#b86f12]">Read the guide →</a>
+                </div>
               </article>
             ))}
+          </div>
+          <div className="mt-8 text-center">
+            <a href="/blog" className="text-sm font-semibold text-[#b86f12]">View all articles →</a>
           </div>
         </Container>
       </Section>
