@@ -18,7 +18,7 @@ export type BlogPostContent = {
   publishedLabel: string;
   disclaimer: string;
   shortAnswer: TextSegment[];
-  costSection: {
+  costSection?: {
     eyebrow: string;
     title: string;
     intro: string;
@@ -391,6 +391,191 @@ export const blogPostContent: Record<string, BlogPostContent> = {
     cta: {
       title: "Ready to price your Toronto basement renovation?",
       copy: "Share the basement size, ceiling height, moisture notes, desired rooms and preferred timing. McAze will review the scope and explain the next practical step toward a written estimate.",
+    },
+  },
+  "hidden-water-leaks-repair-occupied-home": {
+    eyebrow: "Water Damage Case Study",
+    heroImageAlt: "Bathroom renovation after a hidden water leak repair",
+    secondaryCta: { label: "Home Renovation Services", href: "/services" },
+    publishedLabel: "November 16, 2026",
+    disclaimer:
+      "This case study describes one completed McAze project. Causes, repair methods and timelines vary by property. Concealed leaks should be investigated before finishes are replaced, and pricing depends on the damage and the agreed scope.",
+    shortAnswer: [
+      { text: "A cracked bathroom water-supply pipe, a concealed dishwasher supply leak, and construction debris blocking a drain caused lifting tiles, mould, and moisture under hardwood. McAze repaired all three problems and renovated the affected areas in about " },
+      { text: "26–27 days", bold: true },
+      { text: " — while the homeowner " },
+      { text: "continued living in the house", bold: true },
+      { text: "." },
+    ],
+    sections: [
+      {
+        id: "warning-signs",
+        eyebrow: "The warning signs",
+        title: "Hidden Leaks Do Not Have to Flood a Room",
+        paragraphs: [
+          "A water leak does not have to flood a room to cause significant damage. A small amount of water escaping behind a wall or beneath a floor can remain unnoticed for years.",
+          "For one McAze Renovation customer, the warning signs appeared in several places: lifting bathroom tiles, mould behind finished surfaces, moisture beneath the living-room hardwood, and loose kitchen floor tiles.",
+          "Our task was to find the sources, repair the leakage, and renovate the affected areas. Just as importantly, we needed to complete the work while the homeowner continued living in the house.",
+          "The project took approximately 26–27 days, including investigation, repairs, removal of damaged materials, and renovation.",
+        ],
+      },
+      {
+        id: "what-was-happening",
+        eyebrow: "The symptoms",
+        title: "What Was Happening Inside the Home?",
+        paragraphs: [
+          "The homeowner was dealing with gradual water damage rather than a single major flooding event.",
+          "Small, concealed leaks had allowed moisture to reach materials behind the bathroom tiles and beneath the flooring. Over time, the bathroom tiles began lifting, mould developed in concealed areas, and water reached beneath the living-room hardwood.",
+          "The kitchen had its own problems. Floor tiles were loosening and rising, but the source of the moisture was not immediately visible.",
+          "Although the symptoms appeared related, our investigation identified several separate issues that needed attention.",
+        ],
+      },
+      {
+        id: "bathroom-leak",
+        eyebrow: "Source 1",
+        title: "The Bathroom Leak: A Cracked Water-Supply Pipe",
+        paragraphs: [
+          "The bathroom leakage was traced to a cracked section of water-supply piping serving the bathroom, in the supply arrangement leading toward the shower tap.",
+          "The leak was not coming from water spraying out of the showerhead. It was occurring within the concealed plumbing supply.",
+          "Water had been escaping slowly from the crack and reaching the surrounding materials. Over time, the effects became visible in the bathroom finishes and extended into the living-room flooring area.",
+          "We could identify the crack and address the leakage, but the original reason the pipe cracked was not confirmed. A manufacturing defect or another cause should not be assumed without supporting evidence.",
+          "What mattered for the repair was locating the damaged pipe and stopping the water before rebuilding the affected areas.",
+        ],
+      },
+      {
+        id: "kitchen-leak",
+        eyebrow: "Source 2",
+        title: "The Kitchen Leak: A Concealed Dishwasher Supply Connection",
+        paragraphs: [
+          "In the kitchen, we found leakage at a connection supplying water to the dishwasher.",
+          "The connection was in a concealed lower area around the appliance, making it difficult to spot during everyday use.",
+          "Rather than creating an obvious puddle in the middle of the kitchen, water had been escaping out of sight and reaching the floor assembly. The kitchen tiles had gradually become loose and started lifting.",
+          "This was another reason the investigation had to go beyond the visible surface. Replacing loose tiles would not have resolved an active leak beneath or behind the appliance.",
+        ],
+      },
+      {
+        id: "drain-blockage",
+        eyebrow: "Separate discovery",
+        title: "A Separate Discovery: Construction Debris in the Drain",
+        paragraphs: [
+          "During the kitchen investigation, we also discovered a blockage in the drainage serving the washing machine and dishwasher.",
+          "The blockage contained remnants of construction materials, including pieces of drywall, apparently left from earlier renovation work.",
+          "This was a separate issue from the leaking dishwasher supply connection. Both needed attention as part of resolving the kitchen's plumbing problems.",
+          "The finding also highlighted a detail homeowners rarely see: materials left inside drainage can create problems long after renovation work appears complete.",
+        ],
+      },
+      {
+        id: "investigation",
+        eyebrow: "Diagnosis",
+        title: "Why the Investigation Took Several Days",
+        paragraphs: [
+          "Finding the causes took several days.",
+          "There were multiple affected areas and more than one plumbing problem. We needed to distinguish the bathroom pipe leak, the concealed dishwasher supply leak, and the drainage blockage.",
+          "The damaged tiles and flooring showed where moisture had caused problems. They did not immediately reveal every source.",
+          "Taking time to investigate helped establish the repair sequence and the areas that needed to be opened. It also helped us avoid treating several different problems as though they came from one leak.",
+        ],
+      },
+      {
+        id: "repair-sequence",
+        eyebrow: "Repair order",
+        title: "Repairing the Causes Before Replacing the Finishes",
+        paragraphs: [
+          "Once the sources were identified, we addressed the leakage and drainage problems before proceeding with the main renovation. The homeowner needed the underlying problems resolved before investing in replacement tiles and flooring. The work followed a practical sequence:",
+        ],
+        bullets: [
+          "Investigate the affected rooms and identify the sources.",
+          "Repair the leaking plumbing and address the blocked drainage.",
+          "Remove affected finishes and damaged materials.",
+          "Repair and renovate the opened areas.",
+          "Complete the finishing work with attention to the existing interior.",
+        ],
+      },
+      {
+        id: "occupied-home",
+        eyebrow: "Living through renovation",
+        title: "The Homeowner Stayed in the House Throughout the Renovation",
+        paragraphs: [
+          "One of the aspects the customer appreciated most was being able to remain at home during the work.",
+          "They left in the morning and returned in the evening while our team carried out the renovation during the day. They did not have to move out for the project.",
+          "Working inside an occupied home required care beyond the immediate repair areas. Furniture, belongings, and surrounding parts of the house needed protection while materials were removed and renovation work continued.",
+          "We covered and screened off belongings and adjacent areas with protective plastic sheeting. Our team worked carefully around the homeowner's possessions, and no belongings were damaged during the project.",
+          "For this customer, the way the work was carried out mattered alongside the finished result. They could continue their daily routine while their home was being repaired.",
+          "Whether a homeowner can remain in place depends on the scope and conditions of each project. In this case, we were able to organise the work around continued occupancy.",
+        ],
+      },
+      {
+        id: "preserving-design",
+        eyebrow: "Matching the existing interior",
+        title: "Preserving Unaffected Materials and the Existing Design",
+        paragraphs: [
+          "The homeowner wanted to retain the existing appearance as much as possible.",
+          "We therefore worked to preserve materials outside the water-affected areas wherever practical, while removing the damaged materials that required replacement.",
+          "This distinction mattered. Repairing water damage did not mean automatically replacing every finish in every room.",
+          "Matching the existing design was another priority. Tile collections and styles change, and finding a suitable match can become difficult years after an original installation.",
+          "We made an effort to source tiles consistent with the existing design so the repaired areas would blend into the home. The aim was to minimise noticeable differences between the retained finishes and the renovated sections.",
+          "The project combined essential repairs with respect for the interior the homeowner wanted to keep.",
+        ],
+      },
+      {
+        id: "timeline",
+        eyebrow: "Duration",
+        title: "How Long Did the Project Take?",
+        paragraphs: [
+          "The complete project took approximately 26–27 days—just under one month.",
+          "That period included investigating the concealed problems, repairing the plumbing issues, removing damaged materials, and renovating the affected bathroom, living-room flooring area, and kitchen floor.",
+          "It was not simply a tile replacement project. Several underlying issues had to be resolved, and the work had to be organised around a customer who continued living in the property.",
+        ],
+      },
+      {
+        id: "fair-pricing",
+        eyebrow: "First-time customer",
+        title: "Fair Pricing for a First-Time Customer",
+        paragraphs: [
+          "This was the homeowner's first project with McAze.",
+          "We offered favourable first-time-client pricing to help make a project involving several affected areas more manageable.",
+          "Our approach is to build lasting relationships through fair pricing, careful workmanship, and respect for the customer's home. We want clients to feel comfortable returning for future work and recommending us to people they know.",
+          "Each estimate still depends on the property, the damage, and the agreed scope.",
+        ],
+      },
+      {
+        id: "testimonial-video",
+        eyebrow: "Customer feedback",
+        title: "A Customer Who Shared Their Experience on Video",
+        paragraphs: [
+          "After completion, the homeowner recorded and sent us a video describing their experience with McAze.",
+          "They appreciated the clean, careful work and the way the renovation was handled while they remained in the house.",
+          "Their feedback reflected more than the appearance of the repaired rooms. It also reflected the protection of their belongings, the care taken throughout the project, and the ability to continue living at home.",
+        ],
+      },
+    ],
+    faqs: [
+      { question: "Can a small leak damage more than one room?", answer: "In this project, gradual bathroom leakage affected both the bathroom finishes and the living-room flooring area. The kitchen also had a separate concealed leak. When several rooms show damage, each area needs investigation rather than an assumption that one source explains everything." },
+      { question: "Do lifting tiles always mean there is a water leak?", answer: "Lifting tiles alone do not establish the cause. In this home, concealed leakage was found during the investigation. The important step is understanding why the tiles are failing before deciding on the repair." },
+      { question: "Does all the flooring have to be replaced?", answer: "The extent of replacement depends on the damage and the condition of the surrounding materials. Here, we worked to preserve unaffected materials wherever practical and renovate the areas that required repair." },
+      { question: "Can replacement tiles match an older design?", answer: "Matching can be challenging because products and designs change. We worked to find tiles consistent with the existing interior, with the aim of making the repaired sections blend into the surrounding finishes." },
+      { question: "Can I stay at home during water-damage renovation?", answer: "Our customer stayed in the house throughout this project. Whether that is practical for another home depends on the affected rooms, access, required work, and site conditions. It should be discussed when planning the renovation." },
+    ],
+    sidebarCta: {
+      title: "Signs of a hidden leak?",
+      copy: "Lifting tiles, loose flooring or moisture under hardwood? Tell us what you have noticed and we will discuss the next step.",
+    },
+    closingSegments: [
+      { text: "If you are noticing lifting bathroom tiles, loose kitchen flooring, or signs of moisture beneath hardwood, " },
+      { link: { label: "contact McAze", href: "/contact" } },
+      { text: " to discuss the affected areas. Send us your location, photographs, and a brief description of what you have noticed. We can review the information and discuss the appropriate next step." },
+    ],
+    faqTitle: "Questions Homeowners Ask About Hidden Leaks and Renovation",
+    editorialNote:
+      "This case study is based on a completed McAze project. The causes described were specific to this home; similar symptoms can have different causes and should be investigated before repairs are planned.",
+    internalLinksTitle: "Related McAze services",
+    internalLinks: [
+      { label: "Bathroom renovation services", href: "/services/bathroom-renovation" },
+      { label: "Kitchen renovation services", href: "/services/kitchen-renovation" },
+      { label: "Flooring services", href: "/services/flooring" },
+    ],
+    cta: {
+      title: "Noticing lifting tiles or moisture under your floors?",
+      copy: "Send us your location, photographs, and a brief description of what you have noticed. McAze will review the information and discuss the appropriate next step.",
     },
   },
 };
