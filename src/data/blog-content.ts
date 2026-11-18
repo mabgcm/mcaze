@@ -5,6 +5,7 @@ export type GuideSection = {
   paragraphs: string[];
   bullets?: string[];
   link?: { href: string; label: string };
+  video?: { src: string; poster: string; caption: string; duration: string };
 };
 
 export type TextSegment = { text: string; bold?: boolean };
@@ -546,6 +547,12 @@ export const blogPostContent: Record<string, BlogPostContent> = {
           "They appreciated the clean, careful work and the way the renovation was handled while they remained in the house.",
           "Their feedback reflected more than the appearance of the repaired rooms. It also reflected the protection of their belongings, the care taken throughout the project, and the ability to continue living at home.",
         ],
+        video: {
+          src: "/images/af68fe20-70cd-41b1-83a5-e2d02f924a57.mp4",
+          poster: "/images/site/testimonial-hidden-leaks-poster.webp",
+          caption: "The homeowner describes the hidden leak repair and renovation, completed while they continued living in the house.",
+          duration: "PT34S",
+        },
       },
     ],
     faqs: [

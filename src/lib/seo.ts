@@ -133,6 +133,19 @@ export function breadcrumbSchema(items: Array<{ name: string; href: string }>) {
   };
 }
 
+export function videoSchema({ name, description, thumbnailUrl, contentUrl, uploadDate, duration }: { name: string; description: string; thumbnailUrl: string; contentUrl: string; uploadDate: string; duration: string }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name,
+    description,
+    thumbnailUrl: absoluteUrl(thumbnailUrl),
+    uploadDate,
+    duration,
+    contentUrl: absoluteUrl(contentUrl),
+  };
+}
+
 export function faqSchema(items: FaqItem[]) {
   return {
     "@context": "https://schema.org",
