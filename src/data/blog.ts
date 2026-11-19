@@ -11,7 +11,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-11-16",
     updatedAt: "2026-11-16",
     readingTime: "7 min read",
-    image: "/images/site/bathroom-renovation.webp",
+    image: "/images/site/hidden-water-leaks-hero.webp",
     headings: [
       "Hidden leaks do not have to flood a room",
       "What was happening inside the home",

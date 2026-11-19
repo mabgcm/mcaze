@@ -396,7 +396,7 @@ export const blogPostContent: Record<string, BlogPostContent> = {
   },
   "hidden-water-leaks-repair-occupied-home": {
     eyebrow: "Water Damage Case Study",
-    heroImageAlt: "Bathroom renovation after a hidden water leak repair",
+    heroImageAlt: "Bathroom wall with tiles removed revealing hidden water damage and copper plumbing",
     secondaryCta: { label: "Home Renovation Services", href: "/services" },
     publishedLabel: "November 16, 2026",
     disclaimer:
